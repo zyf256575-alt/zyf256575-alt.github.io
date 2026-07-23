@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>周钰峰</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: rgba(30, 41, 59, 0.46);
+      --text: #e2e8f0;
+      --text-strong: #f8fafc;
+      --muted: #94a3b8;
+      --muted-2: #64748b;
+      --line: #334155;
+      --accent: #5eead4;
+      --pill: rgba(45, 212, 191, 0.10);
+      --mouse-x: 50vw;
+      --mouse-y: 50vh;
+      --font-mono: "SF Mono", "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--muted);
+      font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      padding-bottom: 58px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(
+          620px circle at var(--mouse-x) var(--mouse-y),
+          rgba(29, 78, 216, 0.16),
+          rgba(29, 78, 216, 0.08) 35%,
+          transparent 72%
+        );
+      transition: opacity 0.2s ease;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    strong { color: var(--text); font-weight: 700; }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, calc(100% - 48px));
+      min-height: 100vh;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 380px minmax(0, 1fr);
+      gap: 104px;
+      padding: 96px 0 0;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 96px;
+      height: calc(100vh - 192px);
+      display: flex;
+      flex-direction: column;
+      align-self: start;
+    }
+
+    .name {
+      margin: 0 0 10px;
+      color: var(--text-strong);
+      font-size: 56px;
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.045em;
+    }
+
+    .subtitle {
+      margin: 0 0 18px;
+      color: var(--text);
+      font-size: 23px;
+      line-height: 1.35;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+
+    .intro {
+      max-width: 335px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .nav {
+      margin-top: 86px;
+    }
+
+    .nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 18px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      color: var(--muted-2);
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      transition: color .18s ease;
+    }
+
+    .nav a::before {
+      content: "";
+      width: 40px;
+      height: 1px;
+      background: var(--line);
+      transition: width .18s ease, background .18s ease;
+    }
+
+    .nav a:hover,
+    .nav a.active { color: var(--text); }
+    .nav a:hover::before,
+    .nav a.active::before {
+      width: 76px;
+      background: var(--text);
+    }
+
+    .nav a.external {
+      color: var(--accent);
+    }
+    .nav a.external::before {
+      display: none;
+    }
+    .nav a.external:hover {
+      color: var(--accent);
+      filter: brightness(1.3);
+    }
+
+    .social {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+    }
+
+    .social a {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      transition: color .18s ease, transform .18s ease;
+    }
+
+    .social a:hover {
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    .social a { position: relative; }
+    .social a.copied::after {
+      content: "已复制";
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--text);
+      color: var(--bg);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .social svg { width: 21px; height: 21px; fill: currentColor; }
+
+    .content {
+      max-width: 660px;
+      padding-bottom: 96px;
+    }
+
+    section { margin-bottom: 128px; scroll-margin-top: 96px; }
+    .section-label { display: none; }
+
+    .about p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 17.5px;
+      line-height: 1.78;
+      letter-spacing: -0.01em;
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 28px;
+      margin: 0 -16px;
+      padding: 18px 16px;
+      border-radius: 12px;
+      transition: background .18s ease, box-shadow .18s ease;
+    }
+
+    .entry + .entry { margin-top: 10px; }
+
+    .entry:hover {
+      background: var(--bg-card);
+      box-shadow: inset 0 1px 0 rgba(148, 163, 184, .08), 0 16px 32px rgba(2, 6, 23, .10);
+    }
+
+    .date {
+      padding-top: 2px;
+      color: var(--muted-2);
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 700;
+      letter-spacing: .045em;
+      text-transform: uppercase;
+    }
+
+    .entry h3 {
+      margin: 0 0 8px;
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.38;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      transition: color .18s ease;
+    }
+
+    .entry:hover h3 { color: var(--accent); }
+
+    .company {
+      margin: -3px 0 10px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      letter-spacing: -0.006em;
+    }
+
+    .tags {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      background: var(--pill);
+      color: var(--accent);
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 700;
+      padding: 8px 12px;
+    }
+
+    .project {
+      display: block;
+      scroll-margin-top: 96px;
+    }
+
+    .project .desc { max-width: 580px; }
+
+    .links {
+      margin-top: 12px;
+      display: flex;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .links a:hover { color: var(--accent); }
+
+
+    .demo-video-wrap {
+      margin-top: 18px;
+      max-width: 580px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, .16);
+      background: rgba(15, 23, 42, .42);
+      box-shadow: 0 18px 44px rgba(2, 6, 23, .22);
+    }
+
+    .demo-video-wrap video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #020617;
+    }
+
+    .demo-caption {
+      margin: 10px 0 0;
+      max-width: 580px;
+      color: var(--muted-2);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+      max-width: 580px;
+    }
+
+    .gallery.single {
+      grid-template-columns: 1fr;
+      max-width: 580px;
+    }
+
+    .gallery.duo {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 820px;
+    }
+
+    .gallery a {
+      display: block;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, .16);
+      transition: border-color .18s ease, transform .18s ease;
+    }
+
+    .gallery a:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .gallery img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+      background: #020617;
+    }
+
+    .gallery.single img {
+      aspect-ratio: 16 / 9;
+    }
+
+    .gallery.duo img {
+      aspect-ratio: 16 / 9;
+    }
+
+    /* Bottom XP easter egg: linked from Project 1 without covering content */
+    .fixed-xp-hud {
+      position: relative;
+      z-index: 1;
+      height: 54px;
+      margin-top: 18px;
+      overflow: hidden;
+      border-top: 1px solid rgba(94, 234, 212, .30);
+      border-bottom: 1px solid rgba(94, 234, 212, .16);
+      background:
+        linear-gradient(180deg, rgba(15, 23, 42, .86), rgba(15, 23, 42, .98)),
+        radial-gradient(760px 54px at 50% 50%, rgba(94, 234, 212, .10), transparent 74%);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: inset 0 1px 0 rgba(148, 163, 184, .06);
+    }
+
+    .fixed-xp-hud::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0;
+      background:
+        linear-gradient(90deg, rgba(94, 234, 212, .12), rgba(56, 189, 248, .18), rgba(94, 234, 212, .12)),
+        radial-gradient(620px 54px at 50% 50%, rgba(94, 234, 212, .26), transparent 74%);
+      box-shadow:
+        inset 0 0 0 1px rgba(94, 234, 212, .38),
+        inset 0 0 32px rgba(94, 234, 212, .16);
+    }
+
+    .fixed-xp-inner {
+      position: relative;
+      z-index: 1;
+      width: min(960px, calc(100% - 48px));
+      height: 54px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      color: var(--muted-2);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .045em;
+      text-transform: uppercase;
+    }
+
+    .xp-label {
+      flex: 0 0 auto;
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .11em;
+      white-space: nowrap;
+    }
+
+    .xp-level {
+      flex: 0 0 auto;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .07em;
+      white-space: nowrap;
+    }
+
+    .xp-track {
+      position: relative;
+      flex: 0 1 520px;
+      height: 17px;
+      min-width: 260px;
+      max-width: 520px;
+      border-radius: 999px;
+      background: rgba(51, 65, 85, .80);
+      box-shadow: inset 0 1px 3px rgba(2, 6, 23, .70);
+      overflow: hidden;
+    }
+
+    .xp-percent {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .075em;
+      line-height: 1;
+      text-shadow:
+        0 1px 2px rgba(2, 6, 23, .95),
+        0 0 8px rgba(15, 23, 42, .72),
+        0 0 12px rgba(226, 232, 240, .24);
+      pointer-events: none;
+    }
+
+    .xp-track::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      inset: 0 auto 0 0;
+      width: 83%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(94, 234, 212, .98), rgba(56, 189, 248, .82));
+      box-shadow: 0 0 22px rgba(94, 234, 212, .32);
+    }
+
+    .xp-stats {
+      flex: 0 1 auto;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 11px;
+    }
+
+    .xp-stats b {
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .fixed-xp-hud.is-pulsing {
+      animation: xpHudModuleFlash .48s ease-in-out 2;
+    }
+
+    .fixed-xp-hud.is-pulsing::before {
+      animation: xpHudOverlayFlash .48s ease-in-out 2;
+    }
+
+    .fixed-xp-hud.is-pulsing .fixed-xp-inner {
+      animation: xpInnerFlash .48s ease-in-out 2;
+    }
+
+    .fixed-xp-hud.is-pulsing .xp-track::before {
+      animation: xpFillFlash .48s ease-in-out 2;
+    }
+
+    @keyframes xpHudModuleFlash {
+      0%, 100% {
+        border-top-color: rgba(94, 234, 212, .30);
+        box-shadow: inset 0 1px 0 rgba(148, 163, 184, .06);
+      }
+      50% {
+        border-top-color: rgba(94, 234, 212, .95);
+        box-shadow:
+          inset 0 1px 0 rgba(94, 234, 212, .42),
+          inset 0 0 34px rgba(94, 234, 212, .13);
+      }
+    }
+
+    @keyframes xpHudOverlayFlash {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes xpInnerFlash {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.45); }
+    }
+
+    @keyframes xpFillFlash {
+      0%, 100% { filter: brightness(1); box-shadow: 0 0 22px rgba(94, 234, 212, .32); }
+      50% { filter: brightness(1.9); box-shadow: 0 0 42px rgba(94, 234, 212, .86); }
+    }
+
+    footer {
+      color: var(--muted-2);
+      font-size: 13px;
+      padding-bottom: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        width: min(100% - 48px, 680px);
+        display: block;
+        padding-top: 64px;
+      }
+      .sidebar {
+        position: static;
+        height: auto;
+      }
+      .name { font-size: 48px; }
+      .intro { max-width: 560px; }
+      .nav { margin-top: 28px; }
+      .nav ul { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+      .nav a { gap: 0; letter-spacing: .08em; }
+      .nav a::before { display: none; }
+      .social { margin-top: 32px; }
+      .content { max-width: none; margin-top: 88px; }
+      .section-label {
+        display: block;
+        margin-bottom: 20px;
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+      section { margin-bottom: 88px; }
+      .entry { grid-template-columns: 1fr; gap: 8px; margin-left: -12px; margin-right: -12px; }
+      .date { padding-top: 0; }
+      .fixed-xp-hud { height: 50px; }
+      .fixed-xp-inner { width: min(100% - 32px, 680px); height: 50px; gap: 10px; font-size: 10px; justify-content: center; }
+      .xp-label { display: none; }
+      .xp-level { font-size: 11px; }
+      .xp-track { flex: 1 1 auto; max-width: none; min-width: 90px; height: 16px; }
+      .xp-percent { font-size: 12px; letter-spacing: .06em; }
+      .xp-stats { gap: 9px; }
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div>
+        <h1 class="name">周钰峰</h1>
+        <h2 class="subtitle">AI Coding / AI 全栈开发</h2>
+        <p class="intro">物理学硕士在读，长期使用 Codex / Claude Code 构建本地优先的 AI-native 工作系统，覆盖个人知识与协作、多模型应用、MCP 工具链与科研计算自动化。</p>
+
+        <nav class="nav" aria-label="主导航">
+          <ul>
+            <li><a class="active" href="#about">关于</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#demos">演示</a></li>
+            <li><a href="resume.pdf" target="_blank" rel="nofollow noopener" class="external">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="social" aria-label="联系方式">
+        <a href="https://github.com/zyf256575-alt" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.1c-3.34.73-4.04-1.42-4.04-1.42-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.53.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0C17.1 4.57 18.1 4.9 18.1 4.9c.66 1.65.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a href="#" onclick="navigator.clipboard.writeText('zyf256575@gmail.com');this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),1500);return false" aria-label="复制邮箱">
+          <svg viewBox="0 0 24 24"><path d="M2.25 5.25A2.25 2.25 0 0 1 4.5 3h15a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 19.5 21h-15a2.25 2.25 0 0 1-2.25-2.25V5.25Zm2.05-.75 7.2 5.4a.83.83 0 0 0 1 0l7.2-5.4H4.3Zm15.95 2.06-6.85 5.14a2.33 2.33 0 0 1-2.8 0L3.75 6.56v12.19c0 .41.34.75.75.75h15c.41 0 .75-.34.75-.75V6.56Z"/></svg>
+        </a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section id="about">
+        <h2 class="section-label">关于</h2>
+        <div class="about">
+          <p>物理学硕士在读，AI Coding / AI 全栈实践者。我关注的不只是调用模型，而是以 DataBase 保存用户持有的长期资产，用 Obsidian 完成人类可读的可视化与关系导航，再让 Codex、Claude Code 和项目规则接入真实流程。</p>
+          <p>目前项目覆盖个人 AI 知识与协作、短视频生成、游戏资产管线和 AI4Science 科研计算。领域不同，但共同目标是把上下文、纠偏经验、证据和人工验收留在模型之外，让协作能力随使用持续演化。</p>
+          <p>业余大部分时间给了运动、音乐和 3A 游戏。魂系的晦暗美学、黑神话的中式表达、巫师 3 的叙事厚度，无形中塑造了我对世界的想象；而《戴森球计划》那种从零编织星河的浪漫，大概也是为什么我喜欢把管线一格一格跑通，看着系统活起来。</p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 class="section-label">项目</h2>
+        <article class="entry project">
+          <h3>个人 AI 知识与协作系统 · Workflow Evolution</h3>
+          <p class="desc">以 DataBase 作为本地长期真源、Obsidian 作为可视化与关系导航界面，连接 Codex、Claude Code、Rules 与 Skills，统一项目、科研、学习等个人数字资产与上下文；系统由早期多工位总控演化为模型无关的轻量工作台，将纠偏和重复任务持续沉淀为可复用协作能力，并保留证据回链与人工验收。</p>
+          <div class="tags"><span class="tag">Local-first</span><span class="tag">Obsidian</span><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">Rules &amp; Skills</span><span class="tag">Human-in-the-loop</span></div>
+          <div class="links"><a href="#xp-bar">Workflow XP ↘</a></div>
+        </article>
+        <article class="entry project">
+          <h3>reel-forge · AI 短视频生成工作流</h3>
+          <p class="desc">接入 Freddie Mac、Redfin、FRED 房地产市场数据源，搭建从数据摄入、信号标准化、claim 校验到 RT 风格静态卡片与短视频生成的自动化管线；使用 DeepSeek / Anthropic-compatible API 与 Qwen-VL 完成文案生成、B-roll 主题评分和视觉检查，并通过 SQLite L2 缓存减少重复模型调用。</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">LLM API</span><span class="tag">Qwen-VL</span><span class="tag">SQLite</span><span class="tag">FFmpeg</span><span class="tag">Automation</span></div>
+          <div class="links"><a href="#reel-forge-demo">视频演示 ↘</a></div>
+        </article>
+        <article class="entry project">
+          <h3>Yuxu Forge · AI Game Asset Pipeline</h3>
+          <p class="desc">从一根白玉神柱开始的东方幻想资产实验。借助 AI 3D 生成、Blender 法线烘焙和 UE5 PBR 材质，一人跑通"概念 → 可渲染资产"全链路，并将 MCP 材质调参与法线修正标准化为 4 步操作链。</p>
+          <div class="tags"><span class="tag">UE5</span><span class="tag">Blender</span><span class="tag">MCP</span><span class="tag">PBR</span><span class="tag">AI 3D</span><span class="tag">Codex</span><span class="tag">Claude Code</span></div>
+          <div class="links"><a href="#yuxu-forge-demo">视频演示 ↘</a></div>
+        </article>
+        <article class="entry project">
+          <h3>AI4Science Research OS · Scatron</h3>
+          <p class="desc">围绕 exact-BSC/GLMT 光学力与扭矩计算核心，构建面向论文生产的 AI4Science Research OS；将文献证据库、图式语法、单篇论文骨架、数值实验与可视化仪表盘串成可追踪工作流，把科研过程拆解为可审阅的状态机与人工检查点，支持 AI 代理并行协作并回收 claim 审查结果。</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Scientific Computing</span><span class="tag">Research OS</span><span class="tag">Literature DB</span><span class="tag">Figure Grammar</span><span class="tag">Human-in-the-loop AI</span></div>
+          <div class="links"><a href="#scatron-demo">可视化演示 ↘</a><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022407325003097" target="_blank" rel="noopener noreferrer">相关论文 ↗</a></div>
+        </article>
+      </section>
+
+      <section id="demos">
+        <h2 class="section-label">演示</h2>
+        <article id="yuxu-forge-demo" class="entry project">
+          <h3>Yuxu Forge</h3>
+          <div class="demo-video-wrap">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/video/project_1.mp4" type="video/mp4">
+              你的浏览器不支持视频播放，请直接打开 assets/video/project_1.mp4。
+            </video>
+          </div>
+          <p class="demo-caption">参考图 → AI 3D → Blender → UE5，一人跑通全链路。</p>
+        </article>
+        <article id="reel-forge-demo" class="entry project">
+          <h3>reel-forge</h3>
+          <div class="demo-video-wrap">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/video/project_2.mp4" type="video/mp4">
+              你的浏览器不支持视频播放，请直接打开 assets/video/project_2.mp4。
+            </video>
+          </div>
+          <p class="demo-caption">数据摄入 → 卡片 → B-roll → BGM → FFmpeg，一键出片。</p>
+        </article>
+        <article id="scatron-demo" class="entry project">
+          <h3>AI4Science Research OS</h3>
+          <div class="gallery duo">
+            <a href="assets/img/project_3_3.png" target="_blank"><img src="assets/img/project_3_3.png" alt="Scatron Bessel wave research atlas and paper framework" loading="eager"></a>
+            <a href="assets/img/project_3_4.png" target="_blank"><img src="assets/img/project_3_4.png" alt="Scatron force torque figure grammar board" loading="eager"></a>
+          </div>
+          <p class="demo-caption">文献入库 → 图式抽取 → 图组生成 → claim 审查，通过状态机与人工检查点回收 AI 代理协作结果。</p>
+        </article>
+      </section>
+
+
+      <footer>周钰峰 · 2026.7 — Design inspired by <a href="https://brittanychiang.com" target="_blank" rel="noopener">Brittany Chiang</a></footer>
+    </main>
+  </div>
+
+  <div id="xp-bar" class="fixed-xp-hud" aria-label="Human-AI Workflow Evolution XP">
+    <div class="fixed-xp-inner">
+      <span class="xp-label">Workflow XP</span>
+      <span class="xp-track" aria-label="83% to next token milestone"><span class="xp-percent">83%</span></span>
+      <div class="xp-stats">
+        <span><b>124亿+</b> / 150亿 tokens</span>
+        <span><b>human + AI</b> evolving</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    const root = document.documentElement;
+    let raf = 0;
+
+    window.addEventListener('pointermove', (event) => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        root.style.setProperty('--mouse-x', `${event.clientX}px`);
+        root.style.setProperty('--mouse-y', `${event.clientY}px`);
+        raf = 0;
+      });
+    }, { passive: true });
+
+    const sections = [...document.querySelectorAll('main section')];
+    const links = [...document.querySelectorAll('.nav a')];
+    const onScroll = () => {
+      let current = sections[0]?.id || '';
+      for (const section of sections) {
+        if (window.scrollY >= section.offsetTop - 220) current = section.id;
+      }
+      links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + current));
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Navigation click feedback: left nav switches immediately, Project 1's Workflow XP scrolls to the bottom easter egg.
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        links.forEach(item => item.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+    const xpBar = document.getElementById('xp-bar');
+    const xpTriggers = [...document.querySelectorAll('a[href="#xp-bar"]')];
+    xpTriggers.forEach(trigger => {
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (!xpBar) return;
+        xpBar.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        xpBar.classList.remove('is-pulsing');
+        void xpBar.offsetWidth;
+        window.setTimeout(() => xpBar.classList.add('is-pulsing'), 180);
+        window.setTimeout(() => xpBar.classList.remove('is-pulsing'), 1500);
+      });
+    });
+  </script>
+
+</body>
+</html>
