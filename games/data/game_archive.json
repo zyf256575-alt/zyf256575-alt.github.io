@@ -11,7 +11,7 @@
   },
   "summary": {
     "localSteamGames": 65,
-    "localSteamHours": 5452.4,
+    "localSteamHours": 5472.3,
     "localPerfectGames": 27,
     "localAchievements": 2174,
     "manualGames": 10,
@@ -483,17 +483,17 @@
           "MINTROCKET"
         ]
       },
-      "hours": 201.2,
-      "playtimeMinutes": 12072,
-      "playtime2WeeksMinutes": 1602,
-      "lastPlayed": 1785566192,
+      "hours": 204.9,
+      "playtimeMinutes": 12294,
+      "playtime2WeeksMinutes": 4893,
+      "lastPlayed": 1785771278,
       "achievements": {
         "achieved": 43,
         "total": 43
       },
-      "playtimeSource": "steam-client-screenshot",
+      "playtimeSource": "steam-local-cache",
       "achievementSource": "steam-client-screenshot",
-      "verifiedAt": "2026-08-01T14:36:32+08:00",
+      "verifiedAt": "2026-08-04T23:35:51+08:00",
       "perfect": true,
       "cover": "assets/covers/1868140.jpg",
       "playPeriod": "2026",
@@ -1753,15 +1753,17 @@
           "战国"
         ]
       },
-      "hours": 10.2,
-      "playtimeMinutes": 610,
-      "playtime2WeeksMinutes": 610,
-      "lastPlayed": 1785732255,
+      "hours": 26.4,
+      "playtimeMinutes": 1583,
+      "playtime2WeeksMinutes": 1583,
+      "lastPlayed": 1785855355,
       "achievements": {
         "achieved": 14,
         "total": 64
       },
+      "playtimeSource": "steam-local-cache",
       "achievementSource": "steam-community",
+      "verifiedAt": "2026-08-04T23:35:51+08:00",
       "perfect": false,
       "cover": "assets/covers/3681010.jpg",
       "playPeriod": "2026–至今"
