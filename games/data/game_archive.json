@@ -1,0 +1,2821 @@
+{
+  "generatedFrom": "local Steam cache + Steam Community public stats + user-verified Steam client screenshots + manual editorial layer",
+  "profile": {
+    "steamId64": "76561199140628430",
+    "profileUrl": "https://steamcommunity.com/profiles/76561199140628430/",
+    "displayName": "PiggySlapsElephant",
+    "level": 14,
+    "publicGameCount": 58,
+    "publicPerfectCount": 25,
+    "publicAchievementCount": 1282
+  },
+  "summary": {
+    "localSteamGames": 65,
+    "localSteamHours": 5452.4,
+    "localPerfectGames": 27,
+    "localAchievements": 2174,
+    "manualGames": 10,
+    "totalGames": 75,
+    "platformCounts": {
+      "steam": 65,
+      "battlenet": 4,
+      "tencent": 4,
+      "other": 2
+    }
+  },
+  "games": [
+    {
+      "id": "1366540",
+      "appId": 1366540,
+      "source": "steam",
+      "platform": "steam",
+      "name": "戴森球计划",
+      "genreIds": [
+        2,
+        23,
+        28,
+        70
+      ],
+      "primaryGenre": "模拟建造",
+      "coreStructure": "自动化生产",
+      "details": {
+        "studio": [
+          "重庆柚子猫游戏"
+        ],
+        "themes": [
+          "太空工业"
+        ]
+      },
+      "hours": 722,
+      "playtimeMinutes": 43318,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1751985436,
+      "achievements": {
+        "achieved": 102,
+        "total": 128
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1366540-header.jpg",
+      "playPeriod": "2022–2025",
+      "note": "持续关注产线规划、吞吐瓶颈与系统扩张。"
+    },
+    {
+      "id": "230410",
+      "appId": 230410,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Warframe",
+      "genreIds": [
+        1,
+        3,
+        37
+      ],
+      "primaryGenre": "第三人称射击",
+      "coreStructure": "刷宝",
+      "details": {
+        "studio": [
+          "Digital Extremes"
+        ],
+        "form": [
+          "长期运营"
+        ],
+        "modes": [
+          "合作"
+        ],
+        "themes": [
+          "科幻"
+        ]
+      },
+      "hours": 515.2,
+      "playtimeMinutes": 30912,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1771765134,
+      "achievements": {
+        "achieved": 166,
+        "total": 193
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/230410.jpg",
+      "playPeriod": "2021–2026"
+    },
+    {
+      "id": "1245620",
+      "appId": 1245620,
+      "source": "steam",
+      "platform": "steam",
+      "name": "艾尔登法环",
+      "genreIds": [
+        1,
+        3
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "开放世界",
+      "details": {
+        "studio": [
+          "FromSoftware"
+        ],
+        "lineage": [
+          "魂系"
+        ],
+        "creators": [
+          "宫崎英高"
+        ],
+        "themes": [
+          "黑暗幻想"
+        ]
+      },
+      "hours": 435.6,
+      "playtimeMinutes": 26136,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1739786392,
+      "achievements": {
+        "achieved": 42,
+        "total": 42
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/1245620.jpg",
+      "playPeriod": "2022–2025",
+      "note": "全成就；开放世界探索与高压战斗系统的长期体验。"
+    },
+    {
+      "id": "582010",
+      "appId": 582010,
+      "source": "steam",
+      "platform": "steam",
+      "name": "怪物猎人：世界",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "共斗狩猎",
+      "details": {
+        "studio": [
+          "Capcom"
+        ],
+        "series": [
+          "怪物猎人"
+        ],
+        "modes": [
+          "合作"
+        ],
+        "themes": [
+          "怪物狩猎"
+        ]
+      },
+      "hours": 283.2,
+      "playtimeMinutes": 16990,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1714300678,
+      "achievements": {
+        "achieved": 100,
+        "total": 100
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/582010.jpg",
+      "playPeriod": "2023–2024",
+      "note": "长期动作共斗体验，关注武器循环、构筑与大型敌人行为反馈。"
+    },
+    {
+      "id": "292030",
+      "appId": 292030,
+      "source": "steam",
+      "platform": "steam",
+      "name": "巫师 3：狂猎",
+      "genreIds": [
+        3
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "开放世界",
+      "details": {
+        "studio": [
+          "CD PROJEKT RED"
+        ],
+        "themes": [
+          "奇幻",
+          "叙事选择"
+        ]
+      },
+      "hours": 262.3,
+      "playtimeMinutes": 15736,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1667751387,
+      "achievements": {
+        "achieved": 78,
+        "total": 78
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/292030.jpg",
+      "playPeriod": "2021–2022",
+      "note": "完整体验叙事驱动开放世界，对任务结构与选择反馈印象深刻。"
+    },
+    {
+      "id": "1325200",
+      "appId": 1325200,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Nioh 2 – The Complete Edition",
+      "genreIds": [
+        1,
+        3
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "类魂",
+      "details": {
+        "studio": [
+          "Team NINJA"
+        ],
+        "themes": [
+          "战国"
+        ]
+      },
+      "hours": 191.3,
+      "playtimeMinutes": 11476,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1676266440,
+      "achievements": {
+        "achieved": 88,
+        "total": 88
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/1325200.jpg",
+      "playPeriod": "2022–2023"
+    },
+    {
+      "id": "814380",
+      "appId": 814380,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Sekiro™: Shadows Die Twice",
+      "genreIds": [
+        1,
+        25
+      ],
+      "primaryGenre": "动作冒险",
+      "coreStructure": "弹反决斗",
+      "details": {
+        "lineage": [
+          "魂系"
+        ],
+        "studio": [
+          "FromSoftware"
+        ],
+        "creators": [
+          "宫崎英高"
+        ],
+        "themes": [
+          "战国"
+        ]
+      },
+      "hours": 173.3,
+      "playtimeMinutes": 10397,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1739790481,
+      "achievements": {
+        "achieved": 34,
+        "total": 34
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/814380.jpg",
+      "playPeriod": "2022–2025"
+    },
+    {
+      "id": "1446780",
+      "appId": 1446780,
+      "source": "steam",
+      "platform": "steam",
+      "name": "MONSTER HUNTER RISE",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "共斗狩猎",
+      "details": {
+        "studio": [
+          "Capcom"
+        ],
+        "modes": [
+          "合作"
+        ],
+        "themes": [
+          "怪物狩猎"
+        ]
+      },
+      "hours": 172.4,
+      "playtimeMinutes": 10346,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1710822384,
+      "achievements": {
+        "achieved": 62,
+        "total": 100
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1446780.jpg",
+      "playPeriod": "2023–2024"
+    },
+    {
+      "id": "239140",
+      "appId": 239140,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Dying Light",
+      "genreIds": [
+        1,
+        3,
+        25
+      ],
+      "primaryGenre": "恐怖生存",
+      "coreStructure": "跑酷生存",
+      "details": {
+        "studio": [
+          "Techland"
+        ],
+        "themes": [
+          "末日丧尸"
+        ]
+      },
+      "hours": 163.4,
+      "playtimeMinutes": 9806,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1669132953,
+      "achievements": {
+        "achieved": 78,
+        "total": 78
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/239140.jpg",
+      "playPeriod": "2021–2022"
+    },
+    {
+      "id": "485510",
+      "appId": 485510,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Nioh: Complete Edition",
+      "genreIds": [
+        1,
+        3
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "类魂",
+      "details": {
+        "studio": [
+          "Team NINJA"
+        ],
+        "themes": [
+          "战国"
+        ]
+      },
+      "hours": 160.8,
+      "playtimeMinutes": 9648,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1667054321,
+      "achievements": {
+        "achieved": 79,
+        "total": 79
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/485510.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "1086940",
+      "appId": 1086940,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Baldur's Gate 3",
+      "genreIds": [
+        2,
+        3,
+        25
+      ],
+      "primaryGenre": "角色扮演",
+      "coreStructure": "回合制战术",
+      "details": {
+        "studio": [
+          "Larian Studios"
+        ],
+        "themes": [
+          "奇幻",
+          "叙事选择"
+        ]
+      },
+      "hours": 156.3,
+      "playtimeMinutes": 9379,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1727882043,
+      "achievements": {
+        "achieved": 24,
+        "total": 54
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1086940.jpg",
+      "playPeriod": "2024"
+    },
+    {
+      "id": "374320",
+      "appId": 374320,
+      "source": "steam",
+      "platform": "steam",
+      "name": "DARK SOULS™ III",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "魂系",
+      "details": {
+        "studio": [
+          "FromSoftware"
+        ],
+        "creators": [
+          "宫崎英高"
+        ],
+        "lineage": [
+          "魂系"
+        ],
+        "themes": [
+          "黑暗幻想"
+        ]
+      },
+      "hours": 147.9,
+      "playtimeMinutes": 8875,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1672480256,
+      "achievements": {
+        "achieved": 43,
+        "total": 43
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/374320.jpg",
+      "playPeriod": "2021–2022"
+    },
+    {
+      "id": "1868140",
+      "appId": 1868140,
+      "source": "steam",
+      "platform": "steam",
+      "name": "潜水员戴夫",
+      "genreIds": [
+        3,
+        4,
+        25,
+        28
+      ],
+      "primaryGenre": "模拟经营",
+      "coreStructure": "探索经营",
+      "details": {
+        "themes": [
+          "海洋探索",
+          "轻叙事"
+        ],
+        "studio": [
+          "MINTROCKET"
+        ]
+      },
+      "hours": 201.2,
+      "playtimeMinutes": 12072,
+      "playtime2WeeksMinutes": 1602,
+      "lastPlayed": 1785566192,
+      "achievements": {
+        "achieved": 43,
+        "total": 43
+      },
+      "playtimeSource": "steam-client-screenshot",
+      "achievementSource": "steam-client-screenshot",
+      "verifiedAt": "2026-08-01T14:36:32+08:00",
+      "perfect": true,
+      "cover": "assets/covers/1868140.jpg",
+      "playPeriod": "2026",
+      "note": "经营、探索与轻量叙事循环结合紧密，近期仍在持续体验。"
+    },
+    {
+      "id": "578080",
+      "appId": 578080,
+      "source": "steam",
+      "platform": "steam",
+      "name": "PUBG: BATTLEGROUNDS",
+      "genreIds": [
+        1,
+        25,
+        29,
+        37
+      ],
+      "primaryGenre": "第三人称射击",
+      "coreStructure": "战术竞技",
+      "details": {
+        "modes": [
+          "多人竞技",
+          "团队生存"
+        ],
+        "studio": [
+          "PUBG Corporation"
+        ],
+        "themes": [
+          "现代军事"
+        ]
+      },
+      "hours": 135.8,
+      "playtimeMinutes": 8151,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1779464175,
+      "achievements": {
+        "achieved": 24,
+        "total": 37
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/578080.jpg",
+      "playPeriod": "2018–至今",
+      "note": "战术竞技与团队生存向 FPS 经历，累计 135.8 小时。"
+    },
+    {
+      "id": "526870",
+      "appId": 526870,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Satisfactory",
+      "genreIds": [
+        2,
+        23,
+        25,
+        28
+      ],
+      "primaryGenre": "模拟建造",
+      "coreStructure": "自动化生产",
+      "details": {
+        "studio": [
+          "Coffee Stain Studios"
+        ],
+        "themes": [
+          "外星工业"
+        ]
+      },
+      "hours": 108.7,
+      "playtimeMinutes": 6520,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1696089314,
+      "achievements": {
+        "achieved": 0,
+        "total": 44
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/526870.jpg",
+      "playPeriod": "2023"
+    },
+    {
+      "id": "1593500",
+      "appId": 1593500,
+      "source": "steam",
+      "platform": "steam",
+      "name": "God of War",
+      "genreIds": [
+        1,
+        3,
+        25
+      ],
+      "primaryGenre": "动作冒险",
+      "coreStructure": "叙事驱动",
+      "details": {
+        "studio": [
+          "Santa Monica Studio"
+        ],
+        "themes": [
+          "北欧神话"
+        ]
+      },
+      "hours": 108.6,
+      "playtimeMinutes": 6517,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1686724419,
+      "achievements": {
+        "achieved": 37,
+        "total": 37
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/1593500.jpg",
+      "playPeriod": "2023"
+    },
+    {
+      "id": "2358720",
+      "appId": 2358720,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Black Myth: Wukong",
+      "genreIds": [
+        1,
+        3,
+        25
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "Boss挑战",
+      "details": {
+        "studio": [
+          "游戏科学"
+        ],
+        "themes": [
+          "东方神话"
+        ]
+      },
+      "hours": 106,
+      "playtimeMinutes": 6363,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1727693466,
+      "achievements": {
+        "achieved": 81,
+        "total": 81
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/2358720.jpg",
+      "playPeriod": "2024"
+    },
+    {
+      "id": "570940",
+      "appId": 570940,
+      "source": "steam",
+      "platform": "steam",
+      "name": "DARK SOULS™: REMASTERED",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "魂系",
+      "details": {
+        "studio": [
+          "FromSoftware"
+        ],
+        "creators": [
+          "宫崎英高"
+        ],
+        "lineage": [
+          "魂系"
+        ],
+        "themes": [
+          "黑暗幻想"
+        ]
+      },
+      "hours": 99.3,
+      "playtimeMinutes": 5956,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1669036193,
+      "achievements": {
+        "achieved": 41,
+        "total": 41
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/570940.jpg",
+      "playPeriod": "2021–2022"
+    },
+    {
+      "id": "367520",
+      "appId": 367520,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Hollow Knight",
+      "genreIds": [
+        1,
+        23,
+        25
+      ],
+      "primaryGenre": "平台动作",
+      "coreStructure": "类银河战士恶魔城",
+      "details": {
+        "studio": [
+          "Team Cherry"
+        ],
+        "themes": [
+          "昆虫王国"
+        ]
+      },
+      "hours": 98.4,
+      "playtimeMinutes": 5902,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1668149943,
+      "achievements": {
+        "achieved": 63,
+        "total": 63
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/367520.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "1030300",
+      "appId": 1030300,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Hollow Knight: Silksong",
+      "genreIds": [
+        1,
+        23,
+        25
+      ],
+      "primaryGenre": "平台动作",
+      "coreStructure": "类银河战士恶魔城",
+      "details": {
+        "studio": [
+          "Team Cherry"
+        ],
+        "themes": [
+          "黑暗奇幻"
+        ]
+      },
+      "hours": 95.5,
+      "playtimeMinutes": 5728,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1759762624,
+      "achievements": {
+        "achieved": 52,
+        "total": 52
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/1030300.jpg",
+      "playPeriod": "2025"
+    },
+    {
+      "id": "48190",
+      "appId": 48190,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Assassin's Creed Brotherhood",
+      "genreIds": [
+        1,
+        25
+      ],
+      "primaryGenre": "动作冒险",
+      "coreStructure": "潜行刺杀",
+      "details": {
+        "studio": [
+          "Ubisoft Montreal"
+        ],
+        "themes": [
+          "文艺复兴"
+        ]
+      },
+      "hours": 84.5,
+      "playtimeMinutes": 5073,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1672339983,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "achievementSource": "none",
+      "perfect": false,
+      "cover": "assets/covers/48190.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "201790",
+      "appId": 201790,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Orcs Must Die! 2",
+      "genreIds": [
+        1,
+        2,
+        3,
+        23,
+        25
+      ],
+      "primaryGenre": "策略",
+      "coreStructure": "动作塔防",
+      "details": {
+        "studio": [
+          "Robot Entertainment"
+        ],
+        "themes": [
+          "奇幻塔防"
+        ]
+      },
+      "hours": 83.6,
+      "playtimeMinutes": 5015,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1667488828,
+      "achievements": {
+        "achieved": 27,
+        "total": 27
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/201790.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "1627720",
+      "appId": 1627720,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Lies of P",
+      "genreIds": [
+        1,
+        3,
+        25
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "类魂",
+      "details": {
+        "themes": [
+          "蒸汽朋克"
+        ],
+        "studio": [
+          "NEOWIZ"
+        ]
+      },
+      "hours": 79.3,
+      "playtimeMinutes": 4759,
+      "playtime2WeeksMinutes": 654,
+      "lastPlayed": 1785089059,
+      "achievements": {
+        "achieved": 53,
+        "total": 53
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/1627720.jpg",
+      "playPeriod": "2023–2026"
+    },
+    {
+      "id": "2322010",
+      "appId": 2322010,
+      "source": "steam",
+      "platform": "steam",
+      "name": "God of War Ragnarök",
+      "genreIds": [
+        1,
+        3,
+        25
+      ],
+      "primaryGenre": "动作冒险",
+      "coreStructure": "叙事驱动",
+      "details": {
+        "studio": [
+          "Santa Monica Studio"
+        ],
+        "themes": [
+          "北欧神话"
+        ]
+      },
+      "hours": 74.4,
+      "playtimeMinutes": 4463,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1784260892,
+      "achievements": {
+        "achieved": 48,
+        "total": 48
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/2322010.jpg",
+      "playPeriod": "2025–2026"
+    },
+    {
+      "id": "1501750",
+      "appId": 1501750,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Lords of the Fallen",
+      "genreIds": [
+        1,
+        3,
+        25
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "类魂",
+      "details": {
+        "themes": [
+          "黑暗奇幻"
+        ],
+        "studio": [
+          "CI Games"
+        ]
+      },
+      "hours": 73.1,
+      "playtimeMinutes": 4387,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1750827299,
+      "achievements": {
+        "achieved": 72,
+        "total": 77
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1501750.jpg",
+      "playPeriod": "2024–2025"
+    },
+    {
+      "id": "335300",
+      "appId": 335300,
+      "source": "steam",
+      "platform": "steam",
+      "name": "DARK SOULS™ II: Scholar of the First Sin",
+      "genreIds": [
+        1,
+        3
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "魂系",
+      "details": {
+        "studio": [
+          "FromSoftware"
+        ],
+        "lineage": [
+          "魂系"
+        ],
+        "themes": [
+          "黑暗幻想"
+        ]
+      },
+      "hours": 63.8,
+      "playtimeMinutes": 3827,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1625930146,
+      "achievements": {
+        "achieved": 38,
+        "total": 38
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/335300.jpg",
+      "playPeriod": "2021"
+    },
+    {
+      "id": "33230",
+      "appId": 33230,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Assassin's Creed II",
+      "genreIds": [
+        1,
+        25
+      ],
+      "primaryGenre": "动作冒险",
+      "coreStructure": "潜行刺杀",
+      "details": {
+        "studio": [
+          "Ubisoft Montreal"
+        ],
+        "themes": [
+          "文艺复兴"
+        ]
+      },
+      "hours": 56,
+      "playtimeMinutes": 3359,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1652474544,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "achievementSource": "none",
+      "perfect": false,
+      "cover": "assets/covers/33230.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "1448440",
+      "appId": 1448440,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Wo Long: Fallen Dynasty",
+      "genreIds": [
+        1,
+        3,
+        25
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "类魂",
+      "details": {
+        "studio": [
+          "Team NINJA"
+        ],
+        "themes": [
+          "三国"
+        ]
+      },
+      "hours": 45.5,
+      "playtimeMinutes": 2727,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1727667068,
+      "achievements": {
+        "achieved": 90,
+        "total": 90
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/1448440.jpg",
+      "playPeriod": "2024"
+    },
+    {
+      "id": "2277560",
+      "appId": 2277560,
+      "source": "steam",
+      "platform": "steam",
+      "name": "WUCHANG: Fallen Feathers",
+      "genreIds": [
+        1,
+        3,
+        25
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "类魂",
+      "details": {
+        "studio": [
+          "灵泽科技"
+        ],
+        "themes": [
+          "明代幻想"
+        ]
+      },
+      "hours": 44.8,
+      "playtimeMinutes": 2686,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1756206767,
+      "achievements": {
+        "achieved": 40,
+        "total": 40
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/2277560.jpg",
+      "playPeriod": "2025"
+    },
+    {
+      "id": "391220",
+      "appId": 391220,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Rise of the Tomb Raider",
+      "genreIds": [
+        1,
+        25
+      ],
+      "primaryGenre": "动作冒险",
+      "coreStructure": "叙事探索",
+      "details": {
+        "studio": [
+          "Crystal Dynamics"
+        ],
+        "themes": [
+          "遗迹探险"
+        ]
+      },
+      "hours": 36.4,
+      "playtimeMinutes": 2186,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1708423998,
+      "achievements": {
+        "achieved": 32,
+        "total": 143
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/391220.jpg",
+      "playPeriod": "2024"
+    },
+    {
+      "id": "102600",
+      "appId": 102600,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Orcs Must Die!",
+      "genreIds": [
+        1,
+        2,
+        23
+      ],
+      "primaryGenre": "策略",
+      "coreStructure": "动作塔防",
+      "details": {
+        "studio": [
+          "Robot Entertainment"
+        ],
+        "themes": [
+          "奇幻塔防"
+        ]
+      },
+      "hours": 33.1,
+      "playtimeMinutes": 1987,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1643129285,
+      "achievements": {
+        "achieved": 27,
+        "total": 27
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/102600.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "728880",
+      "appId": 728880,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Overcooked! 2",
+      "genreIds": [
+        1,
+        4,
+        23
+      ],
+      "primaryGenre": "休闲派对",
+      "coreStructure": "合作烹饪",
+      "details": {
+        "studio": [
+          "Ghost Town Games Ltd."
+        ],
+        "themes": [
+          "卡通厨房"
+        ]
+      },
+      "hours": 29.4,
+      "playtimeMinutes": 1766,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1717924104,
+      "achievements": {
+        "achieved": 21,
+        "total": 54
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/728880.jpg",
+      "playPeriod": "2021–2024"
+    },
+    {
+      "id": "15100",
+      "appId": 15100,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Assassin's Creed",
+      "genreIds": [
+        1,
+        25
+      ],
+      "primaryGenre": "动作冒险",
+      "coreStructure": "潜行刺杀",
+      "details": {
+        "studio": [
+          "Ubisoft Montreal"
+        ],
+        "themes": [
+          "中世纪圣地"
+        ]
+      },
+      "hours": 29.4,
+      "playtimeMinutes": 1767,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1624957831,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "achievementSource": "none",
+      "perfect": false,
+      "cover": "assets/covers/15100.jpg",
+      "playPeriod": "2021"
+    },
+    {
+      "id": "582160",
+      "appId": 582160,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Assassin's Creed Origins",
+      "genreIds": [
+        1,
+        3,
+        25
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "开放世界",
+      "details": {
+        "studio": [
+          "Ubisoft Montreal"
+        ],
+        "themes": [
+          "古埃及"
+        ]
+      },
+      "hours": 28,
+      "playtimeMinutes": 1679,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1695565942,
+      "achievements": {
+        "achieved": 15,
+        "total": 67
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/582160.jpg",
+      "playPeriod": "2023"
+    },
+    {
+      "id": "203160",
+      "appId": 203160,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Tomb Raider",
+      "genreIds": [
+        1,
+        25
+      ],
+      "primaryGenre": "动作冒险",
+      "coreStructure": "叙事探索",
+      "details": {
+        "studio": [
+          "Crystal Dynamics"
+        ],
+        "themes": [
+          "遗迹探险"
+        ]
+      },
+      "hours": 27.4,
+      "playtimeMinutes": 1641,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1667728392,
+      "achievements": {
+        "achieved": 50,
+        "total": 50
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/203160.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "1097150",
+      "appId": 1097150,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Fall Guys",
+      "genreIds": [
+        1,
+        4,
+        18,
+        23,
+        29
+      ],
+      "primaryGenre": "休闲派对",
+      "coreStructure": "淘汰竞技",
+      "details": {
+        "studio": [
+          "Mediatonic"
+        ],
+        "themes": [
+          "综艺闯关"
+        ]
+      },
+      "hours": 25.2,
+      "playtimeMinutes": 1513,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1669376136,
+      "achievements": {
+        "achieved": 16,
+        "total": 34
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1097150.jpg",
+      "playPeriod": "2021–2022"
+    },
+    {
+      "id": "1057090",
+      "appId": 1057090,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Ori and the Will of the Wisps",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "平台动作",
+      "coreStructure": "类银河战士恶魔城",
+      "details": {
+        "studio": [
+          "Moon Studios GmbH"
+        ],
+        "themes": [
+          "精灵森林"
+        ]
+      },
+      "hours": 25,
+      "playtimeMinutes": 1499,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1699074139,
+      "achievements": {
+        "achieved": 37,
+        "total": 37
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/1057090.jpg",
+      "playPeriod": "2023"
+    },
+    {
+      "id": "527230",
+      "appId": 527230,
+      "source": "steam",
+      "platform": "steam",
+      "name": "For The King",
+      "genreIds": [
+        2,
+        3,
+        23,
+        25
+      ],
+      "primaryGenre": "角色扮演",
+      "coreStructure": "回合制冒险",
+      "details": {
+        "studio": [
+          "IronOak Games"
+        ],
+        "themes": [
+          "桌游奇幻"
+        ]
+      },
+      "hours": 22.9,
+      "playtimeMinutes": 1373,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1694805946,
+      "achievements": {
+        "achieved": 47,
+        "total": 78
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/527230.jpg",
+      "playPeriod": "2022–2023"
+    },
+    {
+      "id": "730",
+      "appId": 730,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Counter-Strike 2",
+      "genreIds": [
+        1,
+        37
+      ],
+      "primaryGenre": "第一人称射击",
+      "coreStructure": "回合竞技",
+      "details": {
+        "modes": [
+          "多人竞技",
+          "团队对抗"
+        ],
+        "studio": [
+          "Valve"
+        ],
+        "themes": [
+          "现代反恐"
+        ]
+      },
+      "hours": 19.4,
+      "playtimeMinutes": 1167,
+      "playtime2WeeksMinutes": 96,
+      "lastPlayed": 1784728498,
+      "achievements": {
+        "achieved": 1,
+        "total": 1
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/730.jpg",
+      "playPeriod": "2025–2026",
+      "note": "接触过传统回合制竞技 FPS，累计 19.4 小时。"
+    },
+    {
+      "id": "1522820",
+      "appId": 1522820,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Orcs Must Die! 3",
+      "genreIds": [
+        1,
+        2,
+        23,
+        25
+      ],
+      "primaryGenre": "策略",
+      "coreStructure": "动作塔防",
+      "details": {
+        "studio": [
+          "Robot Entertainment"
+        ],
+        "themes": [
+          "奇幻塔防"
+        ]
+      },
+      "hours": 18.6,
+      "playtimeMinutes": 1115,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1719149779,
+      "achievements": {
+        "achieved": 11,
+        "total": 38
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1522820.jpg",
+      "playPeriod": "2023–2024"
+    },
+    {
+      "id": "1174180",
+      "appId": 1174180,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Red Dead Redemption 2",
+      "genreIds": [
+        1,
+        25
+      ],
+      "primaryGenre": "动作冒险",
+      "coreStructure": "开放世界",
+      "details": {
+        "studio": [
+          "Rockstar Games"
+        ],
+        "themes": [
+          "美国西部"
+        ]
+      },
+      "hours": 15.1,
+      "playtimeMinutes": 908,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1712498048,
+      "achievements": {
+        "achieved": 4,
+        "total": 51
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1174180.jpg",
+      "playPeriod": "2024"
+    },
+    {
+      "id": "261570",
+      "appId": 261570,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Ori and the Blind Forest",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "平台动作",
+      "coreStructure": "类银河战士恶魔城",
+      "details": {
+        "studio": [
+          "Moon Studios GmbH"
+        ],
+        "themes": [
+          "精灵森林"
+        ]
+      },
+      "hours": 14.4,
+      "playtimeMinutes": 866,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1668003295,
+      "achievements": {
+        "achieved": 50,
+        "total": 50
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/261570.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "1525700",
+      "appId": 1525700,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Tavern Master",
+      "genreIds": [
+        2,
+        28
+      ],
+      "primaryGenre": "模拟经营",
+      "coreStructure": "酒馆经营",
+      "details": {
+        "studio": [
+          "Untitled Studio"
+        ],
+        "themes": [
+          "中世纪酒馆"
+        ]
+      },
+      "hours": 13.6,
+      "playtimeMinutes": 816,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1767363316,
+      "achievements": {
+        "achieved": 11,
+        "total": 17
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1525700.jpg",
+      "playPeriod": "2025–2026"
+    },
+    {
+      "id": "1483870",
+      "appId": 1483870,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Draw & Guess",
+      "genreIds": [
+        4,
+        23
+      ],
+      "primaryGenre": "休闲派对",
+      "coreStructure": "绘画猜词",
+      "details": {
+        "studio": [
+          "Acureus"
+        ],
+        "themes": [
+          "派对绘画"
+        ]
+      },
+      "hours": 13.4,
+      "playtimeMinutes": 803,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1709547368,
+      "achievements": {
+        "achieved": 0,
+        "total": 29
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1483870.jpg",
+      "playPeriod": "2024"
+    },
+    {
+      "id": "1426210",
+      "appId": 1426210,
+      "source": "steam",
+      "platform": "steam",
+      "name": "It Takes Two",
+      "genreIds": [
+        1,
+        25
+      ],
+      "primaryGenre": "动作冒险",
+      "coreStructure": "合作闯关",
+      "details": {
+        "studio": [
+          "Hazelight Studios"
+        ],
+        "themes": [
+          "童话冒险"
+        ]
+      },
+      "hours": 12.9,
+      "playtimeMinutes": 777,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1670081633,
+      "achievements": {
+        "achieved": 10,
+        "total": 20
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1426210.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "2515020",
+      "appId": 2515020,
+      "source": "steam",
+      "platform": "steam",
+      "name": "FINAL FANTASY XVI",
+      "genreIds": [
+        1,
+        3
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "叙事驱动",
+      "details": {
+        "studio": [
+          "Square Enix"
+        ],
+        "themes": [
+          "黑暗奇幻"
+        ]
+      },
+      "hours": 12.9,
+      "playtimeMinutes": 777,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1728220846,
+      "achievements": {
+        "achieved": 8,
+        "total": 69
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/2515020.jpg",
+      "playPeriod": "2024"
+    },
+    {
+      "id": "1676840",
+      "appId": 1676840,
+      "source": "steam",
+      "platform": "steam",
+      "name": "For The King II",
+      "genreIds": [
+        2,
+        3,
+        23,
+        25
+      ],
+      "primaryGenre": "角色扮演",
+      "coreStructure": "回合制冒险",
+      "details": {
+        "studio": [
+          "IronOak Games"
+        ],
+        "themes": [
+          "桌游奇幻"
+        ]
+      },
+      "hours": 11.7,
+      "playtimeMinutes": 700,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1756740109,
+      "achievements": {
+        "achieved": 20,
+        "total": 126
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1676840.jpg",
+      "playPeriod": "2025"
+    },
+    {
+      "id": "387290",
+      "appId": 387290,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Ori and the Blind Forest: Definitive Edition",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "平台动作",
+      "coreStructure": "类银河战士恶魔城",
+      "details": {
+        "studio": [
+          "Moon Studios GmbH"
+        ],
+        "themes": [
+          "精灵森林"
+        ]
+      },
+      "hours": 10.9,
+      "playtimeMinutes": 656,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1669099042,
+      "achievements": {
+        "achieved": 57,
+        "total": 57
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/387290.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "632360",
+      "appId": 632360,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Risk of Rain 2",
+      "genreIds": [
+        1,
+        23
+      ],
+      "primaryGenre": "第三人称射击",
+      "coreStructure": "Roguelite",
+      "details": {
+        "modes": [
+          "合作"
+        ],
+        "themes": [
+          "科幻"
+        ],
+        "studio": [
+          "Hopoo Games"
+        ]
+      },
+      "hours": 10.7,
+      "playtimeMinutes": 640,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1657644924,
+      "achievements": {
+        "achieved": 38,
+        "total": 171
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/632360.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "3681010",
+      "appId": 3681010,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Nioh 3",
+      "genreIds": [
+        1,
+        3
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "类魂",
+      "details": {
+        "studio": [
+          "Team NINJA"
+        ],
+        "themes": [
+          "战国"
+        ]
+      },
+      "hours": 10.2,
+      "playtimeMinutes": 610,
+      "playtime2WeeksMinutes": 610,
+      "lastPlayed": 1785732255,
+      "achievements": {
+        "achieved": 14,
+        "total": 64
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/3681010.jpg",
+      "playPeriod": "2026–至今"
+    },
+    {
+      "id": "883710",
+      "appId": 883710,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Resident Evil 2",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "恐怖生存",
+      "coreStructure": "资源管理",
+      "details": {
+        "studio": [
+          "CAPCOM Co., Ltd."
+        ],
+        "themes": [
+          "丧尸恐怖"
+        ]
+      },
+      "hours": 9.6,
+      "playtimeMinutes": 576,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1700835930,
+      "achievements": {
+        "achieved": 15,
+        "total": 44
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/883710.jpg",
+      "playPeriod": "2023"
+    },
+    {
+      "id": "2215430",
+      "appId": 2215430,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Ghost of Tsushima DIRECTOR'S CUT",
+      "genreIds": [
+        1,
+        25
+      ],
+      "primaryGenre": "动作冒险",
+      "coreStructure": "开放世界",
+      "details": {
+        "studio": [
+          "Sucker Punch Productions"
+        ],
+        "themes": [
+          "武士时代"
+        ]
+      },
+      "hours": 8.9,
+      "playtimeMinutes": 534,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1733147392,
+      "achievements": {
+        "achieved": 3,
+        "total": 77
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/2215430.jpg",
+      "playPeriod": "2024"
+    },
+    {
+      "id": "548430",
+      "appId": 548430,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Deep Rock Galactic",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "第一人称射击",
+      "coreStructure": "合作采掘",
+      "details": {
+        "studio": [
+          "Ghost Ship Games"
+        ],
+        "themes": [
+          "太空矿业"
+        ]
+      },
+      "hours": 8.4,
+      "playtimeMinutes": 506,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1705931157,
+      "achievements": {
+        "achieved": 6,
+        "total": 69
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/548430.jpg",
+      "playPeriod": "2022–2024"
+    },
+    {
+      "id": "1172470",
+      "appId": 1172470,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Apex Legends",
+      "genreIds": [
+        1,
+        25,
+        37
+      ],
+      "primaryGenre": "第一人称射击",
+      "coreStructure": "大逃杀",
+      "details": {
+        "studio": [
+          "Respawn"
+        ],
+        "themes": [
+          "科幻竞技"
+        ]
+      },
+      "hours": 8.1,
+      "playtimeMinutes": 487,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1709577806,
+      "achievements": {
+        "achieved": 4,
+        "total": 12
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1172470.jpg",
+      "playPeriod": "2022–2024"
+    },
+    {
+      "id": "812140",
+      "appId": 812140,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Assassin's Creed Odyssey",
+      "genreIds": [
+        1,
+        3,
+        25
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "开放世界",
+      "details": {
+        "studio": [
+          "Ubisoft Quebec"
+        ],
+        "themes": [
+          "古希腊"
+        ]
+      },
+      "hours": 8,
+      "playtimeMinutes": 480,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1712295994,
+      "achievements": {
+        "achieved": 9,
+        "total": 93
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/812140.jpg",
+      "playPeriod": "2024"
+    },
+    {
+      "id": "1237970",
+      "appId": 1237970,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Titanfall® 2",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "第一人称射击",
+      "coreStructure": "战役推进",
+      "details": {
+        "studio": [
+          "Respawn Entertainment"
+        ],
+        "themes": [
+          "机甲科幻"
+        ]
+      },
+      "hours": 7.1,
+      "playtimeMinutes": 426,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1662777604,
+      "achievements": {
+        "achieved": 35,
+        "total": 50
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1237970.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "242760",
+      "appId": 242760,
+      "source": "steam",
+      "platform": "steam",
+      "name": "The Forest",
+      "genreIds": [
+        1,
+        23,
+        25,
+        28
+      ],
+      "primaryGenre": "恐怖生存",
+      "coreStructure": "生存建造",
+      "details": {
+        "studio": [
+          "Endnight Games Ltd"
+        ],
+        "themes": [
+          "荒岛恐怖"
+        ]
+      },
+      "hours": 6.3,
+      "playtimeMinutes": 380,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1628672443,
+      "achievements": {
+        "achieved": 4,
+        "total": 45
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/242760.jpg",
+      "playPeriod": "2021"
+    },
+    {
+      "id": "329050",
+      "appId": 329050,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Devil May Cry 4 Special Edition",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "砍杀动作",
+      "coreStructure": "连招战斗",
+      "details": {
+        "studio": [
+          "CAPCOM Co., Ltd."
+        ],
+        "themes": [
+          "哥特恶魔"
+        ]
+      },
+      "hours": 5.8,
+      "playtimeMinutes": 347,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1669988419,
+      "achievements": {
+        "achieved": 1,
+        "total": 42
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/329050.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "739630",
+      "appId": 739630,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Phasmophobia",
+      "genreIds": [
+        1,
+        23,
+        70
+      ],
+      "primaryGenre": "恐怖生存",
+      "coreStructure": "合作调查",
+      "details": {
+        "studio": [
+          "Kinetic Games"
+        ],
+        "themes": [
+          "灵异调查"
+        ]
+      },
+      "hours": 5.7,
+      "playtimeMinutes": 344,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1642686726,
+      "achievements": {
+        "achieved": 0,
+        "total": 54
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/739630.jpg",
+      "playPeriod": "2022"
+    },
+    {
+      "id": "2567870",
+      "appId": 2567870,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Chained Together",
+      "genreIds": [
+        4,
+        23,
+        25,
+        28
+      ],
+      "primaryGenre": "平台动作",
+      "coreStructure": "合作攀登",
+      "details": {
+        "studio": [
+          "Anegar Games"
+        ],
+        "themes": [
+          "地狱攀登"
+        ]
+      },
+      "hours": 4.7,
+      "playtimeMinutes": 281,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1778147228,
+      "achievements": {
+        "achieved": 12,
+        "total": 16
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/2567870.jpg",
+      "playPeriod": "2026"
+    },
+    {
+      "id": "2381590",
+      "appId": 2381590,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Only Up!",
+      "genreIds": [
+        4,
+        23,
+        25,
+        28
+      ],
+      "primaryGenre": "平台动作",
+      "coreStructure": "攀登挑战",
+      "details": {
+        "themes": [
+          "物理平台"
+        ],
+        "studio": [
+          "SCKR Games"
+        ]
+      },
+      "hours": 4.4,
+      "playtimeMinutes": 264,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1688216352,
+      "achievements": {
+        "achieved": 1,
+        "total": 1
+      },
+      "achievementSource": "steam-community",
+      "perfect": true,
+      "cover": "assets/covers/2381590.jpg",
+      "playPeriod": "2023"
+    },
+    {
+      "id": "1091500",
+      "appId": 1091500,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Cyberpunk 2077",
+      "genreIds": [
+        3
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "开放世界",
+      "details": {
+        "studio": [
+          "CD PROJEKT RED"
+        ],
+        "themes": [
+          "赛博朋克"
+        ]
+      },
+      "hours": 4.3,
+      "playtimeMinutes": 258,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1731079919,
+      "achievements": {
+        "achieved": 1,
+        "total": 57
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/1091500.jpg",
+      "playPeriod": "2024"
+    },
+    {
+      "id": "2384580",
+      "appId": 2384580,
+      "source": "steam",
+      "platform": "steam",
+      "name": "DYNASTY WARRIORS: ORIGINS",
+      "genreIds": [
+        1,
+        2,
+        3
+      ],
+      "primaryGenre": "砍杀动作",
+      "coreStructure": "无双战斗",
+      "details": {
+        "studio": [
+          "KOEI TECMO GAMES CO., LTD."
+        ],
+        "themes": [
+          "三国历史"
+        ]
+      },
+      "hours": 3.4,
+      "playtimeMinutes": 206,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1742222023,
+      "achievements": {
+        "achieved": 2,
+        "total": 56
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/2384580.jpg",
+      "playPeriod": "2025"
+    },
+    {
+      "id": "2246340",
+      "appId": 2246340,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Monster Hunter Wilds",
+      "genreIds": [
+        1,
+        3,
+        25
+      ],
+      "primaryGenre": "动作RPG",
+      "coreStructure": "共斗狩猎",
+      "details": {
+        "studio": [
+          "Capcom"
+        ],
+        "modes": [
+          "合作"
+        ],
+        "themes": [
+          "怪物狩猎"
+        ]
+      },
+      "hours": 2.9,
+      "playtimeMinutes": 173,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1742653557,
+      "achievements": {
+        "achieved": 5,
+        "total": 50
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/2246340.jpg",
+      "playPeriod": "2025"
+    },
+    {
+      "id": "601150",
+      "appId": 601150,
+      "source": "steam",
+      "platform": "steam",
+      "name": "Devil May Cry 5",
+      "genreIds": [
+        1
+      ],
+      "primaryGenre": "砍杀动作",
+      "coreStructure": "连招战斗",
+      "details": {
+        "studio": [
+          "CAPCOM Co., Ltd."
+        ],
+        "themes": [
+          "哥特恶魔"
+        ]
+      },
+      "hours": 2,
+      "playtimeMinutes": 121,
+      "playtime2WeeksMinutes": 0,
+      "lastPlayed": 1686748333,
+      "achievements": {
+        "achieved": 2,
+        "total": 55
+      },
+      "achievementSource": "steam-community",
+      "perfect": false,
+      "cover": "assets/covers/601150.jpg",
+      "playPeriod": "2023"
+    },
+    {
+      "source": "manual",
+      "platform": "battlenet",
+      "hours": null,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "perfect": false,
+      "cover": "assets/covers/manual-wow.png",
+      "id": "manual-wow",
+      "name": "魔兽世界",
+      "playPeriod": "2008–至今",
+      "durationLabel": "70 级版本接触，90 级版本正式游玩",
+      "note": "70 级版本初次接触；小学四年级在 90 级《熊猫人之谜》时期正式游玩，之后跨多个资料片断续回归。",
+      "primaryGenre": "MMORPG",
+      "coreStructure": "长期运营",
+      "details": {
+        "studio": [
+          "Blizzard Entertainment"
+        ],
+        "modes": [
+          "团队协作"
+        ],
+        "themes": [
+          "魔兽宇宙"
+        ]
+      }
+    },
+    {
+      "source": "manual",
+      "platform": "battlenet",
+      "hours": null,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "perfect": false,
+      "cover": "assets/covers/manual-heroes.webp",
+      "id": "manual-heroes",
+      "name": "风暴英雄",
+      "playPeriod": "2017–2018",
+      "durationLabel": "高一时期游玩",
+      "note": "高一（2017–2018）期间阶段性游玩，基本只打快速匹配。",
+      "primaryGenre": "多人竞技",
+      "coreStructure": "MOBA",
+      "comment": "高一（2017–2018）期间游玩，基本只打快速匹配。",
+      "details": {
+        "studio": [
+          "Blizzard Entertainment"
+        ],
+        "modes": [
+          "团队协作"
+        ],
+        "themes": [
+          "暴雪宇宙"
+        ]
+      }
+    },
+    {
+      "source": "manual",
+      "platform": "tencent",
+      "hours": null,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "perfect": false,
+      "cover": "assets/covers/manual-lol.jpg",
+      "id": "manual-lol",
+      "name": "英雄联盟",
+      "playPeriod": "2011–至今",
+      "durationLabel": "S1 入坑",
+      "note": "国服早期玩家，单双排历史最高超凡大师，长期关注版本变化、英雄配合与即时决策。",
+      "primaryGenre": "多人竞技",
+      "coreStructure": "MOBA",
+      "highlight": {
+        "label": "历史最高",
+        "value": "超凡大师",
+        "tone": "rank-violet"
+      },
+      "details": {
+        "studio": [
+          "Riot Games"
+        ],
+        "operator": [
+          "腾讯"
+        ],
+        "form": [
+          "长期运营"
+        ],
+        "modes": [
+          "竞技"
+        ],
+        "themes": [
+          "符文之地"
+        ]
+      }
+    },
+    {
+      "source": "manual",
+      "platform": "tencent",
+      "hours": null,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "perfect": false,
+      "cover": "assets/covers/manual-cf-icon.svg",
+      "id": "manual-cf",
+      "name": "穿越火线",
+      "playPeriod": "2010–2012",
+      "primaryGenre": "第一人称射击",
+      "coreStructure": "多人对战",
+      "details": {
+        "studio": [
+          "Smilegate"
+        ],
+        "themes": [
+          "现代军事"
+        ]
+      }
+    },
+    {
+      "source": "manual",
+      "platform": "tencent",
+      "hours": null,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "perfect": false,
+      "cover": "assets/covers/manual-dnf-icon.svg",
+      "id": "manual-dnf",
+      "name": "地下城与勇士",
+      "playPeriod": "2010–2017",
+      "primaryGenre": "动作RPG",
+      "coreStructure": "横版刷图",
+      "details": {
+        "studio": [
+          "Neople"
+        ],
+        "themes": [
+          "阿拉德大陆"
+        ]
+      }
+    },
+    {
+      "source": "manual",
+      "platform": "battlenet",
+      "hours": null,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "perfect": false,
+      "cover": "assets/covers/manual-hearthstone.png",
+      "id": "manual-hearthstone",
+      "name": "炉石传说",
+      "playPeriod": "2015–2022",
+      "durationLabel": "黑石山时期开始，2022 年达到传说",
+      "note": "从《黑石山的火焰》时期开始游玩，持续至 2022 年；2022 年达到传说段位。",
+      "primaryGenre": "卡牌策略",
+      "coreStructure": "牌组构筑",
+      "highlight": {
+        "label": "历史最高",
+        "value": "传说",
+        "tone": "rank-gold"
+      },
+      "details": {
+        "studio": [
+          "Blizzard Entertainment"
+        ],
+        "modes": [
+          "PvP"
+        ],
+        "lineage": [
+          "历史最高：传说"
+        ],
+        "themes": [
+          "魔幻卡牌"
+        ]
+      }
+    },
+    {
+      "source": "manual",
+      "platform": "battlenet",
+      "hours": null,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "perfect": false,
+      "cover": "assets/covers/manual-diablo.jpg",
+      "id": "manual-diablo",
+      "name": "暗黑破坏神 III",
+      "playPeriod": "2012",
+      "durationLabel": "仅游玩本体版本",
+      "note": "只玩过《暗黑破坏神 III》本体中以迪亚波罗为核心的主线版本，未将系列其他作品计入。",
+      "primaryGenre": "动作RPG",
+      "coreStructure": "刷宝",
+      "details": {
+        "studio": [
+          "Blizzard Entertainment"
+        ],
+        "themes": [
+          "暗黑宇宙"
+        ]
+      }
+    },
+    {
+      "source": "manual",
+      "platform": "other",
+      "hours": null,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "perfect": false,
+      "cover": "assets/covers/manual-ffxiv.jpg",
+      "id": "manual-ffxiv",
+      "name": "最终幻想 XIV",
+      "playPeriod": "2018",
+      "durationLabel": "约 2018 年达到当时满级",
+      "primaryGenre": "MMORPG",
+      "coreStructure": "长期运营",
+      "comment": "高中时期游玩，约 2018 年达到当时满级，并反复挑战过飞船或机械主题副本；具体副本名待回忆。",
+      "details": {
+        "studio": [
+          "Square Enix"
+        ],
+        "themes": [
+          "最终幻想"
+        ]
+      }
+    },
+    {
+      "source": "manual",
+      "platform": "tencent",
+      "hours": null,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "perfect": false,
+      "cover": "assets/covers/230410.jpg",
+      "id": "manual-warframe-cn",
+      "name": "星际战甲（国服）",
+      "playPeriod": "2019–2020",
+      "primaryGenre": "第三人称射击",
+      "coreStructure": "刷宝",
+      "details": {
+        "studio": [
+          "Digital Extremes"
+        ],
+        "themes": [
+          "科幻"
+        ]
+      }
+    },
+    {
+      "source": "manual",
+      "platform": "other",
+      "hours": null,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "perfect": false,
+      "cover": "assets/covers/manual-tianxia2-icon.svg",
+      "id": "manual-tianxia2",
+      "name": "天下贰",
+      "playPeriod": "2011",
+      "primaryGenre": "MMORPG",
+      "coreStructure": "即时战斗",
+      "details": {
+        "studio": [
+          "网易游戏"
+        ],
+        "themes": [
+          "东方玄幻"
+        ]
+      }
+    }
+  ],
+  "diagnostics": {
+    "localAppsWithPlaytime": 69,
+    "resolvedNames": 68,
+    "unresolvedAppIds": [
+      630
+    ],
+    "confirmedExcludedLowPlaytimeAppIds": [
+      630,
+      2784470,
+      738510
+    ],
+    "parserFailures": [],
+    "communityStatsUsedAppIds": [
+      730,
+      102600,
+      201790,
+      203160,
+      230410,
+      239140,
+      242760,
+      261570,
+      292030,
+      329050,
+      335300,
+      367520,
+      374320,
+      387290,
+      388080,
+      391220,
+      485510,
+      526870,
+      527230,
+      548430,
+      570940,
+      578080,
+      582010,
+      582160,
+      601150,
+      632360,
+      728880,
+      739630,
+      812140,
+      814380,
+      883710,
+      1030300,
+      1057090,
+      1086940,
+      1091500,
+      1097150,
+      1172470,
+      1174180,
+      1237970,
+      1245620,
+      1325200,
+      1366540,
+      1426210,
+      1446780,
+      1448440,
+      1483870,
+      1501750,
+      1522820,
+      1525700,
+      1593500,
+      1627720,
+      1676840,
+      1868140,
+      2215430,
+      2246340,
+      2277560,
+      2322010,
+      2358720,
+      2381590,
+      2384580,
+      2515020,
+      2567870
+    ],
+    "communityVsLocalMismatches": [
+      {
+        "appId": 203160,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 50,
+          "total": 50
+        }
+      },
+      {
+        "appId": 329050,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 1,
+          "total": 42
+        }
+      },
+      {
+        "appId": 387290,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 57,
+          "total": 57
+        }
+      },
+      {
+        "appId": 388080,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 1,
+          "total": 2
+        }
+      },
+      {
+        "appId": 527230,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 47,
+          "total": 78
+        }
+      },
+      {
+        "appId": 548430,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 6,
+          "total": 69
+        }
+      },
+      {
+        "appId": 601150,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 2,
+          "total": 55
+        }
+      },
+      {
+        "appId": 632360,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 38,
+          "total": 171
+        }
+      },
+      {
+        "appId": 728880,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 21,
+          "total": 54
+        }
+      },
+      {
+        "appId": 739630,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 0,
+          "total": 54
+        }
+      },
+      {
+        "appId": 1057090,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 37,
+          "total": 37
+        }
+      },
+      {
+        "appId": 1483870,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 0,
+          "total": 29
+        }
+      },
+      {
+        "appId": 1522820,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 11,
+          "total": 38
+        }
+      },
+      {
+        "appId": 2384580,
+        "local": {
+          "achieved": 0,
+          "total": 0
+        },
+        "community": {
+          "achieved": 2,
+          "total": 56
+        }
+      },
+      {
+        "appId": 1676840,
+        "local": {
+          "achieved": 20,
+          "total": 90
+        },
+        "community": {
+          "achieved": 20,
+          "total": 126
+        }
+      },
+      {
+        "appId": 1868140,
+        "local": {
+          "achieved": 37,
+          "total": 43
+        },
+        "community": {
+          "achieved": 38,
+          "total": 43
+        }
+      }
+    ],
+    "achievementTotalsStillUnknown": [
+      15100,
+      33230,
+      48190
+    ],
+    "communityCacheEntries": 66,
+    "communityRefreshedAppIds": [],
+    "communityPreservedAppIds": [],
+    "communityFetchFailures": {}
+  }
+}

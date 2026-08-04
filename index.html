@@ -378,6 +378,70 @@
       aspect-ratio: 16 / 9;
     }
 
+    .game-database-entry {
+      min-height: 72px;
+      padding: 10px 2px;
+      display: grid;
+      grid-template-columns: 3px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 15px;
+      border-top: 1px solid rgba(148, 163, 184, .18);
+      border-bottom: 1px solid rgba(148, 163, 184, .18);
+      color: inherit;
+      text-decoration: none;
+      transition: border-color .18s ease, background .18s ease;
+    }
+
+    .game-database-entry::before {
+      content: "";
+      width: 3px;
+      height: 100%;
+      min-height: 38px;
+      border-radius: 3px;
+      background: linear-gradient(var(--accent), rgba(94, 234, 212, .16));
+      opacity: .76;
+      transition: opacity .18s ease, box-shadow .18s ease;
+    }
+
+    .game-database-entry:hover,
+    .game-database-entry:focus-visible {
+      border-color: rgba(94, 234, 212, .48);
+      background: rgba(30, 41, 59, .22);
+      outline: none;
+    }
+
+    .game-database-entry:hover::before,
+    .game-database-entry:focus-visible::before {
+      opacity: 1;
+      box-shadow: 0 0 16px rgba(94, 234, 212, .18);
+    }
+
+    .game-database-title {
+      color: var(--text-strong);
+      font-size: 21px;
+      line-height: 1.2;
+      font-weight: 750;
+      letter-spacing: 0;
+    }
+
+    .game-database-entry-action {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    .game-database-entry-action span {
+      display: inline-block;
+      transition: transform .18s ease;
+    }
+
+    .game-database-entry:hover .game-database-entry-action span,
+    .game-database-entry:focus-visible .game-database-entry-action span {
+      transform: translate(2px, -2px);
+    }
+
+
     /* Bottom XP easter egg: linked from Project 1 without covering content */
     .fixed-xp-hud {
       position: relative;
@@ -592,6 +656,14 @@
       .xp-percent { font-size: 12px; letter-spacing: .06em; }
       .xp-stats { gap: 9px; }
       .gallery { grid-template-columns: 1fr; }
+      .game-database-entry {
+        min-height: 68px;
+        padding: 11px 2px;
+        grid-template-columns: 3px minmax(0, 1fr) auto;
+        gap: 12px;
+      }
+      .game-database-title { font-size: 19px; }
+      .game-database-entry-action { grid-column: 3; grid-row: 1; }
     }
   </style>
 </head>
@@ -608,6 +680,7 @@
             <li><a class="active" href="#about">关于</a></li>
             <li><a href="#projects">项目</a></li>
             <li><a href="#demos">演示</a></li>
+            <li><a href="#game-log">游戏履历</a></li>
             <li><a href="resume.pdf" target="_blank" rel="nofollow noopener" class="external">Resume</a></li>
           </ul>
         </nav>
@@ -693,6 +766,14 @@
         </article>
       </section>
 
+      <section id="game-log">
+        <a class="game-database-entry" href="games/" aria-label="打开游戏履历">
+          <span class="game-database-title">游戏履历</span>
+          <span class="game-database-entry-action">查看履历 <span aria-hidden="true">↗</span></span>
+        </a>
+
+      </section>
+
 
       <footer>周钰峰 · 2026.7 — Design inspired by <a href="https://brittanychiang.com" target="_blank" rel="noopener">Brittany Chiang</a></footer>
     </main>
@@ -754,6 +835,7 @@
         window.setTimeout(() => xpBar.classList.remove('is-pulsing'), 1500);
       });
     });
+
   </script>
 
 </body>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>游戏履历 · 周钰峰</title>
+  <link rel="stylesheet" href="styles.css?v=20260804-entry-a">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="返回游戏履历顶部">
+        <span>Game Log</span>
+      </a>
+      <div class="topbar-actions">
+        <a class="home-link" href="../">个人主页</a>
+        <a id="steam-profile-link" class="steam-link" href="#" target="_blank" rel="noopener noreferrer">
+          Steam <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="intro-band" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <div class="intro-heading-row">
+          <div>
+            <span class="intro-eyebrow">PLAY HISTORY / 2008—NOW</span>
+            <h1 id="page-title">游戏履历</h1>
+          </div>
+          <span id="archive-summary" class="archive-summary" hidden></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="archive" aria-label="游戏档案">
+      <div class="archive-body">
+        <div id="archive-platform-tabs" class="archive-platform-tabs" role="tablist" aria-label="游戏平台">
+          <button class="platform-tab is-active" type="button" role="tab" aria-selected="true" data-platform="steam">
+            Steam <span id="steam-platform-count"></span>
+          </button>
+          <button class="platform-tab" type="button" role="tab" aria-selected="false" data-platform="battlenet">
+            战网 <span id="battlenet-platform-count"></span>
+          </button>
+          <button class="platform-tab" type="button" role="tab" aria-selected="false" data-platform="tencent">
+            腾讯 / WeGame <span id="tencent-platform-count"></span>
+          </button>
+          <button class="platform-tab" type="button" role="tab" aria-selected="false" data-platform="other">
+            其他平台 <span id="other-platform-count"></span>
+          </button>
+        </div>
+
+        <div class="archive-controls">
+          <label class="search-field">
+            <span class="sr-only">搜索游戏</span>
+            <input id="game-search" type="search" placeholder="搜索游戏名称" autocomplete="off">
+          </label>
+          <label class="select-field">
+            <span class="sr-only">排序方式</span>
+            <select id="archive-sort">
+              <option value="hours">按游戏时长</option>
+              <option value="completion">按成就完成度</option>
+              <option value="recent">按最近游玩</option>
+              <option value="type">按主类型</option>
+              <option value="name">按游戏名称</option>
+            </select>
+          </label>
+          <label class="select-field">
+            <span class="sr-only">主类型</span>
+            <select id="archive-type">
+              <option value="all">全部类型</option>
+            </select>
+          </label>
+          <div class="segments" role="group" aria-label="档案筛选">
+            <button class="segment is-active" type="button" data-filter="all">全部</button>
+            <button class="segment" type="button" data-filter="perfect">全成就</button>
+          </div>
+          <span id="result-count" class="result-count" aria-live="polite"></span>
+        </div>
+
+        <div id="game-list" class="game-list" aria-live="polite"></div>
+        <div id="empty-state" class="empty-state" hidden>没有匹配的游戏记录。</div>
+      </div>
+    </section>
+
+  </main>
+
+  <template id="cover-placeholder-template">
+    <div class="cover-placeholder" aria-hidden="true"><span></span></div>
+  </template>
+
+  <script src="app.js?v=20260804-entry-a" defer></script>
+</body>
+</html>
