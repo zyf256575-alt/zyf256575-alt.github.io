@@ -259,8 +259,8 @@ function renderProfile(data) {
 }
 
 function matchesPlatformFilter(game, filter, platform) {
-  if (filter === "active") return isRecentlyActive(game);
   if (platformOf(game) !== platform) return false;
+  if (filter === "active") return isRecentlyActive(game);
   if (filter === "perfect" && !game.perfect) return false;
   return true;
 }
@@ -337,9 +337,12 @@ function renderArchive() {
 
 function populateGenres() {
   const select = document.querySelector("#archive-type");
+  const platformGames = state.data.games.filter(
+    (game) => platformOf(game) === state.platform,
+  );
   const sourceGames = state.filter === "active"
-    ? state.data.games.filter(isRecentlyActive)
-    : state.data.games.filter((game) => platformOf(game) === state.platform);
+    ? platformGames.filter(isRecentlyActive)
+    : platformGames;
   const genreCounts = sourceGames
     .reduce((counts, game) => {
       const genre = game.primaryGenre || "其他";
@@ -368,7 +371,7 @@ function syncFilterButtons() {
 }
 
 function isPlatformSelected(filter, currentPlatform, buttonPlatform) {
-  return filter !== "active" && currentPlatform === buttonPlatform;
+  return currentPlatform === buttonPlatform;
 }
 
 function syncPlatformButtons() {
@@ -385,7 +388,7 @@ function syncPlatformButtons() {
 
 function setPlatform(platform) {
   state.platform = platform;
-  state.filter = "all";
+  if (state.filter !== "active") state.filter = "all";
   state.genre = "all";
   state.sort = platform === "steam" ? "hours" : "type";
 
@@ -444,17 +447,6 @@ function renderPlatformCounts(data) {
     numberFormat.format(counts.tencent || 0);
   document.querySelector("#other-platform-count").textContent =
     numberFormat.format(counts.other || 0);
-
-  const archiveSummary = document.querySelector("#archive-summary");
-  const totalGames = Number(data.summary.totalGames);
-  const platformTotal = Object.values(counts).filter((value) =>
-    Number.isFinite(Number(value)) && Number(value) > 0
-  ).length;
-  if (archiveSummary && Number.isFinite(totalGames) && platformTotal > 0) {
-    archiveSummary.textContent =
-      `${numberFormat.format(totalGames)} GAMES / ${platformTotal} PLATFORMS`;
-    archiveSummary.hidden = false;
-  }
 }
 
 function showArchiveError(message) {

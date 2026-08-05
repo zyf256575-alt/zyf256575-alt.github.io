@@ -148,17 +148,6 @@ p {
   letter-spacing: .11em;
 }
 
-.archive-summary {
-  padding-bottom: 3px;
-  color: #748087;
-  font-family: "SF Mono", "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 10px;
-  line-height: 1.4;
-  font-weight: 650;
-  letter-spacing: .06em;
-  white-space: nowrap;
-}
-
 .intro-text {
   max-width: 680px;
   margin-bottom: 22px;
@@ -700,10 +689,6 @@ p {
 
   .intro-band h1 {
     font-size: 30px;
-  }
-
-  .archive-summary {
-    padding-bottom: 0;
   }
 
   .intro-text {
