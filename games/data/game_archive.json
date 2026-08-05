@@ -2339,6 +2339,7 @@
         "total": 0
       },
       "perfect": false,
+      "active": true,
       "cover": "assets/covers/manual-lol.jpg",
       "id": "manual-lol",
       "name": "英雄联盟",

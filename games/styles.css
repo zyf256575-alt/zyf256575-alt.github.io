@@ -309,7 +309,7 @@ p {
   z-index: 10;
   min-height: 66px;
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) 174px 164px auto auto;
+  grid-template-columns: minmax(220px, 1fr) 174px 164px auto;
   align-items: center;
   gap: 12px;
   padding: 10px 0;
@@ -381,14 +381,6 @@ p {
 .core-structure-tag {
   border-color: rgba(83, 211, 189, 0.38);
   color: #89d8ca;
-}
-
-.result-count {
-  min-width: 70px;
-  color: var(--muted);
-  font-size: 12px;
-  text-align: right;
-  font-variant-numeric: tabular-nums;
 }
 
 .game-list {
@@ -740,11 +732,6 @@ p {
   .segment {
     flex: 1;
     min-width: 0;
-  }
-
-  .result-count {
-    min-width: 0;
-    text-align: left;
   }
 
   .game-row {

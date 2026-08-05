@@ -30,6 +30,7 @@ function formatHours(hours) {
 }
 
 function isRecentlyActive(game) {
+  if (game?.active === true) return true;
   const minutes = Number(game?.playtime2WeeksMinutes);
   return Number.isFinite(minutes) && minutes > 0;
 }
@@ -201,8 +202,7 @@ function createGameRow(game) {
 
   const details = createGameDetails(game, [...seenTags]);
   const playPeriod = String(game.playPeriod || "").trim();
-  const recentlyActive =
-    platformOf(game) === "steam" && isRecentlyActive(game);
+  const recentlyActive = isRecentlyActive(game);
   if (details || playPeriod || recentlyActive) {
     const metaLine = make("div", "game-meta-line");
     if (details) metaLine.append(details);
@@ -213,15 +213,19 @@ function createGameRow(game) {
       metaLine.append(period);
     }
     if (recentlyActive) {
-      const recentHours = hoursFormat.format(
-        Number(game.playtime2WeeksMinutes) / 60,
-      );
       const activeStatus = make("span", "game-active-status", "活跃");
-      activeStatus.title = `近两周游玩 ${recentHours} 小时`;
-      activeStatus.setAttribute(
-        "aria-label",
-        `Steam 活跃状态：近两周游玩 ${recentHours} 小时`,
-      );
+      const recentMinutes = Number(game.playtime2WeeksMinutes);
+      if (Number.isFinite(recentMinutes) && recentMinutes > 0) {
+        const recentHours = hoursFormat.format(recentMinutes / 60);
+        activeStatus.title = `近两周游玩 ${recentHours} 小时`;
+        activeStatus.setAttribute(
+          "aria-label",
+          `Steam 活跃状态：近两周游玩 ${recentHours} 小时`,
+        );
+      } else {
+        activeStatus.title = "当前活跃";
+        activeStatus.setAttribute("aria-label", "当前活跃");
+      }
       metaLine.append(activeStatus);
     }
     main.append(metaLine);
@@ -254,9 +258,15 @@ function renderProfile(data) {
   }
 }
 
+function matchesPlatformFilter(game, filter, platform) {
+  if (filter === "active") return isRecentlyActive(game);
+  if (platformOf(game) !== platform) return false;
+  if (filter === "perfect" && !game.perfect) return false;
+  return true;
+}
+
 function matchesCurrentView(game) {
-  if (platformOf(game) !== state.platform) return false;
-  if (state.filter === "perfect" && !game.perfect) return false;
+  if (!matchesPlatformFilter(game, state.filter, state.platform)) return false;
   if (
     state.genre !== "all" &&
     game.primaryGenre !== state.genre
@@ -323,14 +333,14 @@ function renderArchive() {
   const emptyState = document.querySelector("#empty-state");
   list.replaceChildren(...games.map(createGameRow));
   emptyState.hidden = games.length > 0;
-  document.querySelector("#result-count").textContent =
-    `${numberFormat.format(games.length)} 项`;
 }
 
 function populateGenres() {
   const select = document.querySelector("#archive-type");
-  const genreCounts = state.data.games
-    .filter((game) => platformOf(game) === state.platform)
+  const sourceGames = state.filter === "active"
+    ? state.data.games.filter(isRecentlyActive)
+    : state.data.games.filter((game) => platformOf(game) === state.platform);
+  const genreCounts = sourceGames
     .reduce((counts, game) => {
       const genre = game.primaryGenre || "其他";
       counts.set(genre, (counts.get(genre) || 0) + 1);
@@ -343,6 +353,9 @@ function populateGenres() {
   genres.forEach((genre) => {
     select.append(new Option(genre, genre));
   });
+  if (state.genre !== "all" && !genreCounts.has(state.genre)) {
+    state.genre = "all";
+  }
   select.value = state.genre;
 }
 
@@ -354,17 +367,29 @@ function syncFilterButtons() {
   });
 }
 
+function isPlatformSelected(filter, currentPlatform, buttonPlatform) {
+  return filter !== "active" && currentPlatform === buttonPlatform;
+}
+
+function syncPlatformButtons() {
+  document.querySelectorAll("[data-platform]").forEach((button) => {
+    const active = isPlatformSelected(
+      state.filter,
+      state.platform,
+      button.dataset.platform,
+    );
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-selected", String(active));
+  });
+}
+
 function setPlatform(platform) {
   state.platform = platform;
   state.filter = "all";
   state.genre = "all";
   state.sort = platform === "steam" ? "hours" : "type";
 
-  document.querySelectorAll("[data-platform]").forEach((button) => {
-    const active = button.dataset.platform === platform;
-    button.classList.toggle("is-active", active);
-    button.setAttribute("aria-selected", String(active));
-  });
+  syncPlatformButtons();
 
   const perfectButton = document.querySelector('[data-filter="perfect"]');
   perfectButton.disabled = platform !== "steam";
@@ -400,6 +425,9 @@ function wireControls() {
     button.addEventListener("click", () => {
       if (button.disabled) return;
       state.filter = button.dataset.filter;
+      if (state.filter === "active") state.genre = "all";
+      syncPlatformButtons();
+      populateGenres();
       syncFilterButtons();
       renderArchive();
     });
