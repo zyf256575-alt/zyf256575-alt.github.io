@@ -106,12 +106,71 @@ function buildGameDetailEntries(game, visibleTagValues = []) {
     .slice(0, 4);
 }
 
+function createGameEditorial(game) {
+  const review = (Array.isArray(game.review) ? game.review : [game.review])
+    .map((paragraph) => String(paragraph || "").trim())
+    .filter(Boolean);
+  const screenshots = (Array.isArray(game.screenshots) ? game.screenshots : [])
+    .filter((screenshot) => screenshot?.src);
+
+  if (!review.length && !screenshots.length) return null;
+
+  const editorial = make("div", "game-editorial");
+
+  if (review.length) {
+    const reviewBlock = make("section", "game-personal-review");
+    reviewBlock.append(make("h3", "game-editorial-title", "个人游玩记录"));
+    review.forEach((paragraph) => {
+      reviewBlock.append(make("p", "", paragraph));
+    });
+    editorial.append(reviewBlock);
+  }
+
+  if (screenshots.length) {
+    const screenshotBlock = make("section", "game-screenshot-block");
+    screenshotBlock.append(make("h3", "game-editorial-title", "游戏内截图"));
+    const gallery = make("div", "game-screenshot-gallery");
+
+    screenshots.forEach((screenshot, index) => {
+      const figure = make(
+        "figure",
+        `game-screenshot-card${index === 0 ? " is-featured" : ""}`,
+      );
+      const link = document.createElement("a");
+      link.href = screenshot.src;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.setAttribute("aria-label", `${screenshot.caption || game.name}，打开原图`);
+
+      const image = document.createElement("img");
+      image.src = screenshot.src;
+      image.alt = screenshot.alt || `${game.name} 游戏内截图`;
+      image.loading = "lazy";
+      image.decoding = "async";
+      link.append(image);
+      figure.append(link);
+
+      if (screenshot.caption) {
+        figure.append(make("figcaption", "", screenshot.caption));
+      }
+      gallery.append(figure);
+    });
+
+    screenshotBlock.append(gallery);
+    editorial.append(screenshotBlock);
+  }
+
+  return editorial;
+}
+
 function createGameDetails(game, visibleTagValues = []) {
   const entries = buildGameDetailEntries(game, visibleTagValues);
+  const editorial = createGameEditorial(game);
 
-  if (!entries.length) return null;
+  if (!entries.length && !editorial) return null;
 
   const details = make("details", "game-details");
+  if (editorial) details.classList.add("has-editorial");
   details.append(make("summary", "", "详情"));
   if (entries.length) {
     const strip = make("div", "game-detail-strip");
@@ -125,6 +184,7 @@ function createGameDetails(game, visibleTagValues = []) {
     });
     details.append(strip);
   }
+  if (editorial) details.append(editorial);
   return details;
 }
 

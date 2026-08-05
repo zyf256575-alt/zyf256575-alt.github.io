@@ -470,6 +470,20 @@ p {
   color: var(--text);
 }
 
+.game-details.has-editorial[open] {
+  width: 100%;
+  max-width: 620px;
+}
+
+.game-details.has-editorial[open] ~ .game-play-period,
+.game-details.has-editorial[open] ~ .game-active-status {
+  display: none;
+}
+
+.game-row:has(.game-details.has-editorial[open]) {
+  align-items: start;
+}
+
 .game-play-period {
   color: #8e999f;
   font-size: 11px;
@@ -528,6 +542,83 @@ p {
   min-width: 0;
   color: #a8b0b4;
   overflow-wrap: anywhere;
+}
+
+.game-editorial {
+  width: 100%;
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid #30383d;
+  border-radius: 6px;
+  background: #131719;
+}
+
+.game-editorial-title {
+  margin: 0 0 10px;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.game-personal-review p {
+  margin: 0;
+  color: #c2c9cc;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.game-personal-review p + p {
+  margin-top: 12px;
+}
+
+.game-screenshot-block {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #2b3236;
+}
+
+.game-screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.game-screenshot-card {
+  min-width: 0;
+  grid-column: span 2;
+  margin: 0;
+}
+
+.game-screenshot-card.is-featured {
+  grid-column: 1 / -1;
+}
+
+.game-screenshot-card a {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #343d42;
+  border-radius: 4px;
+  background: #090c0e;
+}
+
+.game-screenshot-card a:hover,
+.game-screenshot-card a:focus-visible {
+  border-color: var(--teal);
+}
+
+.game-screenshot-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+}
+
+.game-screenshot-card figcaption {
+  margin-top: 5px;
+  color: #7f8a90;
+  font-size: 10px;
+  line-height: 1.45;
 }
 
 .game-hours {
@@ -747,6 +838,23 @@ p {
     grid-column: 2 / 4;
     grid-row: 2;
     margin-top: -8px;
+  }
+
+  .game-details.has-editorial[open] {
+    max-width: 100%;
+  }
+
+  .game-editorial {
+    padding: 13px;
+  }
+
+  .game-screenshot-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .game-screenshot-card,
+  .game-screenshot-card.is-featured {
+    grid-column: 1;
   }
 
 }

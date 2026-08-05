@@ -14,13 +14,13 @@
     "localSteamHours": 5472.3,
     "localPerfectGames": 27,
     "localAchievements": 2174,
-    "manualGames": 10,
-    "totalGames": 75,
+    "manualGames": 11,
+    "totalGames": 76,
     "platformCounts": {
       "steam": 65,
       "battlenet": 4,
       "tencent": 4,
-      "other": 2
+      "other": 3
     }
   },
   "games": [
@@ -58,7 +58,33 @@
       "perfect": false,
       "cover": "assets/covers/1366540-header.jpg",
       "playPeriod": "2022–2025",
-      "note": "持续关注产线规划、吞吐瓶颈与系统扩张。"
+      "review": [
+        "《戴森球计划》是我接触的第一款单机建造游戏。通关流程本身并不困难，真正让我投入的，是终局阶段种类繁多、散落各处的生产链让我觉得烦琐。起初我只是想把零散产线整理成模块，后来目标越滚越大：在由数十个恒星系和大量行星组成的星区里，单独把一整颗行星改造成只生产终极产物“白糖”（宇宙矩阵）的超级工厂。所有原矿都从其他行星和恒星系通过星际物流输入，中间产物全部在这颗行星内部加工，最终只输出白糖。",
+        "为了把工厂铺满整颗球形行星，我利用了游戏的网格特性：越接近两极，规则方格之间的间隙越大；通过蓝图偏转绕过常规网格限制，可以进一步提高单位面积利用率。我先为每类中间产物设计超密铺蓝图单元，再复制扩展，并反复核算传送带吞吐、机器产能、增产剂供应和地表利用率。二周目最终实现了单球每分钟约 2.3 万白糖的产量，整颗行星包含近百万个建造单位，其中大部分是传送带。这个周目投入约 400 小时。",
+        "最后 100–200 小时里，搭载 GTX 1650 的旧笔记本通常只剩下 9–12 帧，但整颗行星仍像一台巨大而精密的机器持续运转：星际运输舰从不同恒星系送来原矿，遍布全球的机器、传送带与物流塔再将它们逐级汇聚为终极产物。那一刻带来的已经不只是产量上的满足，而是亲手用技术与秩序把一颗荒芜行星改造成文明机器的震撼——这也是建造游戏最打动我的工业浪漫。"
+      ],
+      "screenshots": [
+        {
+          "src": "assets/screenshots/1366540/planet-factory-overview.webp",
+          "alt": "戴森球计划中被自动化工厂覆盖的整颗行星",
+          "caption": "整球全景｜工厂铺满整颗行星"
+        },
+        {
+          "src": "assets/screenshots/1366540/interstellar-logistics.webp",
+          "alt": "戴森球计划中的星际物流运输场景",
+          "caption": "星际物流｜外部原矿持续输入"
+        },
+        {
+          "src": "assets/screenshots/1366540/dense-blueprint-modules.webp",
+          "alt": "戴森球计划中的机器传送带与密铺蓝图模块",
+          "caption": "密铺模块｜机器、传送带与模块化布局"
+        },
+        {
+          "src": "assets/screenshots/1366540/stellar-industrial-night.webp",
+          "alt": "恒星逆光下运行的戴森球计划行星工厂",
+          "caption": "工业浪漫｜恒星逆光、运输舰与行星工厂"
+        }
+      ]
     },
     {
       "id": "230410",
@@ -2479,6 +2505,31 @@
         ],
         "themes": [
           "暗黑宇宙"
+        ]
+      }
+    },
+    {
+      "source": "manual",
+      "platform": "other",
+      "hours": null,
+      "achievements": {
+        "achieved": 0,
+        "total": 0
+      },
+      "perfect": false,
+      "cover": "assets/covers/manual-warcraft3.webp",
+      "id": "manual-warcraft3",
+      "name": "魔兽争霸 III",
+      "playPeriod": "2010–2017",
+      "note": "2010–2017 年间游玩，主要体验自定义地图中的守图玩法。",
+      "primaryGenre": "即时战略",
+      "coreStructure": "自定义地图",
+      "details": {
+        "studio": [
+          "Blizzard Entertainment"
+        ],
+        "themes": [
+          "守图地图"
         ]
       }
     },
