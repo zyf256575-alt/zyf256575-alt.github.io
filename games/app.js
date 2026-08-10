@@ -5,6 +5,7 @@ const state = {
   sort: "hours",
   genre: "all",
   query: "",
+  selectedGameId: null,
 };
 
 const numberFormat = new Intl.NumberFormat("zh-CN");
@@ -13,11 +14,23 @@ const hoursFormat = new Intl.NumberFormat("zh-CN", {
   maximumFractionDigits: 1,
 });
 
+let screenshotLightbox = null;
+let screenshotLightboxScreenshots = [];
+let screenshotLightboxIndex = 0;
+let screenshotLightboxGame = null;
+let screenshotLightboxReturnTarget = null;
+
 function make(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
   if (text !== undefined && text !== null) node.textContent = text;
   return node;
+}
+
+function attachFastTooltip(element, tooltip, ariaLabel = tooltip) {
+  element.dataset.tooltip = tooltip;
+  element.setAttribute("aria-label", ariaLabel);
+  return element;
 }
 
 function platformOf(game) {
@@ -51,6 +64,7 @@ function compareNames(left, right) {
 
 function createCover(game) {
   const frame = make("div", "row-cover");
+  if (game.perfect) frame.classList.add("is-perfect");
   const usePlaceholder = () => {
     frame.replaceChildren();
     const template = document.querySelector("#cover-placeholder-template");
@@ -106,86 +120,435 @@ function buildGameDetailEntries(game, visibleTagValues = []) {
     .slice(0, 4);
 }
 
-function createGameEditorial(game) {
+function getGameEditorialData(game) {
   const review = (Array.isArray(game.review) ? game.review : [game.review])
     .map((paragraph) => String(paragraph || "").trim())
     .filter(Boolean);
+  const reviewSections = (
+    Array.isArray(game.reviewSections) ? game.reviewSections : []
+  )
+    .map((section) => ({
+      title: String(section?.title || "").trim(),
+      text: String(section?.text || "").trim(),
+    }))
+    .filter(({ title, text }) => title && text);
   const screenshots = (Array.isArray(game.screenshots) ? game.screenshots : [])
     .filter((screenshot) => screenshot?.src);
 
-  if (!review.length && !screenshots.length) return null;
-
-  const editorial = make("div", "game-editorial");
-
-  if (review.length) {
-    const reviewBlock = make("section", "game-personal-review");
-    reviewBlock.append(make("h3", "game-editorial-title", "个人游玩记录"));
-    review.forEach((paragraph) => {
-      reviewBlock.append(make("p", "", paragraph));
-    });
-    editorial.append(reviewBlock);
-  }
-
-  if (screenshots.length) {
-    const screenshotBlock = make("section", "game-screenshot-block");
-    screenshotBlock.append(make("h3", "game-editorial-title", "游戏内截图"));
-    const gallery = make("div", "game-screenshot-gallery");
-
-    screenshots.forEach((screenshot, index) => {
-      const figure = make(
-        "figure",
-        `game-screenshot-card${index === 0 ? " is-featured" : ""}`,
-      );
-      const link = document.createElement("a");
-      link.href = screenshot.src;
-      link.target = "_blank";
-      link.rel = "noopener";
-      link.setAttribute("aria-label", `${screenshot.caption || game.name}，打开原图`);
-
-      const image = document.createElement("img");
-      image.src = screenshot.src;
-      image.alt = screenshot.alt || `${game.name} 游戏内截图`;
-      image.loading = "lazy";
-      image.decoding = "async";
-      link.append(image);
-      figure.append(link);
-
-      if (screenshot.caption) {
-        figure.append(make("figcaption", "", screenshot.caption));
-      }
-      gallery.append(figure);
-    });
-
-    screenshotBlock.append(gallery);
-    editorial.append(screenshotBlock);
-  }
-
-  return editorial;
+  return { review, reviewSections, screenshots };
 }
 
-function createGameDetails(game, visibleTagValues = []) {
-  const entries = buildGameDetailEntries(game, visibleTagValues);
-  const editorial = createGameEditorial(game);
+function closeScreenshotLightbox() {
+  if (!screenshotLightbox?.open) return;
+  screenshotLightbox.close();
+}
 
-  if (!entries.length && !editorial) return null;
+function selectLightboxScreenshot(index) {
+  if (!screenshotLightboxScreenshots.length || !screenshotLightbox) return;
 
-  const details = make("details", "game-details");
-  if (editorial) details.classList.add("has-editorial");
-  details.append(make("summary", "", "详情"));
-  if (entries.length) {
-    const strip = make("div", "game-detail-strip");
-    entries.forEach(({ label, value }) => {
-      const item = make("span", "game-detail-item");
-      item.append(
-        make("span", "game-detail-label", label),
-        make("span", "game-detail-value", value),
-      );
-      strip.append(item);
-    });
-    details.append(strip);
+  const total = screenshotLightboxScreenshots.length;
+  screenshotLightboxIndex = ((index % total) + total) % total;
+  const screenshot = screenshotLightboxScreenshots[screenshotLightboxIndex];
+  const source = screenshot.fullSrc || screenshot.src;
+  const image = screenshotLightbox.querySelector(
+    ".game-screenshot-lightbox-image",
+  );
+  const counter = screenshotLightbox.querySelector(
+    ".game-screenshot-lightbox-count",
+  );
+  const previousButton = screenshotLightbox.querySelector(
+    ".game-screenshot-lightbox-previous",
+  );
+  const nextButton = screenshotLightbox.querySelector(
+    ".game-screenshot-lightbox-next",
+  );
+
+  image.src = source;
+  image.alt = screenshot.alt || `${screenshotLightboxGame?.name || "游戏"} 游戏内截图`;
+  counter.textContent = `${String(screenshotLightboxIndex + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+  previousButton.disabled = total <= 1;
+  nextButton.disabled = total <= 1;
+}
+
+function createLightboxChevron(direction) {
+  const namespace = "http://www.w3.org/2000/svg";
+  const icon = document.createElementNS(namespace, "svg");
+  const path = document.createElementNS(namespace, "path");
+
+  icon.classList.add("game-screenshot-lightbox-chevron");
+  icon.setAttribute("viewBox", "0 0 24 24");
+  icon.setAttribute("aria-hidden", "true");
+  icon.setAttribute("focusable", "false");
+  path.setAttribute(
+    "d",
+    direction === "previous"
+      ? "M15.5 5 L8.5 12 L15.5 19"
+      : "M8.5 5 L15.5 12 L8.5 19",
+  );
+  path.setAttribute("fill", "none");
+  path.setAttribute("stroke", "currentColor");
+  path.setAttribute("stroke-width", "2");
+  path.setAttribute("stroke-linecap", "round");
+  path.setAttribute("stroke-linejoin", "round");
+  icon.append(path);
+  return icon;
+}
+
+function ensureScreenshotLightbox() {
+  if (screenshotLightbox?.isConnected) return screenshotLightbox;
+
+  const dialog = document.createElement("dialog");
+  dialog.id = "game-screenshot-lightbox";
+  dialog.className = "game-screenshot-lightbox";
+  dialog.setAttribute("aria-label", "游戏截图原图查看器");
+
+  const closeButton = make(
+    "button",
+    "game-screenshot-lightbox-close",
+    "×",
+  );
+  closeButton.type = "button";
+  closeButton.setAttribute("aria-label", "关闭原图查看器");
+  closeButton.addEventListener("click", closeScreenshotLightbox);
+
+  const previousButton = make(
+    "button",
+    "game-screenshot-lightbox-nav game-screenshot-lightbox-previous",
+  );
+  previousButton.type = "button";
+  previousButton.setAttribute("aria-label", "上一张截图");
+  previousButton.append(createLightboxChevron("previous"));
+  previousButton.addEventListener("click", () => {
+    selectLightboxScreenshot(screenshotLightboxIndex - 1);
+  });
+
+  const image = document.createElement("img");
+  image.className = "game-screenshot-lightbox-image";
+  image.decoding = "async";
+
+  const nextButton = make(
+    "button",
+    "game-screenshot-lightbox-nav game-screenshot-lightbox-next",
+  );
+  nextButton.type = "button";
+  nextButton.setAttribute("aria-label", "下一张截图");
+  nextButton.append(createLightboxChevron("next"));
+  nextButton.addEventListener("click", () => {
+    selectLightboxScreenshot(screenshotLightboxIndex + 1);
+  });
+
+  const counter = make("span", "game-screenshot-lightbox-count");
+
+  dialog.append(
+    closeButton,
+    previousButton,
+    image,
+    nextButton,
+    counter,
+  );
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) closeScreenshotLightbox();
+  });
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      selectLightboxScreenshot(screenshotLightboxIndex - 1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      selectLightboxScreenshot(screenshotLightboxIndex + 1);
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      closeScreenshotLightbox();
+    }
+  });
+  dialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeScreenshotLightbox();
+  });
+  dialog.addEventListener("close", () => {
+    image.removeAttribute("src");
+    screenshotLightboxScreenshots = [];
+    screenshotLightboxGame = null;
+    screenshotLightboxReturnTarget?.focus();
+    screenshotLightboxReturnTarget = null;
+  });
+
+  document.body.append(dialog);
+  screenshotLightbox = dialog;
+  return dialog;
+}
+
+function openScreenshotLightbox(game, screenshots, index, trigger) {
+  if (!screenshots.length) return;
+
+  const dialog = ensureScreenshotLightbox();
+  screenshotLightboxScreenshots = screenshots;
+  screenshotLightboxGame = game;
+  screenshotLightboxReturnTarget = trigger;
+  selectLightboxScreenshot(index);
+  dialog.showModal();
+  dialog.querySelector(".game-screenshot-lightbox-close").focus();
+}
+
+function buildDefaultWorkDescription(game) {
+  const sourcedDescription = String(game.workDescription || "").trim();
+  if (sourcedDescription) return sourcedDescription;
+
+  const theme = String(game.details?.themes?.[0] || "").trim();
+  const structure = String(game.coreStructure || "").trim();
+  const genre = String(game.primaryGenre || "").trim();
+
+  if (theme && structure && genre) {
+    return `以${theme}为题材，围绕${structure}展开的${genre}作品。`;
   }
-  if (editorial) details.append(editorial);
-  return details;
+  if (structure && genre) {
+    return `围绕${structure}展开的${genre}作品。`;
+  }
+  if (theme && genre) {
+    return `以${theme}为题材的${genre}作品。`;
+  }
+  if (genre) return `${genre}作品。`;
+  return "该作品的本体内容。";
+}
+
+function buildGameWorkContents(game) {
+  const defaultDescription = buildDefaultWorkDescription(game);
+  const explicitContents = Array.isArray(game.workContents)
+    ? game.workContents
+    : [];
+  const sectionContents = (Array.isArray(game.reviewSections)
+    ? game.reviewSections
+    : []).map((section) => ({
+      type: /^本体$|^基础游戏$/.test(String(section?.title || "").trim())
+        ? "base"
+        : "expansion",
+      title: String(section?.title || "").trim(),
+      cover: String(section?.cover || "").trim(),
+      description: String(section?.description || section?.text || "").trim(),
+    }));
+  const sourceContents = explicitContents.length
+    ? explicitContents
+    : sectionContents;
+  const workContents = sourceContents
+    .map((content) => {
+      const type = String(content?.type || "expansion").trim();
+      return {
+        type,
+        title: String(content?.title || "").trim(),
+        cover: String(content?.cover || "").trim(),
+        description:
+          String(content?.description || content?.text || "").trim() ||
+          (type === "base" ? defaultDescription : ""),
+      };
+    })
+    .filter(({ title }) => title);
+  const hasBaseContent = workContents.some(({ type, title }) =>
+    type === "base" || /^本体$|^基础游戏$/.test(title),
+  );
+
+  if (!hasBaseContent) {
+    workContents.unshift({
+      type: "base",
+      title: "本体",
+      cover: String(game.cover || "").trim(),
+      description: defaultDescription,
+    });
+  }
+  workContents.forEach((content) => {
+    if (content.type === "base" && !content.cover) {
+      content.cover = String(game.cover || "").trim();
+    }
+  });
+  return workContents;
+}
+
+function createGameRecordPanel(game) {
+  const record = make("div", "game-record");
+  const visibleTags = [game.primaryGenre, game.coreStructure]
+    .map((value) => String(value || "").trim())
+    .filter(Boolean);
+  const entries = buildGameDetailEntries(game, visibleTags);
+  const { screenshots } = getGameEditorialData(game);
+  const workContents = buildGameWorkContents(game);
+  const screenshotStrip = createRecordScreenshotStrip(game, screenshots);
+  const selectedWorkLabel = make("span", "game-selected-work-label");
+  const selectedWorkTitle = make("h4", "game-selected-work-title");
+  const selectedWorkDescription = make("p", "game-work-description");
+  let selectWorkContent = null;
+
+  const header = make("header", "game-record-header");
+  header.append(make("h2", "game-record-title", game.name));
+  record.append(header);
+
+  if (workContents.length) {
+    const works = make("section", "game-record-works");
+    works.append(make("h3", "game-record-section-title", "作品内容"));
+    const stage = make("div", "game-work-stage");
+    const stageImage = document.createElement("img");
+    stageImage.className = "game-work-stage-image";
+    stageImage.loading = "eager";
+    stageImage.decoding = "async";
+    const stagePlaceholder = make(
+      "div",
+      "game-work-stage-placeholder",
+      "暂无封面",
+    );
+    stage.append(stageImage, stagePlaceholder);
+    works.append(stage);
+
+    const rail = make(
+      "div",
+      "game-work-content-rail game-work-thumbnail-rail",
+    );
+    rail.setAttribute("aria-label", `${game.name} 作品版本`);
+
+    selectWorkContent = (index, focusSelected = false) => {
+      const selected = workContents[index];
+      if (!selected) return;
+
+      const thumbnails = [...rail.querySelectorAll(".game-work-thumbnail")];
+      thumbnails.forEach((card, cardIndex) => {
+        const active = cardIndex === index;
+        card.classList.toggle("is-active", active);
+        card.setAttribute("aria-pressed", String(active));
+        card.tabIndex = active ? 0 : -1;
+      });
+
+      stageImage.hidden = !selected.cover;
+      stagePlaceholder.hidden = Boolean(selected.cover);
+      if (selected.cover) {
+        stageImage.src = selected.cover;
+        stageImage.alt = `${selected.title} 封面`;
+      } else {
+        stageImage.removeAttribute("src");
+        stageImage.alt = "";
+        stagePlaceholder.textContent = `${selected.title} · 暂无封面`;
+      }
+
+      const cleanTitle = String(selected.title || "")
+        .replace(/^(资料片|DLC)[：:·\s-]*/i, "")
+        .trim();
+      selectedWorkLabel.textContent =
+        selected.type === "base" ? "本体" : "资料片";
+      selectedWorkLabel.classList.toggle(
+        "is-expansion",
+        selected.type !== "base",
+      );
+      selectedWorkTitle.textContent =
+        selected.type === "base" ? game.name : cleanTitle || selected.title;
+      selectedWorkDescription.textContent = selected.description || "暂无作品简介";
+
+      if (focusSelected) thumbnails[index]?.focus();
+    };
+
+    workContents.forEach((content, index) => {
+      const workRoleClass =
+        content.type === "base" ? " is-base-work" : " is-expansion-work";
+      const card = make(
+        "button",
+        `game-work-card game-work-thumbnail${workRoleClass}${content.cover ? " has-cover" : " is-text-only"}`,
+      );
+      card.type = "button";
+      card.setAttribute("aria-pressed", "false");
+      card.setAttribute("aria-label", `查看作品内容：${content.title}`);
+      card.title = content.title;
+      if (content.cover) {
+        const image = document.createElement("img");
+        image.src = content.cover;
+        image.alt = `${content.title} 封面`;
+        image.loading = "lazy";
+        image.decoding = "async";
+        card.append(image);
+      } else {
+        card.append(make("span", "game-work-thumbnail-placeholder", content.title));
+      }
+      card.addEventListener("click", () => selectWorkContent(index));
+      card.addEventListener("keydown", (event) => {
+        let nextIndex = null;
+        if (event.key === "ArrowLeft") {
+          nextIndex = (index - 1 + workContents.length) % workContents.length;
+        } else if (event.key === "ArrowRight") {
+          nextIndex = (index + 1) % workContents.length;
+        }
+        if (nextIndex === null) return;
+        event.preventDefault();
+        selectWorkContent(nextIndex, true);
+      });
+      rail.append(card);
+    });
+    works.append(rail);
+    record.append(works);
+  }
+
+  if (entries.length || workContents.length) {
+    const factsSection = make("section", "game-record-facts-section");
+    factsSection.append(make("h3", "game-record-section-title", "作品资料"));
+    if (workContents.length) {
+      const selectedWork = make("div", "game-selected-work");
+      selectedWork.append(
+        selectedWorkLabel,
+        selectedWorkTitle,
+        selectedWorkDescription,
+      );
+      factsSection.append(selectedWork);
+    }
+    if (entries.length) {
+      const facts = make("dl", "game-record-facts");
+      entries.forEach(({ label, value }) => {
+        const fact = make("div", "game-record-fact");
+        fact.append(make("dt", "", label), make("dd", "", value));
+        facts.append(fact);
+      });
+      factsSection.append(facts);
+    }
+    record.append(factsSection);
+  }
+
+  selectWorkContent?.(0);
+
+  const gallery = make("section", "game-record-gallery");
+  gallery.append(make("h3", "game-record-section-title", "游戏截图"));
+  if (screenshotStrip) {
+    gallery.append(screenshotStrip);
+  } else {
+    gallery.append(make("p", "game-record-empty", "暂无游戏记录"));
+  }
+  record.append(gallery);
+
+  return record;
+}
+
+function createRecordScreenshotStrip(game, screenshots) {
+  if (!screenshots.length) return null;
+
+  const strip = make("div", "game-record-screenshots");
+  strip.setAttribute("aria-label", `${game.name} 游戏截图`);
+  screenshots.forEach((screenshot, index) => {
+    const button = make("button", "game-record-screenshot");
+    button.type = "button";
+    button.setAttribute(
+      "aria-label",
+      `查看第 ${index + 1} 张原图：${screenshot.caption || game.name}`,
+    );
+    const image = document.createElement("img");
+    image.src = screenshot.src;
+    image.alt = screenshot.alt || `${game.name} 游戏内截图`;
+    image.loading = "lazy";
+    image.decoding = "async";
+    button.append(image);
+    button.addEventListener("click", () => {
+      openScreenshotLightbox(game, screenshots, index, button);
+    });
+    strip.append(button);
+  });
+  return strip;
+}
+
+function renderGameRecordPanel(game) {
+  const panel = document.querySelector("#game-record-panel");
+  if (!panel) return;
+  panel.hidden = !game;
+  panel.replaceChildren(...(game ? [createGameRecordPanel(game)] : []));
 }
 
 function createManualHighlight(game) {
@@ -234,8 +597,14 @@ function createRowProgress(game) {
 
 function createGameRow(game) {
   const row = make("article", "game-row");
+  row.dataset.gameId = String(game.id);
   row.dataset.platform = platformOf(game);
   row.dataset.primaryGenre = game.primaryGenre || "其他";
+  row.tabIndex = 0;
+  row.setAttribute("role", "button");
+  row.setAttribute("aria-selected", String(String(game.id) === state.selectedGameId));
+  row.setAttribute("aria-label", `查看 ${game.name} 的作品档案`);
+  row.classList.toggle("is-selected", String(game.id) === state.selectedGameId);
   row.append(createCover(game));
 
   const main = make("div", "game-main");
@@ -260,32 +629,29 @@ function createGameRow(game) {
   });
   main.append(subline);
 
-  const details = createGameDetails(game, [...seenTags]);
   const playPeriod = String(game.playPeriod || "").trim();
   const recentlyActive = isRecentlyActive(game);
-  if (details || playPeriod || recentlyActive) {
+  if (playPeriod || recentlyActive) {
     const metaLine = make("div", "game-meta-line");
-    if (details) metaLine.append(details);
     if (playPeriod) {
-      const period = make("span", "game-play-period", playPeriod);
-      period.title = "个人游玩跨度";
-      period.setAttribute("aria-label", `个人游玩跨度：${playPeriod}`);
+      const period = attachFastTooltip(
+        make("span", "game-play-period", playPeriod),
+        "个人游玩跨度",
+        `个人游玩跨度：${playPeriod}`,
+      );
       metaLine.append(period);
     }
     if (recentlyActive) {
       const activeStatus = make("span", "game-active-status", "活跃");
       const recentMinutes = Number(game.playtime2WeeksMinutes);
+      let tooltip = "当前活跃";
+      let ariaLabel = "当前活跃";
       if (Number.isFinite(recentMinutes) && recentMinutes > 0) {
         const recentHours = hoursFormat.format(recentMinutes / 60);
-        activeStatus.title = `近两周游玩 ${recentHours} 小时`;
-        activeStatus.setAttribute(
-          "aria-label",
-          `Steam 活跃状态：近两周游玩 ${recentHours} 小时`,
-        );
-      } else {
-        activeStatus.title = "当前活跃";
-        activeStatus.setAttribute("aria-label", "当前活跃");
+        tooltip = `近两周游玩 ${recentHours} 小时`;
+        ariaLabel = `Steam 活跃状态：${tooltip}`;
       }
+      attachFastTooltip(activeStatus, tooltip, ariaLabel);
       metaLine.append(activeStatus);
     }
     main.append(metaLine);
@@ -307,6 +673,22 @@ function createGameRow(game) {
     status.append(make("span", "perfect-badge", "全成就"));
   }
   row.append(status);
+  const selectRow = () => {
+    state.selectedGameId = String(game.id);
+    document.querySelectorAll(".game-row").forEach((candidate) => {
+      const selected = candidate.dataset.gameId === state.selectedGameId;
+      candidate.classList.toggle("is-selected", selected);
+      candidate.setAttribute("aria-selected", String(selected));
+    });
+    renderGameRecordPanel(game);
+  };
+  row.addEventListener("click", selectRow);
+  row.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      selectRow();
+    }
+  });
   return row;
 }
 
@@ -391,8 +773,14 @@ function renderArchive() {
   const games = sortGames(state.data.games.filter(matchesCurrentView));
   const list = document.querySelector("#game-list");
   const emptyState = document.querySelector("#empty-state");
+  if (!games.some((game) => String(game.id) === state.selectedGameId)) {
+    state.selectedGameId = games.length ? String(games[0].id) : null;
+  }
   list.replaceChildren(...games.map(createGameRow));
   emptyState.hidden = games.length > 0;
+  renderGameRecordPanel(
+    games.find((game) => String(game.id) === state.selectedGameId) || null,
+  );
 }
 
 function populateGenres() {

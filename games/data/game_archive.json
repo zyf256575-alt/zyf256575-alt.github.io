@@ -58,33 +58,42 @@
       "perfect": false,
       "cover": "assets/covers/1366540-header.jpg",
       "playPeriod": "2022–2025",
+      "playthroughs": 2,
       "review": [
-        "《戴森球计划》是我接触的第一款单机建造游戏。通关流程本身并不困难，真正让我投入的，是终局阶段种类繁多、散落各处的生产链让我觉得烦琐。起初我只是想把零散产线整理成模块，后来目标越滚越大：在由数十个恒星系和大量行星组成的星区里，单独把一整颗行星改造成只生产终极产物“白糖”（宇宙矩阵）的超级工厂。所有原矿都从其他行星和恒星系通过星际物流输入，中间产物全部在这颗行星内部加工，最终只输出白糖。",
-        "为了把工厂铺满整颗球形行星，我利用了游戏的网格特性：越接近两极，规则方格之间的间隙越大；通过蓝图偏转绕过常规网格限制，可以进一步提高单位面积利用率。我先为每类中间产物设计超密铺蓝图单元，再复制扩展，并反复核算传送带吞吐、机器产能、增产剂供应和地表利用率。二周目最终实现了单球每分钟约 2.3 万白糖的产量，整颗行星包含近百万个建造单位，其中大部分是传送带。这个周目投入约 400 小时。",
-        "最后 100–200 小时里，搭载 GTX 1650 的旧笔记本通常只剩下 9–12 帧，但整颗行星仍像一台巨大而精密的机器持续运转：星际运输舰从不同恒星系送来原矿，遍布全球的机器、传送带与物流塔再将它们逐级汇聚为终极产物。那一刻带来的已经不只是产量上的满足，而是亲手用技术与秩序把一颗荒芜行星改造成文明机器的震撼——这也是建造游戏最打动我的工业浪漫。"
+        "接触到的第一款建造游戏。二周目开始折腾极限密铺、模块化和自动化，直到把整颗行星都密铺成一个超级工厂，算是亲手搓出了一点工业浪漫。"
       ],
       "screenshots": [
         {
           "src": "assets/screenshots/1366540/planet-factory-overview.webp",
+          "thumbSrc": "assets/screenshots/1366540/planet-factory-overview-thumb.webp",
+          "fullSrc": "assets/screenshots/1366540/planet-factory-overview-original.jpg",
           "alt": "戴森球计划中被自动化工厂覆盖的整颗行星",
           "caption": "整球全景｜工厂铺满整颗行星"
         },
         {
           "src": "assets/screenshots/1366540/interstellar-logistics.webp",
+          "thumbSrc": "assets/screenshots/1366540/interstellar-logistics-thumb.webp",
+          "fullSrc": "assets/screenshots/1366540/interstellar-logistics-original.jpg",
           "alt": "戴森球计划中的星际物流运输场景",
           "caption": "星际物流｜外部原矿持续输入"
         },
         {
           "src": "assets/screenshots/1366540/dense-blueprint-modules.webp",
+          "thumbSrc": "assets/screenshots/1366540/dense-blueprint-modules-thumb.webp",
+          "fullSrc": "assets/screenshots/1366540/dense-blueprint-modules-original.jpg",
           "alt": "戴森球计划中的机器传送带与密铺蓝图模块",
           "caption": "密铺模块｜机器、传送带与模块化布局"
         },
         {
           "src": "assets/screenshots/1366540/stellar-industrial-night.webp",
+          "thumbSrc": "assets/screenshots/1366540/stellar-industrial-night-thumb.webp",
+          "fullSrc": "assets/screenshots/1366540/stellar-industrial-night-original.jpg",
           "alt": "恒星逆光下运行的戴森球计划行星工厂",
           "caption": "工业浪漫｜恒星逆光、运输舰与行星工厂"
         }
-      ]
+      ],
+      "workDescription": "工程师从陌生星系的一片空地起步，采集资源、铺设产线并把工厂扩展到多个行星与恒星系。模块化生产、星际物流和不断增长的能源需求层层相扣，最终把手工作坊推成环绕恒星运转的工业文明。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1366540/?l=schinese&cc=cn"
     },
     {
       "id": "230410",
@@ -124,7 +133,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/230410.jpg",
-      "playPeriod": "2021–2026"
+      "playPeriod": "2021–2026",
+      "review": [
+        "重肝微氪，特别适合拿来消磨时间的刷子游戏。内容量大得离谱，随便拎出一个小系统都够研究很久。喜欢太空机甲的话，很难错过。"
+      ],
+      "workDescription": "沉睡的 Tenno 在 Lotus 指引下驾驭不同战甲，穿梭太阳系对抗多个敌对派系。高速机动、武器构筑与持续扩张的系统彼此套叠，构成一部可以长期投入的太空忍者史诗。",
+      "workDescriptionSource": "https://store.steampowered.com/app/230410/?l=schinese&cc=cn"
     },
     {
       "id": "1245620",
@@ -164,7 +178,83 @@
       "perfect": true,
       "cover": "assets/covers/1245620.jpg",
       "playPeriod": "2022–2025",
-      "note": "全成就；开放世界探索与高压战斗系统的长期体验。"
+      "playthroughs": 5,
+      "personalHonors": [
+        "GOAT"
+      ],
+      "note": "全成就；开放世界探索与高压战斗系统的长期体验。",
+      "review": [
+        "目前玩过的所有游戏里，毋庸置疑的 GOAT。魂系列的集大成之作，美术、光影、音乐、战斗、箱庭和开放世界探索全是顶尖水平。最喜欢的还是配乐和哥特式建筑以及碎片化叙事的那种神秘史诗感。"
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "以交界地为舞台的开放世界动作角色扮演游戏，将魂系战斗、箱庭探索与大尺度区域连接在同一世界中。辽阔区域与层层咬合的遗迹并置，让开放探索仍保有系列熟悉的危险、留白与发现感。"
+        },
+        {
+          "title": "资料片 · 黄金树幽影",
+          "text": "以幽影之地为舞台的大型资料片，延续本体的探索、地下城与 Boss 战，并加入新的武器类别、战技与成长系统。幽影树碎片重构成长节奏，新旧谜团则把米凯拉的远征推向比本篇更晦暗的结局。",
+          "cover": "assets/covers/2778580.jpg"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/screenshots/1245620/01-moonlit-cliff.webp",
+          "thumbSrc": "assets/screenshots/1245620/01-moonlit-cliff-thumb.webp",
+          "fullSrc": "assets/screenshots/1245620/01-moonlit-cliff-original.jpg",
+          "alt": "骑乘灵马站在崖边眺望远方城堡",
+          "caption": "月下崖边与远方城堡"
+        },
+        {
+          "src": "assets/screenshots/1245620/02-gothic-castle-portrait.webp",
+          "thumbSrc": "assets/screenshots/1245620/02-gothic-castle-portrait-thumb.webp",
+          "fullSrc": "assets/screenshots/1245620/02-gothic-castle-portrait-original.jpg",
+          "alt": "哥特式城堡前的人物近景",
+          "caption": "哥特式城堡与人物近景"
+        },
+        {
+          "src": "assets/screenshots/1245620/03-gothic-castle-approach.webp",
+          "thumbSrc": "assets/screenshots/1245620/03-gothic-castle-approach-thumb.webp",
+          "fullSrc": "assets/screenshots/1245620/03-gothic-castle-approach-original.jpg",
+          "alt": "褪色者走向高耸的哥特式城堡",
+          "caption": "走向哥特式城堡"
+        },
+        {
+          "src": "assets/screenshots/1245620/04-erdtree-and-moon.webp",
+          "thumbSrc": "assets/screenshots/1245620/04-erdtree-and-moon-thumb.webp",
+          "fullSrc": "assets/screenshots/1245620/04-erdtree-and-moon-original.jpg",
+          "alt": "黄金树、月亮与骑乘灵马的褪色者",
+          "caption": "黄金树、月亮与灵马"
+        },
+        {
+          "src": "assets/screenshots/1245620/05-leyndell-encounter.webp",
+          "thumbSrc": "assets/screenshots/1245620/05-leyndell-encounter-thumb.webp",
+          "fullSrc": "assets/screenshots/1245620/05-leyndell-encounter-original.jpg",
+          "alt": "王城金色屋顶间的人物相遇",
+          "caption": "王城屋顶上的相遇"
+        },
+        {
+          "src": "assets/screenshots/1245620/06-mountain-pass.webp",
+          "thumbSrc": "assets/screenshots/1245620/06-mountain-pass-thumb.webp",
+          "fullSrc": "assets/screenshots/1245620/06-mountain-pass-original.jpg",
+          "alt": "骑乘灵马穿过暖色山谷入口",
+          "caption": "山谷入口的骑行景色"
+        },
+        {
+          "src": "assets/screenshots/1245620/07-lands-between-panorama.webp",
+          "thumbSrc": "assets/screenshots/1245620/07-lands-between-panorama-thumb.webp",
+          "fullSrc": "assets/screenshots/1245620/07-lands-between-panorama-original.jpg",
+          "alt": "交界地旷野与远方王城的全景",
+          "caption": "交界地旷野与远方王城"
+        },
+        {
+          "src": "assets/screenshots/1245620/08-farum-azula-storm.webp",
+          "thumbSrc": "assets/screenshots/1245620/08-farum-azula-storm-thumb.webp",
+          "fullSrc": "assets/screenshots/1245620/08-farum-azula-storm-original.jpg",
+          "alt": "风暴中悬浮的天空城遗迹",
+          "caption": "风暴中的天空城遗迹"
+        }
+      ]
     },
     {
       "id": "582010",
@@ -203,7 +293,44 @@
       "perfect": true,
       "cover": "assets/covers/582010.jpg",
       "playPeriod": "2023–2024",
-      "note": "长期动作共斗体验，关注武器循环、构筑与大型敌人行为反馈。"
+      "note": "长期动作共斗体验，关注武器循环、构筑与大型敌人行为反馈。",
+      "review": [
+        "太刀，帅！"
+      ],
+      "screenshots": [
+        {
+          "src": "assets/screenshots/582010/01-fatalis-slash.webp",
+          "thumbSrc": "assets/screenshots/582010/01-fatalis-slash-thumb.webp",
+          "fullSrc": "assets/screenshots/582010/01-fatalis-slash-original.jpg",
+          "alt": "怪物猎人世界中黑龙讨伐时斩击命中的瞬间",
+          "caption": "黑龙讨伐｜斩击命中的瞬间"
+        },
+        {
+          "src": "assets/screenshots/582010/02-hoarfrost-sunset.webp",
+          "thumbSrc": "assets/screenshots/582010/02-hoarfrost-sunset-thumb.webp",
+          "fullSrc": "assets/screenshots/582010/02-hoarfrost-sunset-original.jpg",
+          "alt": "怪物猎人世界冰原据点上空的霞光与飞龙",
+          "caption": "冰原风景｜据点上空的霞光与飞龙"
+        },
+        {
+          "src": "assets/screenshots/582010/03-savage-deviljho-hunt.webp",
+          "thumbSrc": "assets/screenshots/582010/03-savage-deviljho-hunt-thumb.webp",
+          "fullSrc": "assets/screenshots/582010/03-savage-deviljho-hunt-original.jpg",
+          "alt": "怪物猎人世界冰原中遭遇惶怒恐暴龙与凶爪龙",
+          "caption": "冰原追猎｜惶怒恐暴龙与凶爪龙同场"
+        }
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "第五期调查团深入新大陆，在追踪古龙的同时逐步理解这片土地不断迁徙与变化的生态。立体地图、狩猎准备和高压交锋彼此衔接，让猎人真正产生长期生活在猎场中的感觉。"
+        },
+        {
+          "title": "资料片 · 冰原",
+          "cover": "assets/covers/1118010.jpg",
+          "text": "调查团越过大蚁冢荒地前往永霜冻土，在严寒生态中追查冰呪龙与新大陆异变的联系。大师等级、更具压迫感的怪物和扩展招式重新拉长成长线，也把配装与武器理解推向更深一层。"
+        }
+      ]
     },
     {
       "id": "292030",
@@ -237,7 +364,30 @@
       "perfect": true,
       "cover": "assets/covers/292030.jpg",
       "playPeriod": "2021–2022",
-      "note": "完整体验叙事驱动开放世界，对任务结构与选择反馈印象深刻。"
+      "playthroughs": 2,
+      "personalHonors": [
+        "剧情 GOAT"
+      ],
+      "note": "完整体验叙事驱动开放世界，对任务结构与选择反馈印象深刻。",
+      "review": [
+        "目前玩过的 RPG 里，单论剧情，毫无疑问是 GOAT。战斗一般，剧情真夯。"
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "战争把人推向一个个没有正确答案的选择。杰洛特能杀掉怪物，却解决不了偏见、贪婪和恐惧。最难忘的反而是那些做完很久以后，依然不知道自己选得对不对的任务。"
+        },
+        {
+          "title": "资料片 · 石之心",
+          "cover": "assets/covers/378649.jpg",
+          "text": "一个关于欲望、爱情和代价的故事。欧吉尔德、爱丽丝与镜子大师，把经典的“魔鬼契约”讲得冷酷又克制。篇幅不算长，却可能是《巫师 3》里完成度最高、后劲也最足的一段。"
+        },
+        {
+          "title": "资料片 · 血与酒",
+          "cover": "assets/covers/378648.jpg",
+          "text": "陶森特像一场阳光明媚的骑士童话，葡萄酒、城堡和仪式之下，藏着的仍是偏见与旧债。它的体量已经很像一部续作，而最好的地方，是终于给漂泊半生的杰洛特留了一个可以回去的家。"
+        }
+      ]
     },
     {
       "id": "1325200",
@@ -270,7 +420,31 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/1325200.jpg",
-      "playPeriod": "2022–2023"
+      "playPeriod": "2022–2023",
+      "review": [
+        "比起一味受苦，更像把魂系节奏、刷宝构筑和妖怪技揉成一套高密度动作系统；越熟练，战斗越顺手。"
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "在战国末期的妖怪乱世中，自定义武器、妖怪技与常暗机制共同构成高密度攻防，也让配装和资源循环成为战斗的一部分。多层构筑与精密操作彼此放大，让每次受苦、成长和反攻都能转化成清晰的战斗理解。"
+        },
+        {
+          "title": "资料片 · 牛若战记",
+          "cover": "assets/covers/nioh2-tengus-disciple.jpg",
+          "text": "故事回到平安末期的屋岛与源平争乱，通过新区域、机关棍与更高阶妖怪战，补出《仁王 2》因缘的开端。源平传说与主角身世在此交汇，也为整条跨越时代的因缘补上最早一环。"
+        },
+        {
+          "title": "资料片 · 平安京讨魔传",
+          "cover": "assets/covers/nioh2-darkness-in-the-capital.jpg",
+          "text": "舞台转向妖异横行的平安京，以手甲、阴阳术与京都传说扩展战斗构筑，并把更久远的过去接回本篇。京都传说与更久远的妖怪因缘被接回本篇，让历史回溯同时承担构筑扩展与叙事补完。"
+        },
+        {
+          "title": "资料片 · 太初武士秘史",
+          "cover": "assets/covers/nioh2-first-samurai.jpg",
+          "text": "时间线抵达平安初期的铃鹿峠，围绕大岳丸与楚叶矢丸完成最后一轮追溯，为秀之字的旅程收束因果。大岳丸与楚叶矢丸的往事终于闭合，也让秀之字跨越时代的旅程收束在同一个因果循环里。"
+        }
+      ]
     },
     {
       "id": "814380",
@@ -309,7 +483,12 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/814380.jpg",
-      "playPeriod": "2022–2025"
+      "playPeriod": "2022–2025",
+      "review": [
+        "战斗几乎被压缩成刀锋相接的一问一答；学会架势和节奏以后，原本的压迫感会一点点变成爽快感。"
+      ],
+      "workDescription": "失去左臂的忍者狼为夺回主君踏上复仇之路，在苇名将倾的乱世中直面武士、忍者与异形强敌。架势、弹反和忍义手把攻防压缩成极具节奏感的对决，也让犹豫真正成为败北。",
+      "workDescriptionSource": "https://store.steampowered.com/app/814380/?l=schinese&cc=cn"
     },
     {
       "id": "1446780",
@@ -344,7 +523,21 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1446780.jpg",
-      "playPeriod": "2023–2024"
+      "playPeriod": "2023–2024",
+      "review": [
+        "翔虫把移动、追击和受身都提速了，狩猎更轻快，也更鼓励主动贴身；少了些沉重感，换来很顺的战斗节奏。"
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "炎火村猎人在百龙夜行的威胁下追查怪物异动，并以翔虫与御龙穿行更加立体的猎场。高速位移和更紧凑的任务节奏重写了接近怪物的方式，也让传统狩猎显得更轻快直接。"
+        },
+        {
+          "title": "资料片 · 曙光",
+          "cover": "assets/covers/1880360.jpg",
+          "text": "猎人远赴王国据点埃尔迦德，围绕古龙爵银龙与三王域的异变展开新的调查。盟友任务、大师等级和更复杂的怪物招式重新铺开成长线，让本体的轻快框架拥有更扎实的终局深度。"
+        }
+      ]
     },
     {
       "id": "239140",
@@ -378,7 +571,21 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/239140.jpg",
-      "playPeriod": "2021–2022"
+      "playPeriod": "2021–2022",
+      "review": [
+        "跑酷让丧尸题材真正有了自己的手感：白天翻墙找路，夜晚则被追逐感彻底接管，合作游玩尤其热闹。"
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "特工克兰潜入被隔离的哈兰，在寻找机密文件的同时被迫卷入幸存者与感染者之间的生存斗争。城市垂直结构与昼夜危险差互相放大，让白天熟悉的道路在入夜后变成截然不同的逃生路线。"
+        },
+        {
+          "title": "资料片 · 信徒",
+          "cover": "assets/covers/325724.jpg",
+          "text": "克兰离开哈兰市区前往开阔乡野，追查一个据称能够抵抗感染的神秘教派。越野车取代屋顶跑酷成为移动核心，辽阔地形也把追逐、探索与清图节奏重新组织。"
+        }
+      ]
     },
     {
       "id": "485510",
@@ -411,7 +618,31 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/485510.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "残心、架势切换和装备词条让它远不只是“日本战国版魂系”；门槛不低，系统吃透以后很上头。"
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "航海家威廉为追寻夺走守护灵的凯瑞来到战国日本，并被卷入人类战争与妖怪异变。残心、三段架势和装备词条让硬派攻防与刷宝构筑相互咬合，形成不同于魂系的战国动作语言。"
+        },
+        {
+          "title": "资料片 · 东北之龙",
+          "cover": "assets/covers/nioh-dragon-of-the-north.jpg",
+          "text": "战后舞台移至奥州，围绕独眼龙伊达政宗与灵石异动展开新章，并以大太刀和更高难度区域延续本篇。伊达政宗与灵石异动延续战后余波，大太刀则为高难度攻防加入更沉重的距离控制。"
+        },
+        {
+          "title": "资料片 · 义之继承者",
+          "cover": "assets/covers/nioh-defiant-honor.jpg",
+          "text": "大阪冬之阵成为主战场，真田幸村与十勇士把个人传奇置于围城战中，旋棍也带来更贴身的连续攻势。围城叙事与真田传奇收紧了战场尺度，旋棍也带来更贴身、更连续的压制方式。"
+        },
+        {
+          "title": "资料片 · 元和偃武",
+          "cover": "assets/covers/nioh-bloodsheds-end.jpg",
+          "text": "大阪夏之阵为威廉的战国旅程作结，同时加入无间狱等终局内容，把难度、配装与长期挑战推到完整版本的顶点。大阪夏之阵结束威廉的战国旅程，无间狱则把难度、配装和长期挑战推到完整版本的终点。"
+        }
+      ]
     },
     {
       "id": "1086940",
@@ -446,7 +677,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1086940.jpg",
-      "playPeriod": "2024"
+      "playPeriod": "2024",
+      "review": [
+        "自由度真正落在每次对话、检定和战斗里，同一件事总有意想不到的解法；角色塑造和演出也撑得住超长流程。"
+      ],
+      "workDescription": "一场夺心魔绑架把冒险者卷进被遗忘国度的危机，队伍将在旅途中决定如何使用或摆脱寄生虫的力量。规则驱动的战斗、自由解法与会持续回响的选择，共同撑起一段真正属于玩家的群像冒险。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1086940/?l=schinese&cc=cn"
     },
     {
       "id": "374320",
@@ -484,7 +720,26 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/374320.jpg",
-      "playPeriod": "2021–2022"
+      "playPeriod": "2021–2022",
+      "review": [
+        "节奏更快，Boss 战也更集中地考验读招和执行；灰烬将熄的世界一路压着人走，终章感非常强。"
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "薪王离位、初火将熄，无火的余灰穿过洛斯里克寻找拒绝传火的旧日王者。更快的战斗节奏与系列记忆中的人物残响彼此映照，让这段末世巡礼既像终章，也像一次告别。"
+        },
+        {
+          "title": "资料片 · 艾雷德尔之烬",
+          "cover": "assets/covers/506970.jpg",
+          "text": "艾雷德尔延续了魂一绘画世界的雪原与异乡感，却把这里写成一个拒绝燃烧、因而走向腐朽的封闭世界。芙莉德想守住旧画，鸦人却在等待火焰与下一幅画；三阶段战斗把这场停滞与重生的冲突推到了终点。"
+        },
+        {
+          "title": "资料片 · 环印城",
+          "cover": "assets/covers/506971.jpg",
+          "text": "余灰追随奴隶骑士盖尔越过聚集地与环印城，一直走到时间崩塌后的世界尽头。黑暗、火焰与人性的谜题在旅途终点汇合，也为整个系列留下克制而完整的句号。"
+        }
+      ]
     },
     {
       "id": "1868140",
@@ -522,8 +777,88 @@
       "verifiedAt": "2026-08-04T23:35:51+08:00",
       "perfect": true,
       "cover": "assets/covers/1868140.jpg",
-      "playPeriod": "2026",
-      "note": "经营、探索与轻量叙事循环结合紧密，近期仍在持续体验。"
+      "playPeriod": "2025–2026",
+      "note": "经营、探索与轻量叙事循环结合紧密，近期仍在持续体验。",
+      "review": [
+        "白天潜水、晚上开店，两套循环切得轻松又上瘾；内容不断往外长，却始终保留着很舒服的小品气质。"
+      ],
+      "screenshots": [
+        {
+          "src": "assets/screenshots/1868140/01-deep-sea-eel.webp",
+          "thumbSrc": "assets/screenshots/1868140/01-deep-sea-eel-thumb.webp",
+          "fullSrc": "assets/screenshots/1868140/01-deep-sea-eel-original.jpg",
+          "alt": "《潜水员戴夫》游戏截图 1",
+          "caption": "《潜水员戴夫》游戏截图 1"
+        },
+        {
+          "src": "assets/screenshots/1868140/02-giant-crab.webp",
+          "thumbSrc": "assets/screenshots/1868140/02-giant-crab-thumb.webp",
+          "fullSrc": "assets/screenshots/1868140/02-giant-crab-original.jpg",
+          "alt": "《潜水员戴夫》游戏截图 2",
+          "caption": "《潜水员戴夫》游戏截图 2"
+        },
+        {
+          "src": "assets/screenshots/1868140/03-godzilla.webp",
+          "thumbSrc": "assets/screenshots/1868140/03-godzilla-thumb.webp",
+          "fullSrc": "assets/screenshots/1868140/03-godzilla-original.jpg",
+          "alt": "《潜水员戴夫》游戏截图 3",
+          "caption": "《潜水员戴夫》游戏截图 3"
+        },
+        {
+          "src": "assets/screenshots/1868140/04-kaiju-sunset.webp",
+          "thumbSrc": "assets/screenshots/1868140/04-kaiju-sunset-thumb.webp",
+          "fullSrc": "assets/screenshots/1868140/04-kaiju-sunset-original.jpg",
+          "alt": "《潜水员戴夫》游戏截图 4",
+          "caption": "《潜水员戴夫》游戏截图 4"
+        },
+        {
+          "src": "assets/screenshots/1868140/05-giant-shark.webp",
+          "thumbSrc": "assets/screenshots/1868140/05-giant-shark-thumb.webp",
+          "fullSrc": "assets/screenshots/1868140/05-giant-shark-original.jpg",
+          "alt": "《潜水员戴夫》游戏截图 5",
+          "caption": "《潜水员戴夫》游戏截图 5"
+        },
+        {
+          "src": "assets/screenshots/1868140/06-ancient-creature.webp",
+          "thumbSrc": "assets/screenshots/1868140/06-ancient-creature-thumb.webp",
+          "fullSrc": "assets/screenshots/1868140/06-ancient-creature-original.jpg",
+          "alt": "《潜水员戴夫》游戏截图 6",
+          "caption": "《潜水员戴夫》游戏截图 6"
+        },
+        {
+          "src": "assets/screenshots/1868140/07-bancho-toast.webp",
+          "thumbSrc": "assets/screenshots/1868140/07-bancho-toast-thumb.webp",
+          "fullSrc": "assets/screenshots/1868140/07-bancho-toast-original.jpg",
+          "alt": "《潜水员戴夫》游戏截图 7",
+          "caption": "《潜水员戴夫》游戏截图 7"
+        },
+        {
+          "src": "assets/screenshots/1868140/08-thank-you.webp",
+          "thumbSrc": "assets/screenshots/1868140/08-thank-you-thumb.webp",
+          "fullSrc": "assets/screenshots/1868140/08-thank-you-original.jpg",
+          "alt": "《潜水员戴夫》游戏截图 8",
+          "caption": "《潜水员戴夫》游戏截图 8"
+        },
+        {
+          "src": "assets/screenshots/1868140/09-jungle-festival.webp",
+          "thumbSrc": "assets/screenshots/1868140/09-jungle-festival-thumb.webp",
+          "fullSrc": "assets/screenshots/1868140/09-jungle-festival-original.jpg",
+          "alt": "《潜水员戴夫》游戏截图 9",
+          "caption": "《潜水员戴夫》游戏截图 9"
+        }
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "cover": "assets/covers/dave-the-diver-base-header.jpg",
+          "text": "戴夫白天潜入不断变化的蓝洞捕捞与探索，晚上则回到寿司店把收获变成菜单和收入。海洋生态、角色支线与昼夜循环自然串联，让采集、料理和经营逐渐长成轻松又充实的生活节奏。"
+        },
+        {
+          "title": "资料片 · In the Jungle",
+          "cover": "assets/covers/4394810.jpg",
+          "text": "离开熟悉的海域前往乌塔拉雨林，在淡水湖与村落之间展开新探索，加入独立生态、任务与可带回餐厅的新食材。淡水生态、村落任务和可带回餐厅的新食材重新组合经营循环，也让探索从海洋自然延伸到陆地。"
+        }
+      ]
     },
     {
       "id": "578080",
@@ -563,7 +898,21 @@
       "perfect": false,
       "cover": "assets/covers/578080.jpg",
       "playPeriod": "2018–至今",
-      "note": "战术竞技与团队生存向 FPS 经历，累计 135.8 小时。"
+      "note": "战术竞技与团队生存向 FPS 经历，累计 135.8 小时。",
+      "review": [
+        "它最难替代的不是枪法，而是从搜物资到转移、伏击，再到决赛圈的整段紧张感；每局都能讲出不同故事。"
+      ],
+      "screenshots": [
+        {
+          "src": "assets/screenshots/578080/01-match-moment.webp",
+          "thumbSrc": "assets/screenshots/578080/01-match-moment-thumb.webp",
+          "fullSrc": "assets/screenshots/578080/01-match-moment-original.jpg",
+          "alt": "《PUBG: BATTLEGROUNDS》游戏截图 1",
+          "caption": "《PUBG: BATTLEGROUNDS》游戏截图 1"
+        }
+      ],
+      "workDescription": "玩家从航线上跳伞进入不断收缩的战场，搜集物资并在不确定的遭遇中活到最后。弹道、听声辨位与临场决策让每局故事都无法复制，也定义了战术竞技最直接的紧张感。",
+      "workDescriptionSource": "https://store.steampowered.com/app/578080/?l=schinese&cc=cn"
     },
     {
       "id": "526870",
@@ -598,7 +947,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/526870.jpg",
-      "playPeriod": "2023"
+      "playPeriod": "2023",
+      "review": [
+        "第一人称让每条传送带和每座厂房都有了真实尺度；优化产线很费脑，但看着整片工厂稳定运转又很解压。"
+      ],
+      "workDescription": "工程师降落在陌生星球，从开采矿物开始搭建跨越地表与高空的自动化工厂。第一人称探索、多层建筑和绵延不绝的传送带彼此咬合，让效率优化最终变成一项可亲身穿行的空间工程。",
+      "workDescriptionSource": "https://store.steampowered.com/app/526870/?l=schinese&cc=cn"
     },
     {
       "id": "1593500",
@@ -632,7 +986,12 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/1593500.jpg",
-      "playPeriod": "2023"
+      "playPeriod": "2023",
+      "review": [
+        "把宏大的北欧神话收进一段父子同行的旅程里，战斗厚重，叙事克制；真正撑住全程的是奎托斯慢慢学会如何做父亲。"
+      ],
+      "workDescription": "离开希腊后的奎托斯与儿子阿特柔斯踏上北欧旅程，为完成妻子的遗愿穿过诸神与怪物盘踞的九界。克制的镜头、沉重的斧战与父子关系彼此推进，让宏大神话落回一段关于教养与和解的私人故事。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1593500/?l=schinese&cc=cn"
     },
     {
       "id": "2358720",
@@ -666,7 +1025,112 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/2358720.jpg",
-      "playPeriod": "2024"
+      "playPeriod": "2024",
+      "review": [
+        "最打动人的不只是把中国神话做成了可探索的世界，还有大量熟悉又陌生的细节；Boss 战的美术和演出尤其亮眼。"
+      ],
+      "screenshots": [
+        {
+          "src": "assets/screenshots/2358720/01-wukong-001.webp",
+          "thumbSrc": "assets/screenshots/2358720/01-wukong-001-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/01-wukong-001-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 1",
+          "caption": "黑神话：悟空｜游戏截图 1"
+        },
+        {
+          "src": "assets/screenshots/2358720/02-wukong-002.webp",
+          "thumbSrc": "assets/screenshots/2358720/02-wukong-002-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/02-wukong-002-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 2",
+          "caption": "黑神话：悟空｜游戏截图 2"
+        },
+        {
+          "src": "assets/screenshots/2358720/03-wukong-004.webp",
+          "thumbSrc": "assets/screenshots/2358720/03-wukong-004-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/03-wukong-004-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 3",
+          "caption": "黑神话：悟空｜游戏截图 3"
+        },
+        {
+          "src": "assets/screenshots/2358720/04-wukong-003.webp",
+          "thumbSrc": "assets/screenshots/2358720/04-wukong-003-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/04-wukong-003-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 4",
+          "caption": "黑神话：悟空｜游戏截图 4"
+        },
+        {
+          "src": "assets/screenshots/2358720/05-wukong-010.webp",
+          "thumbSrc": "assets/screenshots/2358720/05-wukong-010-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/05-wukong-010-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 5",
+          "caption": "黑神话：悟空｜游戏截图 5"
+        },
+        {
+          "src": "assets/screenshots/2358720/06-wukong-014.webp",
+          "thumbSrc": "assets/screenshots/2358720/06-wukong-014-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/06-wukong-014-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 6",
+          "caption": "黑神话：悟空｜游戏截图 6"
+        },
+        {
+          "src": "assets/screenshots/2358720/07-wukong-044.webp",
+          "thumbSrc": "assets/screenshots/2358720/07-wukong-044-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/07-wukong-044-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 7",
+          "caption": "黑神话：悟空｜游戏截图 7"
+        },
+        {
+          "src": "assets/screenshots/2358720/08-wukong-049.webp",
+          "thumbSrc": "assets/screenshots/2358720/08-wukong-049-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/08-wukong-049-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 8",
+          "caption": "黑神话：悟空｜游戏截图 8"
+        },
+        {
+          "src": "assets/screenshots/2358720/09-wukong-052.webp",
+          "thumbSrc": "assets/screenshots/2358720/09-wukong-052-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/09-wukong-052-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 9",
+          "caption": "黑神话：悟空｜游戏截图 9"
+        },
+        {
+          "src": "assets/screenshots/2358720/10-wukong-055.webp",
+          "thumbSrc": "assets/screenshots/2358720/10-wukong-055-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/10-wukong-055-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 10",
+          "caption": "黑神话：悟空｜游戏截图 10"
+        },
+        {
+          "src": "assets/screenshots/2358720/11-wukong-064.webp",
+          "thumbSrc": "assets/screenshots/2358720/11-wukong-064-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/11-wukong-064-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 11",
+          "caption": "黑神话：悟空｜游戏截图 11"
+        },
+        {
+          "src": "assets/screenshots/2358720/12-wukong-069.webp",
+          "thumbSrc": "assets/screenshots/2358720/12-wukong-069-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/12-wukong-069-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 12",
+          "caption": "黑神话：悟空｜游戏截图 12"
+        },
+        {
+          "src": "assets/screenshots/2358720/13-wukong-074.webp",
+          "thumbSrc": "assets/screenshots/2358720/13-wukong-074-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/13-wukong-074-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 13",
+          "caption": "黑神话：悟空｜游戏截图 13"
+        },
+        {
+          "src": "assets/screenshots/2358720/14-wukong-081.webp",
+          "thumbSrc": "assets/screenshots/2358720/14-wukong-081-thumb.webp",
+          "fullSrc": "assets/screenshots/2358720/14-wukong-081-original.jpg",
+          "alt": "Black Myth: Wukong 游戏截图 14",
+          "caption": "黑神话：悟空｜游戏截图 14"
+        }
+      ],
+      "workDescription": "天命人为追寻昔日传说的真相重走西游之路，在山川妖境间迎战熟悉又陌生的神魔。棍法、法术与变身承接中国古典想象，厚重美术则把残缺神话塑成一场可亲历的东方奇旅。",
+      "workDescriptionSource": "https://store.steampowered.com/app/2358720/?l=schinese&cc=cn"
     },
     {
       "id": "570940",
@@ -704,7 +1168,20 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/570940.jpg",
-      "playPeriod": "2021–2022"
+      "playPeriod": "2021–2022",
+      "review": [
+        "地图的立体咬合至今仍让人惊讶，篝火之间的每条捷径都像亲手摸出来的；操作有年代感，但世界设计不过时。"
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "不死人从北方监牢踏上前往罗德兰的朝圣，在衰败诸神与火之时代的遗迹中寻找自身使命。篝火、捷径和上下咬合的地图构成一座近乎完整的世界，操作虽有年代感，空间设计却依然不过时。"
+        },
+        {
+          "title": "扩展内容 · 深渊的亚尔特留斯",
+          "text": "穿过时间裂隙抵达昔日乌拉席露，亚尔特留斯的英雄传说在这里被还原成一场失败的深渊远征。新区域把亚尔特留斯、基亚兰与马努斯的命运补进主线，也奠定了系列后来关于深渊的许多表达。"
+        }
+      ]
     },
     {
       "id": "367520",
@@ -738,7 +1215,21 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/367520.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "虫巢的可爱外壳下面是衰败、孤独和执念。地图探索、Boss 战与配乐彼此咬合，体量和完成度都远超最初印象。"
+      ],
+      "reviewSections": [
+        {
+          "title": "扩展内容 · 格林剧团",
+          "text": "猩红剧团随火焰抵达德特茅斯，小骑士需要收集梦魇之火并参与一场循环往复的仪式。马戏团气质、仪式叙事与层层升级的决斗相互呼应，让梦魇之王成为圣巢最具舞台感的挑战之一。"
+        },
+        {
+          "title": "扩展内容 · 寻神者",
+          "text": "寻神者把圣巢诸神汇入一座层层升高的万神殿，小骑士需要以连续首领战证明自身。重新编排的敌人和递进限制把战斗系统榨到极限，也为愿意继续磨炼技术的玩家留下终极试炼。"
+        }
+      ],
+      "workDescription": "无名小骑士深入衰败的圣巢，穿过遗迹、虫群与梦境追查王国被感染吞噬的原因。精密地图、能力解锁和克制叙事彼此咬合，让孤独探索逐渐显出一段完整悲剧。"
     },
     {
       "id": "1030300",
@@ -772,7 +1263,70 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/1030300.jpg",
-      "playPeriod": "2025"
+      "playPeriod": "2025",
+      "review": [
+        "换成更灵活、更主动的移动和战斗后，熟悉的探索框架有了全新节奏；针与丝让每场交锋都更利落。"
+      ],
+      "screenshots": [
+        {
+          "src": "assets/screenshots/1030300/01-silksong-004.webp",
+          "thumbSrc": "assets/screenshots/1030300/01-silksong-004-thumb.webp",
+          "fullSrc": "assets/screenshots/1030300/01-silksong-004-original.jpg",
+          "alt": "Hollow Knight: Silksong 游戏截图 1",
+          "caption": "Silksong｜游戏截图 1"
+        },
+        {
+          "src": "assets/screenshots/1030300/02-silksong-008.webp",
+          "thumbSrc": "assets/screenshots/1030300/02-silksong-008-thumb.webp",
+          "fullSrc": "assets/screenshots/1030300/02-silksong-008-original.jpg",
+          "alt": "Hollow Knight: Silksong 游戏截图 2",
+          "caption": "Silksong｜游戏截图 2"
+        },
+        {
+          "src": "assets/screenshots/1030300/03-silksong-023.webp",
+          "thumbSrc": "assets/screenshots/1030300/03-silksong-023-thumb.webp",
+          "fullSrc": "assets/screenshots/1030300/03-silksong-023-original.jpg",
+          "alt": "Hollow Knight: Silksong 游戏截图 3",
+          "caption": "Silksong｜游戏截图 3"
+        },
+        {
+          "src": "assets/screenshots/1030300/04-silksong-025.webp",
+          "thumbSrc": "assets/screenshots/1030300/04-silksong-025-thumb.webp",
+          "fullSrc": "assets/screenshots/1030300/04-silksong-025-original.jpg",
+          "alt": "Hollow Knight: Silksong 游戏截图 4",
+          "caption": "Silksong｜游戏截图 4"
+        },
+        {
+          "src": "assets/screenshots/1030300/05-silksong-030.webp",
+          "thumbSrc": "assets/screenshots/1030300/05-silksong-030-thumb.webp",
+          "fullSrc": "assets/screenshots/1030300/05-silksong-030-original.jpg",
+          "alt": "Hollow Knight: Silksong 游戏截图 5",
+          "caption": "Silksong｜游戏截图 5"
+        },
+        {
+          "src": "assets/screenshots/1030300/06-silksong-072.webp",
+          "thumbSrc": "assets/screenshots/1030300/06-silksong-072-thumb.webp",
+          "fullSrc": "assets/screenshots/1030300/06-silksong-072-original.jpg",
+          "alt": "Hollow Knight: Silksong 游戏截图 6",
+          "caption": "Silksong｜游戏截图 6"
+        },
+        {
+          "src": "assets/screenshots/1030300/07-silksong-073.webp",
+          "thumbSrc": "assets/screenshots/1030300/07-silksong-073-thumb.webp",
+          "fullSrc": "assets/screenshots/1030300/07-silksong-073-original.jpg",
+          "alt": "Hollow Knight: Silksong 游戏截图 7",
+          "caption": "Silksong｜游戏截图 7"
+        },
+        {
+          "src": "assets/screenshots/1030300/08-silksong-082.webp",
+          "thumbSrc": "assets/screenshots/1030300/08-silksong-082-thumb.webp",
+          "fullSrc": "assets/screenshots/1030300/08-silksong-082-original.jpg",
+          "alt": "Hollow Knight: Silksong 游戏截图 8",
+          "caption": "Silksong｜游戏截图 8"
+        }
+      ],
+      "workDescription": "大黄蜂被带到由丝线与歌声统治的法洛姆，在不断向上的旅途中追查王国与自身命运的联系。更轻盈的移动、工具构筑和密集战斗延续圣巢式探索，也把孤独下潜改写成一场危险的攀登。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1030300/?l=schinese&cc=cn"
     },
     {
       "id": "48190",
@@ -805,7 +1359,11 @@
       "achievementSource": "none",
       "perfect": false,
       "cover": "assets/covers/48190.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "罗马城把刺杀、跑酷和据点经营连成一体，兄弟会系统也让“刺客组织”第一次真正可玩；老式操作略显生硬，但气质很足。"
+      ],
+      "workDescription": "艾吉奥在罗马继续对抗波吉亚家族，并重建几近瓦解的刺客兄弟会。城市经营、招募系统与多人模式扩展了前作框架，也让个人复仇转向一场有组织的反抗。"
     },
     {
       "id": "201790",
@@ -841,7 +1399,12 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/201790.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "陷阱连锁、地形利用和亲自补刀缺一不可，守图像在现场调试一台会失控的机关；双人合作尤其欢乐。"
+      ],
+      "workDescription": "战法师与女巫联手守住更多裂隙，以武器、法术和陷阱迎击成群兽人。双人合作、角色分工与更自由的陷阱组合，让布防和亲自下场清怪同样重要。",
+      "workDescriptionSource": "https://store.steampowered.com/app/201790/?l=schinese&cc=cn"
     },
     {
       "id": "1627720",
@@ -875,7 +1438,21 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/1627720.jpg",
-      "playPeriod": "2023–2026"
+      "playPeriod": "2023–2026",
+      "review": [
+        "童话改编、机械城市和人偶意象拼出很完整的黑暗气质；战斗讲究弹反与武器组合，难但大多有理可循。"
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "人偶匹诺曹在机械瘟疫席卷的克拉特醒来，为寻找吉佩托穿过一座被谎言与失控人偶吞噬的城市。线性关卡、武器组装与精准格挡彼此配合，让他的成长同时发生在战斗和一次次人性选择之中。"
+        },
+        {
+          "title": "资料片 · 序曲",
+          "text": "把时间拨回克拉特灾难爆发前，以传奇追迹者蕾雅为主角，加入新的区域、武器与敌人，补足城市走向崩坏的前夜。灾难前夜与传奇追迹者蕾雅的经历补全城市崩坏的另一面，也让熟悉地点显出尚未失去的过去。",
+          "cover": "assets/covers/2848330.jpg"
+        }
+      ]
     },
     {
       "id": "2322010",
@@ -909,7 +1486,43 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/2322010.jpg",
-      "playPeriod": "2025–2026"
+      "playPeriod": "2025–2026",
+      "review": [
+        "比前作更大、更热闹，也更像一场为北欧篇收束人物关系的终局；支线角色很丰满，战斗系统也更完整。"
+      ],
+      "screenshots": [
+        {
+          "src": "assets/screenshots/2322010/01-giant-encounter.webp",
+          "thumbSrc": "assets/screenshots/2322010/01-giant-encounter-thumb.webp",
+          "fullSrc": "assets/screenshots/2322010/01-giant-encounter-original.jpg",
+          "alt": "《God of War Ragnarök》游戏截图 1",
+          "caption": "《God of War Ragnarök》游戏截图 1"
+        },
+        {
+          "src": "assets/screenshots/2322010/02-snowy-overlook.webp",
+          "thumbSrc": "assets/screenshots/2322010/02-snowy-overlook-thumb.webp",
+          "fullSrc": "assets/screenshots/2322010/02-snowy-overlook-original.jpg",
+          "alt": "《God of War Ragnarök》游戏截图 2",
+          "caption": "《God of War Ragnarök》游戏截图 2"
+        },
+        {
+          "src": "assets/screenshots/2322010/03-eclipse.webp",
+          "thumbSrc": "assets/screenshots/2322010/03-eclipse-thumb.webp",
+          "fullSrc": "assets/screenshots/2322010/03-eclipse-original.jpg",
+          "alt": "《God of War Ragnarök》游戏截图 3",
+          "caption": "《God of War Ragnarök》游戏截图 3"
+        }
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "芬布尔之冬走向尽头，奎托斯与阿特柔斯在九界寻找阻止诸神黄昏的方法，也各自面对无法替对方完成的道路。神话战争只是外部倒计时，真正推动旅程的仍是父子如何成长，并学会尊重彼此的选择。"
+        },
+        {
+          "title": "扩展内容 · 英灵殿",
+          "text": "用循环挑战重组战斗，也让奎托斯重新面对自己的过去；它更像一段写给角色的收尾。循环挑战重组了既有战斗，也迫使奎托斯正视自己的旧日罪行，为角色留下安静而必要的收尾。"
+        }
+      ]
     },
     {
       "id": "1501750",
@@ -943,7 +1556,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1501750.jpg",
-      "playPeriod": "2024–2025"
+      "playPeriod": "2024–2025",
+      "review": [
+        "影界与现实双层地图是最鲜明的想法，探索和捷径常有惊喜；战斗扎实，但敌群密度有时会把节奏拖得很累。"
+      ],
+      "workDescription": "黑暗远征军在生者世界与亡者国度之间往返，为阻止邪神阿迪尔复苏踏上朝圣般的征程。双世界切换既改变道路与解谜，也让死亡成为继续探索的入口，撑起这场厚重而阴郁的类魂冒险。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1501750/?l=schinese&cc=cn"
     },
     {
       "id": "335300",
@@ -979,7 +1597,20 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/335300.jpg",
-      "playPeriod": "2021"
+      "playPeriod": "2021",
+      "review": [
+        "魂系列里最偏实验性的一作，地图连接和机制常有争议，但庞大的关卡、构筑空间与孤独感依然很有辨识度。"
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "德兰古雷克把衰败、诅咒和循环写得更直白，关卡衔接不总是合理，但探索规模和构筑自由度很足。辽阔探索和自由构筑弥补了部分关卡衔接的生硬，也让诅咒循环显得比前作更漫长、更私人。"
+        },
+        {
+          "title": "失落王冠三部曲",
+          "text": "不死人分别进入深渊王、铁之王与象牙王留下的三片失落国度，追寻能够抵抗诅咒的古老王冠。机关、地形与高压战斗共同抬高关卡密度，也让三段异域远征成为本作最完整的冒险章节。"
+        }
+      ]
     },
     {
       "id": "33230",
@@ -1012,7 +1643,12 @@
       "achievementSource": "none",
       "perfect": false,
       "cover": "assets/covers/33230.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "文艺复兴城市、家族复仇和刺客成长线结合得很顺，系统如今略显老派，艾吉奥的起点仍然值得回看。"
+      ],
+      "workDescription": "年轻贵族艾吉奥因家族遭到陷害踏上复仇之路，在佛罗伦萨与威尼斯的权力斗争中逐步成为刺客大师。文艺复兴城市、历史人物和横跨数十年的成长线彼此交织，为系列塑造了最完整也最具人情味的英雄旅程之一。",
+      "workDescriptionSource": "https://store.steampowered.com/app/33230/?l=schinese&cc=cn"
     },
     {
       "id": "1448440",
@@ -1046,7 +1682,31 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/1448440.jpg",
-      "playPeriod": "2024"
+      "playPeriod": "2024",
+      "review": [
+        "把三国人物塞进高速攻防的动作框架，化解与气势系统很爽快；叙事偏薄，战斗节奏才是它最鲜明的部分。"
+      ],
+      "reviewSections": [
+        {
+          "title": "本体",
+          "text": "无名义勇兵在黄巾之乱后的妖魔三国中辗转各方势力，与熟悉武将共同追查丹药引发的灾祸。化解与气势把历史战场改造成高速攻防，群雄则成为贯穿一连串强敌对决的坐标。"
+        },
+        {
+          "title": "逐鹿中原",
+          "text": "反董卓联军瓦解后，曹操军转向中原扩张；新战场、拳套、神兽与更高难度围绕更紧凑的化解攻防展开。新武器与高阶难度围绕更紧凑的化解攻防展开，也把曹操崛起前的中原争夺补进主线。",
+          "cover": "assets/covers/2205894.jpg"
+        },
+        {
+          "title": "称霸江东",
+          "text": "孙坚死后，孙策率部征服江东；新战场、长剑与魔境千里行把孙家线和后期重复挑战一并展开。孙家线与新战场扩展了三国群像，魔境千里行则把后期构筑转化为可重复挑战的终局内容。",
+          "cover": "assets/covers/2205895.jpg"
+        },
+        {
+          "title": "风起荆襄",
+          "text": "于吉死后，刘备军对抗笼罩荆州的丹药威胁；长鞭、新系统与终局扩展为三部资料片收尾。长鞭、新系统与终局扩展共同收束三部资料片，也为刘备阵营留下更完整的荆州篇章。",
+          "cover": "assets/covers/2205896.jpg"
+        }
+      ]
     },
     {
       "id": "2277560",
@@ -1080,7 +1740,35 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/2277560.jpg",
-      "playPeriod": "2025"
+      "playPeriod": "2025",
+      "review": [
+        "明末乱世与蜀地民俗给类魂框架添了自己的气质，动作与探索都有亮点，整体打磨仍带着新团队的生涩。"
+      ],
+      "screenshots": [
+        {
+          "src": "assets/screenshots/2277560/01-misty-landscape.webp",
+          "thumbSrc": "assets/screenshots/2277560/01-misty-landscape-thumb.webp",
+          "fullSrc": "assets/screenshots/2277560/01-misty-landscape-original.jpg",
+          "alt": "《明末：渊虚之羽》游戏截图 1",
+          "caption": "《明末：渊虚之羽》游戏截图 1"
+        },
+        {
+          "src": "assets/screenshots/2277560/02-sunset-town.webp",
+          "thumbSrc": "assets/screenshots/2277560/02-sunset-town-thumb.webp",
+          "fullSrc": "assets/screenshots/2277560/02-sunset-town-original.jpg",
+          "alt": "《明末：渊虚之羽》游戏截图 2",
+          "caption": "《明末：渊虚之羽》游戏截图 2"
+        },
+        {
+          "src": "assets/screenshots/2277560/03-branching-tree.webp",
+          "thumbSrc": "assets/screenshots/2277560/03-branching-tree-thumb.webp",
+          "fullSrc": "assets/screenshots/2277560/03-branching-tree-original.jpg",
+          "alt": "《明末：渊虚之羽》游戏截图 3",
+          "caption": "《明末：渊虚之羽》游戏截图 3"
+        }
+      ],
+      "workDescription": "身染羽化病的无常踏入明末巴蜀，在战乱、疫病与妖异交织的土地上寻找记忆。蜀地民俗、冷兵器构筑和类魂战斗相互缠绕，为历史乱世罩上一层诡谲神话。",
+      "workDescriptionSource": "https://store.steampowered.com/app/2277560/?l=schinese&cc=cn"
     },
     {
       "id": "391220",
@@ -1113,7 +1801,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/391220.jpg",
-      "playPeriod": "2024"
+      "playPeriod": "2024",
+      "review": [
+        "雪山、遗迹和求生探索的节奏很稳，场景规模比前作更大；故事依旧服务于冒险，但完整度很高。"
+      ],
+      "workDescription": "劳拉深入西伯利亚寻找失落城市基特城，与圣三一争夺关于不死的秘密。雪原遗迹、古墓谜题和生存探索并行，让她从求生者进一步成长为主动追寻真相的冒险家。",
+      "workDescriptionSource": "https://store.steampowered.com/app/391220/?l=schinese&cc=cn"
     },
     {
       "id": "102600",
@@ -1147,7 +1840,12 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/102600.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "把塔防规划和第三人称动作揉到一起，机关连锁的反馈直接，难点不只在守住出口，还在把杀敌路线设计得够漂亮。"
+      ],
+      "workDescription": "战法师独守裂隙，用刀刃、弩炮和形形色色的陷阱阻止兽人大军涌入世界。塔防规划与第三人称动作被压进同一条战线，每一波敌人都在检验布阵和临场补救。",
+      "workDescriptionSource": "https://store.steampowered.com/app/102600/?l=schinese&cc=cn"
     },
     {
       "id": "728880",
@@ -1181,7 +1879,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/728880.jpg",
-      "playPeriod": "2021–2024"
+      "playPeriod": "2021–2024",
+      "review": [
+        "规则很简单，真正的难点是分工和沟通。厨房一乱就会迅速失控，合作时的笑点往往比通关更值得记住。"
+      ],
+      "workDescription": "厨师团队重返混乱的洋葱王国，在移动厨房、传送门和不断变化的地形中协作出餐。简单分工会在时间压力下迅速变成沟通考验，也让每次失误和补救都成为最直接的多人喜剧。",
+      "workDescriptionSource": "https://store.steampowered.com/app/728880/?l=schinese&cc=cn"
     },
     {
       "id": "15100",
@@ -1214,7 +1917,12 @@
       "achievementSource": "none",
       "perfect": false,
       "cover": "assets/covers/15100.jpg",
-      "playPeriod": "2021"
+      "playPeriod": "2021",
+      "review": [
+        "刺客信条最原始也最克制的一作，重复度确实高，但中世纪圣地、信条冲突和潜入仪式感至今仍有独特味道。"
+      ],
+      "workDescription": "第三次十字军东征时期，阿泰尔在圣地城市间执行刺杀，并逐步发现目标背后的共同阴谋。跑酷、潜行与人群系统把历史城市变成可穿行的舞台，也奠定了系列最初的身份想象。",
+      "workDescriptionSource": "https://store.steampowered.com/app/15100/?l=schinese&cc=cn"
     },
     {
       "id": "582160",
@@ -1248,7 +1956,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/582160.jpg",
-      "playPeriod": "2023"
+      "playPeriod": "2023",
+      "review": [
+        "古埃及风景撑起了最强的探索欲，起源故事也给兄弟会补上了情感根基；等级制和清单式内容略显拖沓。"
+      ],
+      "workDescription": "守护者巴耶克穿行托勒密末期的古埃及，追查夺走儿子的阴谋并见证刺客兄弟会的起源。开放世界、等级成长和大规模古迹探索重塑了系列结构，让私人复仇与时代更迭彼此交汇。",
+      "workDescriptionSource": "https://store.steampowered.com/app/582160/?l=schinese&cc=cn"
     },
     {
       "id": "203160",
@@ -1281,7 +1994,12 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/203160.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "劳拉从求生者走向冒险家的过程很完整，战斗比解谜更突出；邪马台的压迫感和线性节奏至今依然利落。"
+      ],
+      "workDescription": "年轻的劳拉流落邪马台，在风暴、遗迹与武装幸存者之间寻找逃生之路。求生资源、攀爬探索和逐步升级的战斗共同完成了她从考古学者到冒险者的第一次蜕变。",
+      "workDescriptionSource": "https://store.steampowered.com/app/203160/?l=schinese&cc=cn"
     },
     {
       "id": "1097150",
@@ -1317,7 +2035,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1097150.jpg",
-      "playPeriod": "2021–2022"
+      "playPeriod": "2021–2022",
+      "review": [
+        "把综艺闯关做成轻量竞技，输赢常被碰撞和意外改写。技术上限有，但最有趣的还是一群人同时出糗。"
+      ],
+      "workDescription": "一群糖豆人在连续障碍赛与淘汰关卡中跌跌撞撞，争夺最后一顶皇冠。物理碰撞、随机混乱和极低的操作门槛，把竞技压力消解成任何人都能加入的派对闹剧。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1097150/?l=schinese&cc=cn"
     },
     {
       "id": "1057090",
@@ -1349,7 +2072,12 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/1057090.jpg",
-      "playPeriod": "2023"
+      "playPeriod": "2023",
+      "review": [
+        "移动和战斗比前作更自由，地图也更适合反复穿梭。它依旧擅长用音乐、色彩和留白讲一段温柔又残酷的童话。"
+      ],
+      "workDescription": "奥里离开尼博尔森林前往尼文，寻找失散的伙伴并揭开这片土地衰败的根源。更自由的战斗、能力组合与流畅移动扩展了探索层次，手绘景观则延续了系列温柔而哀伤的气质。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1057090/?l=schinese&cc=cn"
     },
     {
       "id": "527230",
@@ -1384,7 +2112,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/527230.jpg",
-      "playPeriod": "2022–2023"
+      "playPeriod": "2022–2023",
+      "review": [
+        "桌游式掷骰、资源管理和回合战斗组合得很耐玩，运气会制造挫败，也会让每次翻盘都显得格外有戏。"
+      ],
+      "workDescription": "冒险小队在随机生成的法汝王国中旅行、战斗并设法阻止席卷大陆的混沌。桌游式地图、回合制战斗和 Roguelike 风险叠在一起，让每次路线选择都成为资源与运气的共同押注。",
+      "workDescriptionSource": "https://store.steampowered.com/app/527230/?l=schinese&cc=cn"
     },
     {
       "id": "730",
@@ -1422,7 +2155,12 @@
       "perfect": true,
       "cover": "assets/covers/730.jpg",
       "playPeriod": "2025–2026",
-      "note": "接触过传统回合制竞技 FPS，累计 19.4 小时。"
+      "note": "接触过传统回合制竞技 FPS，累计 19.4 小时。",
+      "review": [
+        "枪法只是门槛，真正拉开差距的是信息、站位和团队配合。规则几十年没变，回合里的心理博弈依然够深。"
+      ],
+      "workDescription": "反恐精英与恐怖分子围绕爆破目标展开短回合对抗，经济、道具和信息共同决定每一次攻防。精准枪法只是基础，地图控制与团队决策才让这套规则在二十多年后依然保持极高的竞技密度。",
+      "workDescriptionSource": "https://store.steampowered.com/app/730/?l=schinese&cc=cn"
     },
     {
       "id": "1522820",
@@ -1457,7 +2195,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1522820.jpg",
-      "playPeriod": "2023–2024"
+      "playPeriod": "2023–2024",
+      "review": [
+        "保留机关连锁的爽感，又用战争场景把规模放大。巨量兽人冲进布好的杀阵时，塔防与动作终于同时达到高潮。"
+      ],
+      "workDescription": "战法师在更大规模的裂隙与战争场景中布置陷阱，亲自迎击成群涌来的兽人大军。战争模式把布阵范围和敌潮数量同时放大，也让机关连锁与即时补位变得比以往更重要。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1522820/?l=schinese&cc=cn"
     },
     {
       "id": "1174180",
@@ -1490,7 +2233,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1174180.jpg",
-      "playPeriod": "2024"
+      "playPeriod": "2024",
+      "review": [
+        "慢节奏的生活细节把西部世界做得很可信，操控略显笨重，但人物和环境经得起停下来细看。"
+      ],
+      "workDescription": "亚瑟·摩根随范德林德帮在旧西部末期一路逃亡，在劫掠求生与帮派忠诚之间逐渐看清时代的终结。缓慢生活节奏、细密世界互动和人物关系共同累积，让一场亡命旅程最终变成关于选择与救赎的挽歌。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1174180/?l=schinese&cc=cn"
     },
     {
       "id": "261570",
@@ -1522,7 +2270,12 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/261570.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "精确平台跳跃与精灵森林的视听气质结合得很好，追逐段落尤其紧张；战斗简单，但情绪推进非常有效。"
+      ],
+      "workDescription": "奥里在濒死的尼博尔森林中寻找光明，借助逐渐获得的能力穿越洞穴、遗迹与危险地形。精准平台跳跃、连贯地图和近乎无对白的叙事，共同讲述一段关于失去、守护与重生的童话。",
+      "workDescriptionSource": "https://store.steampowered.com/app/261570/?l=schinese&cc=cn"
     },
     {
       "id": "1525700",
@@ -1555,7 +2308,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1525700.jpg",
-      "playPeriod": "2025–2026"
+      "playPeriod": "2025–2026",
+      "review": [
+        "经营循环直观，扩建、布置和调配员工很容易让人停不下来。深度不算夸张，胜在节奏舒服、反馈清楚。"
+      ],
+      "workDescription": "经营者从几张桌椅起步，亲手扩建厨房、客房和宴会空间，并雇佣员工维持酒馆运转。建筑布局、服务效率与不断变化的客人需求相互牵制，让小店逐步成长为一套忙碌而有序的中世纪生意。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1525700/?l=schinese&cc=cn"
     },
     {
       "id": "1483870",
@@ -1588,7 +2346,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1483870.jpg",
-      "playPeriod": "2024"
+      "playPeriod": "2024",
+      "review": [
+        "画得好不好并不重要，误解才是乐趣来源。题目在几轮传递后彻底走样，是最稳定也最自然的节目效果。"
+      ],
+      "workDescription": "玩家轮流根据词语作画或猜测答案，在最多十六人的房间里见证信息如何一路走样。绘画水平并不决定乐趣，误解、脑补和朋友间的默契反而构成了每局最值得回看的笑点。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1483870/?l=schinese&cc=cn"
     },
     {
       "id": "1426210",
@@ -1621,7 +2384,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1426210.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "几乎每个章节都在换玩法，合作机制很少重复。婚姻故事见仁见智，但双人关卡设计确实把创意密度拉得很高。"
+      ],
+      "workDescription": "濒临破裂的夫妻被变成玩偶，只能在女儿想象出的世界里合作寻找恢复原状的方法。几乎每一章节都会更换核心机制，双人协作也从解谜手段变成修补关系的叙事语言。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1426210/?l=schinese&cc=cn"
     },
     {
       "id": "2515020",
@@ -1654,7 +2422,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/2515020.jpg",
-      "playPeriod": "2024"
+      "playPeriod": "2024",
+      "review": [
+        "把最终幻想做成偏线性的动作史诗，召唤兽大战很有场面；支线节奏拖沓，但主线的情绪和演出足够有冲击力。"
+      ],
+      "workDescription": "克莱夫在显化者与召唤兽决定战争走向的世界中追索复仇，并逐渐逼近水晶与命运的真相。高速动作、宏大的召唤兽战和政治悲剧交替推进，把个人一生写进大陆崩解的历史。",
+      "workDescriptionSource": "https://store.steampowered.com/app/2515020/?l=schinese&cc=cn"
     },
     {
       "id": "1676840",
@@ -1689,7 +2462,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1676840.jpg",
-      "playPeriod": "2025"
+      "playPeriod": "2025",
+      "review": [
+        "沿用桌游式冒险的骨架，队伍扩到四人后组合更多，流程也更复杂；随机性依旧会左右一局游戏的喜怒。"
+      ],
+      "workDescription": "冒险者组成四人小队反抗堕落女王，在随机地图上规划路线、处理事件并展开回合制战斗。更完整的站位系统与职业协作扩展了前作的桌游框架，也让多人决策拥有更明确的分工。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1676840/?l=schinese&cc=cn"
     },
     {
       "id": "387290",
@@ -1721,7 +2499,11 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/387290.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "在原版基础上补足区域与能力，路线衔接更完整。核心仍是高精度移动和情绪化视听，适合作为初代的最终版本。"
+      ],
+      "workDescription": "奥里在濒死的尼博尔森林中寻找光明，借由新能力穿越洞穴、遗迹与危险地形。精准平台跳跃、连贯地图和无对白叙事共同讲述失去与守护，也让每次移动本身成为表达。"
     },
     {
       "id": "632360",
@@ -1757,7 +2539,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/632360.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "从弱小开局一路堆出失控的火力，构筑成形时爽得很直接。随机道具、角色差异和合作混乱让每局都不太一样。"
+      ],
+      "workDescription": "幸存者在陌生星球上穿过不断增强的敌潮，搜集物品并寻找通往下一片区域的传送器。时间压力、随机装备和可以疯狂叠加的效果让每局构筑迅速失控，也把求生逐步变成反向碾压。",
+      "workDescriptionSource": "https://store.steampowered.com/app/632360/?l=schinese&cc=cn"
     },
     {
       "id": "3681010",
@@ -1792,7 +2579,12 @@
       "verifiedAt": "2026-08-04T23:35:51+08:00",
       "perfect": false,
       "cover": "assets/covers/3681010.jpg",
-      "playPeriod": "2026–至今"
+      "playPeriod": "2026–至今",
+      "review": [
+        "仍是系统密度很高的和风动作RPG，武士与忍者风格让攻防选择更丰富；学习成本不低，熟练后节奏很有层次。"
+      ],
+      "workDescription": "德川竹千代为阻止弟弟将军化踏入跨越时代的妖异战场，并在开放区域追查元凶。武士与忍者两套风格可即时切换，让架势攻防、潜行机动和妖怪构筑形成新的组合空间。",
+      "workDescriptionSource": "https://store.steampowered.com/app/3681010/?l=schinese&cc=cn"
     },
     {
       "id": "883710",
@@ -1824,7 +2616,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/883710.jpg",
-      "playPeriod": "2023"
+      "playPeriod": "2023",
+      "review": [
+        "重制后的警局仍像一座会呼吸的迷宫，弹药压力和暴君追逐把恐惧稳稳压在每一步探索上。"
+      ],
+      "workDescription": "浣熊市在生化灾难中彻底沦陷，里昂与克莱尔从不同路线进入警局寻找生路。有限资源、相互咬合的空间和持续追迫把探索变成压力管理，也让经典灾难以现代方式重生。",
+      "workDescriptionSource": "https://store.steampowered.com/app/883710/?l=schinese&cc=cn"
     },
     {
       "id": "2215430",
@@ -1857,7 +2654,21 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/2215430.jpg",
-      "playPeriod": "2024"
+      "playPeriod": "2024",
+      "review": [
+        "风景与剑戟演出很有电影感，正面交锋也够利落。现在玩得还不算深，留下的主要印象还是很抓人的武士氛围。"
+      ],
+      "screenshots": [
+        {
+          "src": "assets/screenshots/2215430/01-pampas-field.webp",
+          "thumbSrc": "assets/screenshots/2215430/01-pampas-field-thumb.webp",
+          "fullSrc": "assets/screenshots/2215430/01-pampas-field-original.jpg",
+          "alt": "《Ghost of Tsushima DIRECTOR'S CUT》游戏截图 1",
+          "caption": "《Ghost of Tsushima DIRECTOR'S CUT》游戏截图 1"
+        }
+      ],
+      "workDescription": "武士境井仁在蒙古入侵后游历对马岛，为守护故土不得不在武士传统与战鬼手段之间选择。风引导航、自然景观与克制决斗共同塑造了一场可自由行走的时代剧。",
+      "workDescriptionSource": "https://store.steampowered.com/app/2215430/?l=schinese&cc=cn"
     },
     {
       "id": "548430",
@@ -1889,7 +2700,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/548430.jpg",
-      "playPeriod": "2022–2024"
+      "playPeriod": "2022–2024",
+      "review": [
+        "四人下矿、挖矿撤离的循环简单却很耐玩，职业配合和随机洞穴让每次任务都带点临场事故感。"
+      ],
+      "workDescription": "矮人矿工小队深入程序生成的外星洞穴，开采资源并在潮水般的虫群中完成撤离。职业协作、全地形破坏和不可预测的洞穴结构，让每趟下井都同时是工程任务与混乱喜剧。",
+      "workDescriptionSource": "https://store.steampowered.com/app/548430/?l=schinese&cc=cn"
     },
     {
       "id": "1172470",
@@ -1923,7 +2739,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1172470.jpg",
-      "playPeriod": "2022–2024"
+      "playPeriod": "2022–2024",
+      "review": [
+        "滑铲、攀爬和枪械手感都很顺，交火节奏快得让人上头；真正难的是信息交换和临场协作。"
+      ],
+      "workDescription": "三人小队选择能力各异的传奇，在高速收缩的战场中搜集装备并争夺最后生存资格。滑铲、攀爬与英雄技能把枪战和机动紧密结合，也让信息共享与阵容配合成为吃鸡之外的核心乐趣。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1172470/?l=schinese&cc=cn"
     },
     {
       "id": "812140",
@@ -1957,7 +2778,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/812140.jpg",
-      "playPeriod": "2024"
+      "playPeriod": "2024",
+      "review": [
+        "古希腊风景很能撑起旅行感，战斗和刷装也容易上手。现在玩得还不算深，最清楚的是刚骑马穿过岛屿时的旅行感。"
+      ],
+      "workDescription": "雇佣兵在伯罗奔尼撒战争时期横跨古希腊，追查家族秘密并介入雅典与斯巴达的冲突。海陆探索、角色养成和大量分支选择进一步推开系列边界，也把刺客故事改写成一段英雄史诗。",
+      "workDescriptionSource": "https://store.steampowered.com/app/812140/?l=schinese&cc=cn"
     },
     {
       "id": "1237970",
@@ -1989,7 +2815,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1237970.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "机甲与铁驭之间的切换干净利落，战役不长，却几乎每一关都能拿出一个新点子，毫不拖沓。"
+      ],
+      "workDescription": "铁驭杰克与先锋级泰坦 BT 被迫结成搭档，穿越战场阻止 IMC 的毁灭计划。高速跑墙、机甲交战与不断变换规则的关卡紧密衔接，把短篇战役做成一场几乎没有冷场的动作演出。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1237970/?l=schinese&cc=cn"
     },
     {
       "id": "242760",
@@ -2024,7 +2855,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/242760.jpg",
-      "playPeriod": "2021"
+      "playPeriod": "2021",
+      "review": [
+        "白天砍树搭营地，夜里提防洞穴和野人，生存建造与恐怖压迫感咬得很紧，联机时尤其容易出戏又上头。"
+      ],
+      "workDescription": "空难幸存者独自在神秘半岛寻找失踪的儿子，同时抵御潜伏于洞穴和森林中的食人族。采集建造、开放探索与渐深的地下恐怖彼此叠加，让生存日常逐步滑向难以解释的实验真相。",
+      "workDescriptionSource": "https://store.steampowered.com/app/242760/?l=schinese&cc=cn"
     },
     {
       "id": "329050",
@@ -2056,7 +2892,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/329050.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "短暂上手已经能感觉到动作系统很深，角色和招式也很多。还没练到连段层面，更多是先记住了它的动作手感。"
+      ],
+      "workDescription": "尼禄与但丁在福图纳追查魔剑教团，五名可操作角色以不同方式重访同一场魔界危机。抓取、剑阵与风格切换拓宽了连段语言，也让这部特别版成为系列机制的丰富汇编。",
+      "workDescriptionSource": "https://store.steampowered.com/app/329050/?l=schinese&cc=cn"
     },
     {
       "id": "739630",
@@ -2090,7 +2931,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/739630.jpg",
-      "playPeriod": "2022"
+      "playPeriod": "2022",
+      "review": [
+        "靠声音、线索和队友反应撑起恐怖感，规则熟了以后仍会被突发状况吓一跳，联机节目效果很好。"
+      ],
+      "workDescription": "四人调查队进入闹鬼地点，使用专业设备搜集证据并判断幽灵种类。语音互动、随机行为和逐渐失控的理智值，让每次例行调查都可能突然变成仓促逃生。",
+      "workDescriptionSource": "https://store.steampowered.com/app/739630/?l=schinese&cc=cn"
     },
     {
       "id": "2567870",
@@ -2125,7 +2971,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/2567870.jpg",
-      "playPeriod": "2026"
+      "playPeriod": "2026",
+      "review": [
+        "把合作平台跳跃变成一场公开处刑：一个人失误，全队一起掉。折磨是真的，笑点也是真的。"
+      ],
+      "workDescription": "玩家与同伴被一条锁链绑在一起，从地狱深处协作攀向越来越险峻的高处。共享位移把普通跳跃变成团队沟通试炼，一次失误也足以让所有人共同坠落。",
+      "workDescriptionSource": "https://store.steampowered.com/app/2567870/?l=schinese&cc=cn"
     },
     {
       "id": "2381590",
@@ -2160,7 +3011,12 @@
       "achievementSource": "steam-community",
       "perfect": true,
       "cover": "assets/covers/2381590.jpg",
-      "playPeriod": "2023"
+      "playPeriod": "2023",
+      "review": [
+        "路线不长，压力全来自失误后的坠落。操作并不复杂，却很会用高度和沉没成本折磨耐心。"
+      ],
+      "workDescription": "少年杰基从贫民窟一路向上攀登，在漂浮物、管道和荒诞场景之间寻找通往天空的路线。没有存档点的高空平台跳跃把每次失误都变成长距离坠落，也让耐心本身成为唯一稳定的进度。",
+      "workDescriptionSource": "https://store.steampowered.com/app/2381590/?l=schinese&cc=cn"
     },
     {
       "id": "1091500",
@@ -2192,7 +3048,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/1091500.jpg",
-      "playPeriod": "2024"
+      "playPeriod": "2024",
+      "review": [
+        "只在夜之城浅浅逛过几小时，霓虹、义体和人物演出已经很抓眼。还不足以下完整评价，先记下这份城市气质。"
+      ],
+      "workDescription": "雇佣兵 V 在夜之城追逐能够改写生命的芯片，却被迫与传奇摇滚客强尼共享意识。义体构筑、城市支线和角色关系交织成多条人生路径，也让繁华未来始终映着资本与身份的裂缝。",
+      "workDescriptionSource": "https://store.steampowered.com/app/1091500/?l=schinese&cc=cn"
     },
     {
       "id": "2384580",
@@ -2226,7 +3087,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/2384580.jpg",
-      "playPeriod": "2025"
+      "playPeriod": "2025",
+      "review": [
+        "短暂上手，一骑当千的规模感和动作反馈都很直接。现在还只停留在第一印象，至少割草确实够爽。"
+      ],
+      "workDescription": "无名英雄从黄巾之乱起踏入三国战场，在名将群像与大军冲锋中寻找自己的道路。高密度军阵、战术指令和一骑当千的动作爽感结合，让熟悉历史重新显出战场规模。",
+      "workDescriptionSource": "https://store.steampowered.com/app/2384580/?l=schinese&cc=cn"
     },
     {
       "id": "2246340",
@@ -2263,7 +3129,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/2246340.jpg",
-      "playPeriod": "2025"
+      "playPeriod": "2025",
+      "review": [
+        "太刀，帅！"
+      ],
+      "workDescription": "猎人随调查队进入环境剧烈变化的禁地，在迁徙怪群与当地聚落之间追查生态异变。无缝原野、动态天气和更连续的狩猎流程把怪物与环境绑得更紧，也让追踪本身成为故事的一部分。",
+      "workDescriptionSource": "https://store.steampowered.com/app/2246340/?l=schinese&cc=cn"
     },
     {
       "id": "601150",
@@ -2295,7 +3166,12 @@
       "achievementSource": "steam-community",
       "perfect": false,
       "cover": "assets/covers/601150.jpg",
-      "playPeriod": "2023"
+      "playPeriod": "2023",
+      "review": [
+        "只短暂上手过，动作反馈和炫技感已经很显眼。还没玩到能谈系统深度，先留一条第一印象。"
+      ],
+      "workDescription": "恶魔之树在红墓市拔地而起，尼禄、但丁与神秘人 V 沿不同路线追击魔王尤里曾。三套风格迥异的战斗系统在终局交汇，把连段自由、角色宿命与华丽演出推到系列新高。",
+      "workDescriptionSource": "https://store.steampowered.com/app/601150/?l=schinese&cc=cn"
     },
     {
       "source": "manual",
@@ -2324,7 +3200,25 @@
         "themes": [
           "魔兽宇宙"
         ]
-      }
+      },
+      "review": [
+        "从早期版本接触到后来断续回归，真正让人记住的不是某个等级，而是资料片更替后仍能回去看看的那个世界。"
+      ],
+      "reviewSections": [
+        {
+          "title": "70 级版本 · 初次接触",
+          "text": "黑暗之门重新开启后，冒险者从艾泽拉斯进入破碎的外域，面对燃烧军团与失落英雄留下的战争。外域、副本和大型团队内容把线上世界的尺度骤然推开，也让第一次接触显得格外辽阔。"
+        },
+        {
+          "title": "熊猫人之谜 · 正式游玩",
+          "text": "联盟与部落的舰队意外发现被迷雾遮蔽的潘达利亚，并把阵营战争带进这片古老大陆。山水、门派与煞的设定构成鲜明版本气质，也让早期接触终于转化为真正长期游玩。"
+        },
+        {
+          "title": "后续资料片 · 断续回归",
+          "text": "此后的资料片不断改写世界格局、职业系统与终局玩法，每次回归面对的几乎都是一套新的规则。熟悉地点与旧角色却始终没有消失，使版本迁移本身也成为艾泽拉斯漫长编年史的一部分。"
+        }
+      ],
+      "workDescription": "玩家在艾泽拉斯选择种族与职业，穿行不断扩张的大陆参与任务、副本与阵营战争。长期版本更替让世界、职业和社交关系持续变化，也使每次回归都像重新翻开一部仍在书写的编年史。"
     },
     {
       "source": "manual",
@@ -2354,7 +3248,11 @@
         "themes": [
           "暴雪宇宙"
         ]
-      }
+      },
+      "review": [
+        "基本只打快速匹配，胜负没排位那么紧绷，暴雪角色大乱斗和地图机制本身就足够撑起乐趣。"
+      ],
+      "workDescription": "暴雪各个世界的英雄被召入时空枢纽，在目标各异的战场上展开五人团队对抗。共享经验、地图机制和快速团战弱化了个人补刀压力，也把胜负更多交给转线与协作。"
     },
     {
       "source": "manual",
@@ -2395,7 +3293,11 @@
         "themes": [
           "符文之地"
         ]
-      }
+      },
+      "review": [
+        "玩得最久的竞技游戏之一，版本和英雄一直在变，真正耐玩的还是阵容理解、临场决策和队友配合。"
+      ],
+      "workDescription": "两支五人队伍在召唤师峡谷争夺资源、推进兵线并摧毁对方基地。英雄差异、版本迭代与团队博弈形成近乎无穷的组合，也让每一局都成为新的临场判断。"
     },
     {
       "source": "manual",
@@ -2419,7 +3321,11 @@
         "themes": [
           "现代军事"
         ]
-      }
+      },
+      "review": [
+        "枪械、地图和快节奏对局都很直接，是小时候最熟悉的多人射击记忆之一，胜负之外更多是一起玩的热闹。"
+      ],
+      "workDescription": "玩家在保卫者与潜伏者阵营间展开爆破、团队竞技等多种枪战对抗。轻量操作、清晰地图与快速开局构成了国民级射击体验，也承载了早期网吧时代的共同记忆。"
     },
     {
       "source": "manual",
@@ -2443,7 +3349,11 @@
         "themes": [
           "阿拉德大陆"
         ]
-      }
+      },
+      "review": [
+        "横版动作的手感很扎实，刷图、转职和装备成长构成了长期循环；版本更替越快，追赶也越容易变成负担。"
+      ],
+      "workDescription": "冒险家在阿拉德大陆穿行地下城，以横版动作连招对抗使徒与各类异变。职业转职、装备成长和长期团本不断扩张终局追求，也塑造了独特的街机式网游节奏。"
     },
     {
       "source": "manual",
@@ -2480,7 +3390,11 @@
         "themes": [
           "魔幻卡牌"
         ]
-      }
+      },
+      "review": [
+        "从黑石山一路玩到传说，卡组构筑的乐趣不只在强度，也在读环境、猜手牌和偶尔赌一把神抽。"
+      ],
+      "workDescription": "魔兽角色与法术被重新组织成数字卡牌，玩家以三十张牌组展开回合制对决。直观规则、随机事件与持续更新的牌池降低了入门门槛，却保留了构筑和资源交换的深度。"
     },
     {
       "source": "manual",
@@ -2506,7 +3420,11 @@
         "themes": [
           "暗黑宇宙"
         ]
-      }
+      },
+      "review": [
+        "本体流程把刷怪、爆装和技能成长串得很顺，迪亚波罗主线也是最清楚的记忆；后续资料片没有算进这段经历。"
+      ],
+      "workDescription": "奈非天重返崔斯特姆追击从天而降的异象，并在天堂与地狱之间阻止黑暗复苏。技能套装、随机装备和不断抬升的难度构成刷宝循环，让战斗逐渐转化为对效率与构筑的追求。"
     },
     {
       "source": "manual",
@@ -2517,7 +3435,7 @@
         "total": 0
       },
       "perfect": false,
-      "cover": "assets/covers/manual-warcraft3.webp",
+      "cover": "assets/covers/manual-warcraft3.png",
       "id": "manual-warcraft3",
       "name": "魔兽争霸 III",
       "playPeriod": "2010–2017",
@@ -2531,7 +3449,11 @@
         "themes": [
           "守图地图"
         ]
-      }
+      },
+      "review": [
+        "真正留下印象的不是对战天梯，而是自定义地图里的守图玩法。几个人守一张图，简单，却很容易一局接一局。"
+      ],
+      "workDescription": "人类、兽人、暗夜精灵与亡灵在洛丹伦的灾变中走向同一场世界战争。英雄养成、即时战略和强大的地图编辑器共同扩展了作品边界，也孕育出大量独立玩法。"
     },
     {
       "source": "manual",
@@ -2557,7 +3479,11 @@
         "themes": [
           "最终幻想"
         ]
-      }
+      },
+      "review": [
+        "高中时玩到当时满级，也反复打过一段机械或飞船主题副本。很多细节已经模糊，但大型副本的规模感还记得。"
+      ],
+      "workDescription": "冒险者在艾欧泽亚从普通任务起步，随水晶指引卷入跨越国家与世界的长期史诗。职业自由切换、副本协作和持续资料片更新共同塑造了一个适合生活与冒险的线上世界。"
     },
     {
       "source": "manual",
@@ -2581,7 +3507,11 @@
         "themes": [
           "科幻"
         ]
-      }
+      },
+      "review": [
+        "国服保留了刷资源、养战甲和研究系统的核心循环，和 Steam 端分开记录后，更能看出两段经历的差别。"
+      ],
+      "workDescription": "Tenno 驾驭战甲在太阳系执行歼灭、防御与探索任务，通过持续刷取扩充武器和战甲收藏。高速机动与庞杂养成组成长期循环，国服版本则留下了一段独立于国际服的早期经历。"
     },
     {
       "source": "manual",
@@ -2605,7 +3535,11 @@
         "themes": [
           "东方玄幻"
         ]
-      }
+      },
+      "review": [
+        "短暂接触过的东方玄幻网游，许多任务和地图已经记不清了，留下的主要是早期国产网游那种朴素的世界感。"
+      ],
+      "workDescription": "玩家进入以中国神话为底色的大荒，在门派、国战与副本之间体验早期国产大型网游。山海意象、古典配乐和多人社会结构共同构成记忆，也保留了那个年代特有的世界尺度。"
     }
   ],
   "diagnostics": {
