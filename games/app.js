@@ -324,6 +324,8 @@ function buildGameWorkContents(game) {
         : "expansion",
       title: String(section?.title || "").trim(),
       cover: String(section?.cover || "").trim(),
+      levelCap: String(section?.levelCap || "").trim(),
+      levelSquishBefore: String(section?.levelSquishBefore || "").trim(),
       description: String(section?.description || section?.text || "").trim(),
     }));
   const sourceContents = explicitContents.length
@@ -336,6 +338,8 @@ function buildGameWorkContents(game) {
         type,
         title: String(content?.title || "").trim(),
         cover: String(content?.cover || "").trim(),
+        levelCap: String(content?.levelCap || "").trim(),
+        levelSquishBefore: String(content?.levelSquishBefore || "").trim(),
         description:
           String(content?.description || content?.text || "").trim() ||
           (type === "base" ? defaultDescription : ""),
@@ -351,6 +355,8 @@ function buildGameWorkContents(game) {
       type: "base",
       title: "本体",
       cover: String(game.cover || "").trim(),
+      levelCap: "",
+      levelSquishBefore: "",
       description: defaultDescription,
     });
   }
@@ -437,11 +443,22 @@ function createGameRecordPanel(game) {
       selectedWorkTitle.textContent =
         selected.type === "base" ? game.name : cleanTitle || selected.title;
       selectedWorkDescription.textContent = selected.description || "暂无作品简介";
-
       if (focusSelected) thumbnails[index]?.focus();
     };
 
     workContents.forEach((content, index) => {
+      if (content.levelSquishBefore) {
+        const eraBreak = make("div", "game-work-era-break");
+        eraBreak.append(
+          make("span", "game-work-era-break-label", "等级压缩"),
+          make(
+            "strong",
+            "game-work-era-break-value",
+            content.levelSquishBefore,
+          ),
+        );
+        rail.append(eraBreak);
+      }
       const workRoleClass =
         content.type === "base" ? " is-base-work" : " is-expansion-work";
       const card = make(
@@ -461,6 +478,21 @@ function createGameRecordPanel(game) {
         card.append(image);
       } else {
         card.append(make("span", "game-work-thumbnail-placeholder", content.title));
+      }
+      if (content.levelCap) {
+        const levelName =
+          content.type === "base"
+            ? "经典旧世"
+            : String(content.title || "")
+                .replace(/^(资料片|DLC)[：:·\s-]*/i, "")
+                .trim();
+        card.append(
+          make(
+            "span",
+            "game-work-level-name",
+            levelName || content.title,
+          ),
+        );
       }
       card.addEventListener("click", () => selectWorkContent(index));
       card.addEventListener("keydown", (event) => {

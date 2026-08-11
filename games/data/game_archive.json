@@ -1179,6 +1179,7 @@
         },
         {
           "title": "扩展内容 · 深渊的亚尔特留斯",
+          "cover": "assets/covers/dark-souls-artorias-of-the-abyss.jpg",
           "text": "穿过时间裂隙抵达昔日乌拉席露，亚尔特留斯的英雄传说在这里被还原成一场失败的深渊远征。新区域把亚尔特留斯、基亚兰与马努斯的命运补进主线，也奠定了系列后来关于深渊的许多表达。"
         }
       ]
@@ -1222,10 +1223,12 @@
       "reviewSections": [
         {
           "title": "扩展内容 · 格林剧团",
+          "cover": "assets/covers/hollow-knight-grimm-troupe.jpg",
           "text": "猩红剧团随火焰抵达德特茅斯，小骑士需要收集梦魇之火并参与一场循环往复的仪式。马戏团气质、仪式叙事与层层升级的决斗相互呼应，让梦魇之王成为圣巢最具舞台感的挑战之一。"
         },
         {
           "title": "扩展内容 · 寻神者",
+          "cover": "assets/covers/hollow-knight-godmaster.jpg",
           "text": "寻神者把圣巢诸神汇入一座层层升高的万神殿，小骑士需要以连续首领战证明自身。重新编排的敌人和递进限制把战斗系统榨到极限，也为愿意继续磨炼技术的玩家留下终极试炼。"
         }
       ],
@@ -1520,6 +1523,7 @@
         },
         {
           "title": "扩展内容 · 英灵殿",
+          "cover": "assets/covers/god-of-war-ragnarok-valhalla.jpg",
           "text": "用循环挑战重组战斗，也让奎托斯重新面对自己的过去；它更像一段写给角色的收尾。循环挑战重组了既有战斗，也迫使奎托斯正视自己的旧日罪行，为角色留下安静而必要的收尾。"
         }
       ]
@@ -1608,6 +1612,7 @@
         },
         {
           "title": "失落王冠三部曲",
+          "cover": "assets/covers/dark-souls-2-lost-crowns.jpg",
           "text": "不死人分别进入深渊王、铁之王与象牙王留下的三片失落国度，追寻能够抵抗诅咒的古老王冠。机关、地形与高压战斗共同抬高关卡密度，也让三段异域远征成为本作最完整的冒险章节。"
         }
       ]
@@ -3182,7 +3187,7 @@
         "total": 0
       },
       "perfect": false,
-      "cover": "assets/covers/manual-wow.png",
+      "cover": "assets/covers/wow-vanilla.jpg",
       "id": "manual-wow",
       "name": "魔兽世界",
       "playPeriod": "2008–至今",
@@ -3218,7 +3223,94 @@
           "text": "此后的资料片不断改写世界格局、职业系统与终局玩法，每次回归面对的几乎都是一套新的规则。熟悉地点与旧角色却始终没有消失，使版本迁移本身也成为艾泽拉斯漫长编年史的一部分。"
         }
       ],
-      "workDescription": "玩家在艾泽拉斯选择种族与职业，穿行不断扩张的大陆参与任务、副本与阵营战争。长期版本更替让世界、职业和社交关系持续变化，也使每次回归都像重新翻开一部仍在书写的编年史。"
+      "workDescription": "玩家在艾泽拉斯选择种族与职业，穿行不断扩张的大陆参与任务、副本与阵营战争。长期版本更替让世界、职业和社交关系持续变化，也使每次回归都像重新翻开一部仍在书写的编年史。",
+      "workContents": [
+        {
+          "type": "base",
+          "title": "本体",
+          "cover": "assets/covers/wow-vanilla.jpg",
+          "levelCap": "60级",
+          "description": "部落与联盟在艾泽拉斯的广阔大陆上展开冒险，通过任务、地下城、团队副本与阵营冲突，共同塑造这个持续演进的在线世界。"
+        },
+        {
+          "type": "dlc",
+          "title": "资料片 · 燃烧的远征",
+          "cover": "assets/covers/wow-loading-burning-crusade.jpg",
+          "levelCap": "70级",
+          "description": "黑暗之门再次开启，冒险者远征破碎的外域，对抗燃烧军团并追寻伊利丹的踪迹，同时迎来血精灵与德莱尼两大种族。"
+        },
+        {
+          "type": "dlc",
+          "title": "资料片 · 巫妖王之怒",
+          "cover": "assets/covers/wow-loading-wrath.jpg",
+          "levelCap": "80级",
+          "description": "远征诺森德的冰原与群山，直面天灾军团和冰冠堡垒中的巫妖王阿尔萨斯，死亡骑士也由此成为可玩的英雄职业。"
+        },
+        {
+          "type": "dlc",
+          "title": "资料片 · 大地的裂变",
+          "cover": "assets/covers/wow-loading-cataclysm-kalimdor.jpg",
+          "levelCap": "85级",
+          "description": "死亡之翼重返艾泽拉斯并撕裂旧世界，东部王国和卡利姆多被永久改造，狼人、地精与全新的区域故事随灾变而来。"
+        },
+        {
+          "type": "dlc",
+          "title": "资料片 · 熊猫人之谜",
+          "cover": "assets/covers/wow-loading-pandaria.jpg",
+          "levelCap": "90级",
+          "description": "迷雾散去后，联盟与部落踏上潘达利亚，在古老王国、云雾群山与煞魔威胁之间探索冲突、平衡与这片大陆的秘密。"
+        },
+        {
+          "type": "dlc",
+          "title": "资料片 · 德拉诺之王",
+          "cover": "assets/covers/wow-loading-draenor.jpg",
+          "levelCap": "100级",
+          "description": "穿越黑暗之门进入另一条时间线的德拉诺，直面尚未堕落的兽人氏族与钢铁部落，并以要塞系统建立远征据点。"
+        },
+        {
+          "type": "dlc",
+          "title": "资料片 · 军团再临",
+          "cover": "assets/covers/wow-loading-broken-isles.jpg",
+          "levelCap": "110级",
+          "description": "燃烧军团全面入侵，英雄前往破碎群岛，掌握神器武器、建立职业大厅，并与恶魔猎手一同迎战萨格拉斯的军团。"
+        },
+        {
+          "type": "dlc",
+          "title": "资料片 · 争霸艾泽拉斯",
+          "cover": "assets/covers/wow-loading-bfa.jpg",
+          "levelCap": "120级",
+          "description": "联盟与部落的战争再度升级，库尔提拉斯与赞达拉成为新的远征舞台，阵营冲突也逐步牵出艾泽拉斯深处的古老威胁。"
+        },
+        {
+          "type": "dlc",
+          "title": "资料片 · 暗影国度",
+          "cover": "assets/covers/wow-loading-shadowlands.jpg",
+          "levelCap": "60级",
+          "levelSquishBefore": "120 → 50",
+          "description": "生与死之间的帷幕被撕裂，玩家进入暗影界的诸多国度，在盟约、噬渊和托加斯特之间追查灵魂秩序失衡的根源。"
+        },
+        {
+          "type": "dlc",
+          "title": "资料片 · 巨龙时代",
+          "cover": "assets/covers/wow-loading-dragon-isles.jpg",
+          "levelCap": "70级",
+          "description": "巨龙群岛重新苏醒，龙族召唤联盟与部落探索失落家园；龙希尔唤魔师、驭龙术与重制专业系统构成核心体验。"
+        },
+        {
+          "type": "dlc",
+          "title": "资料片 · 地心之战",
+          "cover": "assets/covers/wow-loading-khaz-algar.jpg",
+          "levelCap": "80级",
+          "description": "世界之魂传奇由此展开，冒险者深入卡兹阿加与地底国度，追踪萨拉塔斯和虚空势力，同时体验战团与地下堡系统。"
+        },
+        {
+          "type": "dlc",
+          "title": "资料片 · 至暗之夜",
+          "cover": "assets/covers/wow-loading-midnight.jpg",
+          "levelCap": "90级",
+          "description": "虚空风暴笼罩重塑后的永歌森林，萨拉塔斯将威胁带至奎尔萨拉斯腹地，玩家将在光明与暗影之间寻找新的盟友。"
+        }
+      ]
     },
     {
       "source": "manual",
@@ -3364,7 +3456,7 @@
         "total": 0
       },
       "perfect": false,
-      "cover": "assets/covers/manual-hearthstone.png",
+      "cover": "assets/covers/hearthstone-cn-client.jpg",
       "id": "manual-hearthstone",
       "name": "炉石传说",
       "playPeriod": "2015–2022",

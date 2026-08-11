@@ -39,6 +39,28 @@ async function assertScreenshotCollection(game, expectedNames) {
   }
 }
 
+test("every listed Steam expansion keeps a local cover asset", async () => {
+  const missingCovers = [];
+
+  for (const game of archive.games.filter((entry) => entry.platform === "steam")) {
+    for (const section of game.reviewSections ?? []) {
+      if (section.title === "本体") continue;
+
+      if (!section.cover) {
+        missingCovers.push(`${game.name}: ${section.title}`);
+        continue;
+      }
+
+      const coverUrl = new URL(`../${section.cover}`, import.meta.url);
+      await access(coverUrl);
+      const coverStats = await stat(coverUrl);
+      assert.ok(coverStats.size > 10_000, `${game.name}: ${section.title} cover is too small`);
+    }
+  }
+
+  assert.deepEqual(missingCovers, []);
+});
+
 test("Dyson Sphere Program keeps the approved short personal note and four original screenshots", async () => {
   const dyson = archive.games.find((game) => game.id === "1366540");
 
@@ -595,6 +617,13 @@ test("work selector drives one large cover stage, unified thumbnails, and select
   );
 });
 
+test("large work stage preserves the complete selected cover", () => {
+  assert.match(
+    styleSource,
+    /\.game-work-stage-image\s*\{[^}]*object-fit:\s*contain;/s,
+  );
+});
+
 test("work cards use a dominant base cover and unlabeled expansion covers", () => {
   const panelSource = appSource.slice(
     appSource.indexOf("function createGameRecordPanel"),
@@ -957,4 +986,65 @@ test("painted-world and Oolacile descriptions avoid the repeated short-DLC templ
   assert.ok(oolacile, "Artorias of the Abyss section is missing");
   assert.match(oolacile.text, /乌拉席露/);
   assert.doesNotMatch(oolacile.text, /篇幅不长/);
+});
+
+test("Battle.net work cards stay product-focused and use local recognizable covers", async () => {
+  const wow = archive.games.find((game) => game.id === "manual-wow");
+  const hearthstone = archive.games.find((game) => game.id === "manual-hearthstone");
+  const expectedWowWorks = [
+    ["本体", "assets/covers/wow-vanilla.jpg"],
+    ["资料片 · 燃烧的远征", "assets/covers/wow-loading-burning-crusade.jpg"],
+    ["资料片 · 巫妖王之怒", "assets/covers/wow-loading-wrath.jpg"],
+    ["资料片 · 大地的裂变", "assets/covers/wow-loading-cataclysm-kalimdor.jpg"],
+    ["资料片 · 熊猫人之谜", "assets/covers/wow-loading-pandaria.jpg"],
+    ["资料片 · 德拉诺之王", "assets/covers/wow-loading-draenor.jpg"],
+    ["资料片 · 军团再临", "assets/covers/wow-loading-broken-isles.jpg"],
+    ["资料片 · 争霸艾泽拉斯", "assets/covers/wow-loading-bfa.jpg"],
+    ["资料片 · 暗影国度", "assets/covers/wow-loading-shadowlands.jpg"],
+    ["资料片 · 巨龙时代", "assets/covers/wow-loading-dragon-isles.jpg"],
+    ["资料片 · 地心之战", "assets/covers/wow-loading-khaz-algar.jpg"],
+    ["资料片 · 至暗之夜", "assets/covers/wow-loading-midnight.jpg"],
+  ];
+  const expectedWowLevelCaps = [
+    "60级", "70级", "80级", "85级", "90级", "100级", "110级", "120级",
+    "60级", "70级", "80级", "90级",
+  ];
+
+  assert.ok(wow, "World of Warcraft record is missing");
+  assert.deepEqual(
+    wow.workContents?.map(({ title, cover }) => [title, cover]),
+    expectedWowWorks,
+  );
+  assert.deepEqual(
+    wow.workContents?.map(({ levelCap }) => levelCap),
+    expectedWowLevelCaps,
+  );
+  assert.equal(
+    wow.workContents?.find((work) => work.title === "资料片 · 暗影国度")?.levelSquishBefore,
+    "120 → 50",
+  );
+  assert.doesNotMatch(appSource, /formatWorkLevelCap/);
+  assert.match(appSource, /game-work-era-break/);
+  assert.match(appSource, /等级压缩/);
+  assert.doesNotMatch(appSource, /game-work-stage-level-cap/);
+  assert.doesNotMatch(appSource, /game-work-level-cap/);
+  assert.match(appSource, /game-work-level-name/);
+  assert.doesNotMatch(styleSource, /\.game-work-stage-level-cap/);
+  assert.doesNotMatch(styleSource, /\.game-work-level-cap/);
+  assert.match(styleSource, /\.game-work-level-name/);
+  assert.match(styleSource, /\.game-work-era-break/);
+  for (const work of wow.workContents) {
+    assert.ok(String(work.description || "").trim().length >= 36, `${work.title} needs useful product copy`);
+    assert.equal(work.playPeriod, undefined, `${work.title} must not carry a personal play period`);
+    assert.equal(work.review, undefined, `${work.title} must not carry a personal review`);
+    const coverUrl = new URL(`../${work.cover}`, import.meta.url);
+    await access(coverUrl);
+    assert.ok((await stat(coverUrl)).size > 10_000, `${work.title} cover is too small`);
+  }
+
+  assert.ok(hearthstone, "Hearthstone record is missing");
+  assert.equal(hearthstone.cover, "assets/covers/hearthstone-cn-client.jpg");
+  const hearthstoneCoverUrl = new URL(`../${hearthstone.cover}`, import.meta.url);
+  await access(hearthstoneCoverUrl);
+  assert.ok((await stat(hearthstoneCoverUrl)).size > 10_000);
 });
