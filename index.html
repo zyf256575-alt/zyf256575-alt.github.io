@@ -545,7 +545,7 @@
       position: absolute;
       z-index: 1;
       inset: 0 auto 0 0;
-      width: 83%;
+      width: 99%;
       border-radius: inherit;
       background: linear-gradient(90deg, rgba(94, 234, 212, .98), rgba(56, 189, 248, .82));
       box-shadow: 0 0 22px rgba(94, 234, 212, .32);
@@ -672,12 +672,13 @@
     <aside class="sidebar">
       <div>
         <h1 class="name">周钰峰</h1>
-        <h2 class="subtitle">AI Coding / AI 全栈开发</h2>
-        <p class="intro">物理学硕士在读，长期使用 Codex / Claude Code 构建本地优先的 AI-native 工作系统，覆盖个人知识与协作、多模型应用、MCP 工具链与科研计算自动化。</p>
+        <h2 class="subtitle">Python / AI 应用开发</h2>
+        <p class="intro">物理学硕士在读，喜欢折腾工具，把想法做成能运行的东西，也把重复的事情交给自动化。</p>
 
         <nav class="nav" aria-label="主导航">
           <ul>
             <li><a class="active" href="#about">关于</a></li>
+            <li><a href="#experience">实习</a></li>
             <li><a href="#projects">项目</a></li>
             <li><a href="#demos">演示</a></li>
             <li><a href="#game-log">游戏履历</a></li>
@@ -700,37 +701,41 @@
       <section id="about">
         <h2 class="section-label">关于</h2>
         <div class="about">
-          <p>物理学硕士在读，AI Coding / AI 全栈实践者。我关注的不只是调用模型，而是以 DataBase 保存用户持有的长期资产，用 Obsidian 完成人类可读的可视化与关系导航，再让 Codex、Claude Code 和项目规则接入真实流程。</p>
-          <p>目前项目覆盖个人 AI 知识与协作、短视频生成、游戏资产管线和 AI4Science 科研计算。领域不同，但共同目标是把上下文、纠偏经验、证据和人工验收留在模型之外，让协作能力随使用持续演化。</p>
+          <p>我目前在西安电子科技大学读物理学硕士，主要用 Python 做科研计算、AI 应用和自动化工具。做项目时，我习惯保留数据来源、验证结果和人工确认点，方便后续复现和继续迭代。</p>
+          <p>目前主要项目包括 Scatron 科研计算与验证工具、Workflow Evolution 本地 AI 协作工作台，以及 Yuxu Forge 3D 资产流程验证。住房市场内容生成来自一段 AI Content Engineer 实习，页面下方保留了实际生成的视频。</p>
           <p>业余大部分时间给了运动、音乐和 3A 游戏。魂系的晦暗美学、黑神话的中式表达、巫师 3 的叙事厚度，无形中塑造了我对世界的想象；而《戴森球计划》那种从零编织星河的浪漫，大概也是为什么我喜欢把管线一格一格跑通，看着系统活起来。</p>
         </div>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-label">实习</h2>
+        <article class="entry project">
+          <h3>Trendinsight Corp · AI Content Engineer</h3>
+          <p class="desc">实习期间，我参与了从公开住房市场数据与城市新闻事件，到内容筛选、来源校验、故事卡生成与 FFmpeg 视频合成的端到端原型开发；首版范围较大的视频管线随后收敛为可独立评审的故事卡原型，相关实现最终合入项目仓库。</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">LLM 应用</span><span class="tag">数据管线</span><span class="tag">FFmpeg</span></div>
+          <div class="links"><a href="#reel-forge-demo">视频演示 ↘</a></div>
+        </article>
       </section>
 
       <section id="projects">
         <h2 class="section-label">项目</h2>
         <article class="entry project">
-          <h3>个人 AI 知识与协作系统 · Workflow Evolution</h3>
-          <p class="desc">以 DataBase 作为本地长期真源、Obsidian 作为可视化与关系导航界面，连接 Codex、Claude Code、Rules 与 Skills，统一项目、科研、学习等个人数字资产与上下文；系统由早期多工位总控演化为模型无关的轻量工作台，将纠偏和重复任务持续沉淀为可复用协作能力，并保留证据回链与人工验收。</p>
-          <div class="tags"><span class="tag">Local-first</span><span class="tag">Obsidian</span><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">Rules &amp; Skills</span><span class="tag">Human-in-the-loop</span></div>
+          <h3>Scatron · 科研计算与验证工具</h3>
+          <p class="desc">围绕金属球光散射、光力和扭矩计算，我用 Python 封装 BSC、Mie 散射、材料介电模型与参数扫描，并建立覆盖守恒、收敛和独立公式交叉核对的测试流程。已验证的计算核心继续用于批量出图、结果核验和论文迭代。</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Scientific Computing</span><span class="tag">BSC</span><span class="tag">GLMT</span><span class="tag">pytest</span><span class="tag">Cross-validation</span></div>
+          <div class="links"><a href="#scatron-demo">可视化演示 ↘</a><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022407325003097" target="_blank" rel="noopener noreferrer">已发表前期论文（JQSRT） ↗</a></div>
+        </article>
+        <article class="entry project">
+          <h3>Workflow Evolution · 本地 AI 协作工作台</h3>
+          <p class="desc">以本地 DataBase 和 Obsidian 管理科研、开发、学习与求职资料，再通过任务规则、MCP 和可复用 Skill 接入 Codex、Claude Code 等工具。任务背景、文件边界、信息来源和人工确认点会随项目一起保留，方便跨会话接续、回滚和结果追溯。</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Obsidian</span><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">MCP</span><span class="tag">Skills</span></div>
           <div class="links"><a href="#xp-bar">Workflow XP ↘</a></div>
         </article>
         <article class="entry project">
-          <h3>reel-forge · AI 短视频生成工作流</h3>
-          <p class="desc">接入 Freddie Mac、Redfin、FRED 房地产市场数据源，搭建从数据摄入、信号标准化、claim 校验到 RT 风格静态卡片与短视频生成的自动化管线；使用 DeepSeek / Anthropic-compatible API 与 Qwen-VL 完成文案生成、B-roll 主题评分和视觉检查，并通过 SQLite L2 缓存减少重复模型调用。</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">LLM API</span><span class="tag">Qwen-VL</span><span class="tag">SQLite</span><span class="tag">FFmpeg</span><span class="tag">Automation</span></div>
-          <div class="links"><a href="#reel-forge-demo">视频演示 ↘</a></div>
-        </article>
-        <article class="entry project">
-          <h3>Yuxu Forge · AI Game Asset Pipeline</h3>
-          <p class="desc">从一根白玉神柱开始的东方幻想资产实验。借助 AI 3D 生成、Blender 法线烘焙和 UE5 PBR 材质，一人跑通"概念 → 可渲染资产"全链路，并将 MCP 材质调参与法线修正标准化为 4 步操作链。</p>
-          <div class="tags"><span class="tag">UE5</span><span class="tag">Blender</span><span class="tag">MCP</span><span class="tag">PBR</span><span class="tag">AI 3D</span><span class="tag">Codex</span><span class="tag">Claude Code</span></div>
+          <h3>Yuxu Forge · AI 辅助 3D 资产流程验证</h3>
+          <p class="desc">以东方幻想青白玉柱为对象，从 AI 生成初始模型开始，在 Blender 中处理法线与结构，再进入 UE5 调整 PBR 材质。通过不同机位的渲染结果定位材质、结构和失真问题，并保留可编辑或可回滚的候选方案。</p>
+          <div class="tags"><span class="tag">AI 3D</span><span class="tag">Blender</span><span class="tag">Unreal Engine 5</span><span class="tag">PBR</span><span class="tag">MCP</span></div>
           <div class="links"><a href="#yuxu-forge-demo">视频演示 ↘</a></div>
-        </article>
-        <article class="entry project">
-          <h3>AI4Science Research OS · Scatron</h3>
-          <p class="desc">围绕 exact-BSC/GLMT 光学力与扭矩计算核心，构建面向论文生产的 AI4Science Research OS；将文献证据库、图式语法、单篇论文骨架、数值实验与可视化仪表盘串成可追踪工作流，把科研过程拆解为可审阅的状态机与人工检查点，支持 AI 代理并行协作并回收 claim 审查结果。</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Scientific Computing</span><span class="tag">Research OS</span><span class="tag">Literature DB</span><span class="tag">Figure Grammar</span><span class="tag">Human-in-the-loop AI</span></div>
-          <div class="links"><a href="#scatron-demo">可视化演示 ↘</a><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022407325003097" target="_blank" rel="noopener noreferrer">相关论文 ↗</a></div>
         </article>
       </section>
 
@@ -744,25 +749,25 @@
               你的浏览器不支持视频播放，请直接打开 assets/video/project_1.mp4。
             </video>
           </div>
-          <p class="demo-caption">参考图 → AI 3D → Blender → UE5，一人跑通全链路。</p>
+          <p class="demo-caption">从参考图出发，经过 AI 3D、Blender 处理与 UE5 材质调整，完成白玉神柱的可渲染原型。</p>
         </article>
         <article id="reel-forge-demo" class="entry project">
-          <h3>reel-forge</h3>
+          <h3>住房市场 AI 实习项目</h3>
           <div class="demo-video-wrap">
             <video controls preload="metadata" playsinline>
               <source src="assets/video/project_2.mp4" type="video/mp4">
               你的浏览器不支持视频播放，请直接打开 assets/video/project_2.mp4。
             </video>
           </div>
-          <p class="demo-caption">数据摄入 → 卡片 → B-roll → BGM → FFmpeg，一键出片。</p>
+          <p class="demo-caption">公开市场数据与城市新闻事件经过筛选、来源校验和故事卡生成，最终由 FFmpeg 合成为这支短视频。</p>
         </article>
         <article id="scatron-demo" class="entry project">
-          <h3>AI4Science Research OS</h3>
+          <h3>Scatron</h3>
           <div class="gallery duo">
             <a href="assets/img/project_3_3.png" target="_blank"><img src="assets/img/project_3_3.png" alt="Scatron Bessel wave research atlas and paper framework" loading="eager"></a>
             <a href="assets/img/project_3_4.png" target="_blank"><img src="assets/img/project_3_4.png" alt="Scatron force torque figure grammar board" loading="eager"></a>
           </div>
-          <p class="demo-caption">文献入库 → 图式抽取 → 图组生成 → claim 审查，通过状态机与人工检查点回收 AI 代理协作结果。</p>
+          <p class="demo-caption">从数值计算、参数扫描和图件生成到结果与主张核验，关键步骤保留计算依据和验证结果。</p>
         </article>
       </section>
 
@@ -782,9 +787,9 @@
   <div id="xp-bar" class="fixed-xp-hud" aria-label="Human-AI Workflow Evolution XP">
     <div class="fixed-xp-inner">
       <span class="xp-label">Workflow XP</span>
-      <span class="xp-track" aria-label="83% to next token milestone"><span class="xp-percent">83%</span></span>
+      <span class="xp-track" aria-label="99% to next local Codex token milestone"><span class="xp-percent">99%</span></span>
       <div class="xp-stats">
-        <span><b>124亿+</b> / 150亿 tokens</span>
+        <span title="本地 Codex 任务日志累计（2026-06-10 起）"><b>1483亿+</b> / 1500亿 Codex tokens</span>
         <span><b>human + AI</b> evolving</span>
       </div>
     </div>
