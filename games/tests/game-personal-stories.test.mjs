@@ -6,11 +6,20 @@ const archiveUrl = new URL("../data/game_archive.json", import.meta.url);
 const appUrl = new URL("../app.js", import.meta.url);
 const styleUrl = new URL("../styles.css", import.meta.url);
 const indexUrl = new URL("../index.html", import.meta.url);
+const homepageUrl = new URL("../../index.html", import.meta.url);
 
 const archive = JSON.parse(await readFile(archiveUrl, "utf8"));
 const appSource = await readFile(appUrl, "utf8");
 const styleSource = await readFile(styleUrl, "utf8");
 const indexSource = await readFile(indexUrl, "utf8");
+const homepageSource = await readFile(homepageUrl, "utf8");
+
+test("the homepage opens Game Log through its explicit HTML entry", () => {
+  assert.match(
+    homepageSource,
+    /<a class="game-database-entry" href="games\/index\.html" aria-label="打开游戏履历">/,
+  );
+});
 
 async function assertScreenshotCollection(game, expectedNames) {
   assert.ok(game, "game record is missing");
@@ -161,7 +170,15 @@ test("Elden Ring keeps the approved review and eight screenshots in the selected
 
   assert.ok(eldenRing, "Elden Ring record is missing");
   assert.deepEqual(eldenRing.review, [
-    "目前玩过的所有游戏里，毋庸置疑的 GOAT。魂系列的集大成之作，美术、光影、音乐、战斗、箱庭和开放世界探索全是顶尖水平。最喜欢的还是配乐和哥特式建筑以及碎片化叙事的那种神秘史诗感。",
+    "《艾尔登法环》是目前我玩过的所有游戏里，毋庸置疑的 GOAT，也是我心中魂系列的集大成之作。",
+    "我接触魂系列的顺序是《黑暗之魂1》《黑暗之魂2》《黑暗之魂3》《只狼》，最后才是《艾尔登法环》。一路玩下来，魂系列的经典元素基本都体验过：墓地式开局、曾经辉煌而如今残破的世界、亚诺尔隆德、大书库、毒沼与粪坑、绘画世界、古龙，以及一座座宏伟却已经走向衰败的城堡。《艾尔登法环》继承了这些元素，但没有简单地把它们再重复一遍，而是用开放世界把魂系列原有的战斗、探索、养成和碎片化叙事重新组织了起来。",
+    "它的战斗系统仍然建立在精力管理、闪避时机、攻击后摇和敌人招式识别上，同时加入了战灰、骨灰、跳跃攻击和更自由的武器构筑。玩家既可以老老实实研究 Boss 的动作、控制距离、寻找出手回合，也可以利用属性克制、异常状态、强势流派和骨灰改变难度。这样的设计让游戏既保留了魂系列的操作门槛，也给不同水平的玩家留下了自己的解法。",
+    "不过，如果只谈战斗本身，我并不认为《艾尔登法环》在所有方面都是系列最强。它更像一部内容量巨大、完成度极高的集大成作品，而不是一次彻底推翻旧体系的创新。单论攻防转换的紧张感、招架成功后的反馈，以及动作系统的完整性，我更喜欢《只狼》；单论演出、打击反馈和近身战斗的爽快感，《战神4》和《战神：诸神黄昏》也更直接。老头环后期部分 Boss 的高伤害、长连段、延迟攻击和大范围判定有时会显得刻意，骨灰与少数强势流派又可能让难度突然下降，导致不同玩法之间的体验差距很大。",
+    "但这些问题没有动摇它在我心里的位置，因为《艾尔登法环》真正不可替代的地方，是它把战斗放进了一个极有吸引力的世界里。游戏很少用任务列表牵着玩家走，而是依靠远处的黄金树、城堡、升降机、地下入口和地貌变化，引导玩家主动偏离路线。箱庭区域与开放世界并不是完全割裂的：史东薇尔城、王城罗德尔等大型区域依旧保留了魂系列擅长的立体结构、捷径和隐藏路线；进入野外以后，玩家又能根据远景和直觉决定下一步去哪里。这种探索不是清理地图上的问号，而是真的会产生“那里看起来能过去，我想去看看”的冲动。",
+    "美术也是我认为它明显胜过大多数开放世界游戏的地方。我不是美术专业，但仍然能很直观地感受到画面的层次：王城的金色、湖区的冷色、地下世界的人造星空、雪山的苍白，以及火山和腐败区域带来的压迫感。暖色与冷色经常同时出现在一个画面里，哥特式建筑、巨大的遗迹和夸张的空间尺度又共同制造出一种很少见的神秘史诗感。它的碎片化叙事不会把每件事都讲明白，而是让玩家从道具文本、建筑、尸体位置和人物只言片语中拼出这个世界发生过什么。这种留白有时会让支线难以追踪，却也让世界显得比眼前看到的内容更大。相比之下，仁王系列画风把很多强烈的冷暖色杂糅在一起很容易让画面出现塑料感，更容易让玩家觉得违和，美术/地编这部分我觉得另一款能与之比较的就是《黑神话：悟空》了，这款国产游戏的画面演出更是电影级别的。",
+    "音乐同样是它非常强的一部分。平时探索时，配乐往往比较克制，把注意力留给环境；进入 Boss 战后，音乐才真正把战斗规模和角色身份撑起来。拉塔恩、祖灵、蒙格、艾尔登之兽等战斗的配乐都有很强的记忆点。单论配乐数量、质量和场景结合，我觉得它和《魔兽世界》的 BGM 有相似之处：不只是“好听”，而是能把一个区域、一场战斗甚至一段游戏经历固定在记忆里。许多 Boss 的音乐放在其他游戏中已经足以成为代表曲目，在这里却只是整张原声中的一部分。",
+    "养成方面，卢恩同时承担经验和货币的作用，死亡掉落机制让每次深入陌生区域都带有风险。属性加点、武器强化、战灰和护符逐渐确定角色的战斗路线，构筑成型后的正反馈很强。不过，前期强化材料有限，也会让玩家不太敢频繁尝试新武器；开放世界规模扩大后，矿洞、墓地、敌人与部分 Boss 的重复利用也比较明显。支线提示过少，有时甚至会因为提前推进某个区域而永久错过内容。第一次游玩时这种未知感很迷人，想完整体验所有支线时却不得不依赖攻略。",
+    "《艾尔登法环》并不是每一项都无可挑剔。只看纯粹动作系统，我可能会选择《只狼》；只看近身战斗的爽快程度，《战神4》和《战神：诸神黄昏》也有明显优势。但它把魂系列长期积累的战斗体系、箱庭设计、角色养成、美术、音乐、开放世界探索和碎片化叙事放进了同一个规模惊人的作品里。综合这些部分来看，它仍然是目前最接近我心中“完整游戏体验”的作品。",
   ]);
 
   const expectedScreenshots = [
@@ -1047,4 +1064,121 @@ test("Battle.net work cards stay product-focused and use local recognizable cove
   const hearthstoneCoverUrl = new URL(`../${hearthstone.cover}`, import.meta.url);
   await access(hearthstoneCoverUrl);
   assert.ok((await stat(hearthstoneCoverUrl)).size > 10_000);
+});
+
+test("the approved personal-site game-log increment stays exact", async () => {
+  const approvedIntro =
+    "Codex 重度使用患者，喜欢瞎折腾，也总忍不住把事情做到尽可能完善；热衷自动化，努力把每一个冒出来的点子真正落地。";
+  const oldIntro =
+    "物理学硕士在读，喜欢折腾工具，把想法做成能运行的东西，也把重复的事情交给自动化。";
+  assert.ok(homepageSource.includes(`<p class="intro">${approvedIntro}</p>`));
+  assert.ok(!homepageSource.includes(oldIntro));
+
+  const byId = (id) => archive.games.filter((game) => game.id === id);
+  assert.equal(byId("1903340").length, 1);
+  assert.equal(byId("manual-overwatch").length, 1);
+
+  for (const [id, expected] of [
+    ["1868140", {
+      appId: 1868140,
+      hours: 218.8,
+      playtimeMinutes: 13127,
+      playtime2WeeksMinutes: 771,
+      lastPlayed: 1787077392,
+      playtimeSource: "steam-local-cache",
+    }],
+    ["578080", {
+      appId: 578080,
+      hours: 143,
+      playtimeMinutes: 8578,
+      playtime2WeeksMinutes: 427,
+      lastPlayed: 1786981036,
+      playtimeSource: "steam-local-cache",
+    }],
+    ["1903340", {
+      appId: 1903340,
+      active: true,
+      hours: 19.4,
+      playtimeMinutes: 1162,
+      playtime2WeeksMinutes: 1162,
+      lastPlayed: 1787214380,
+      playtimeSource: "steam-local-cache",
+    }],
+  ]) {
+    const game = archive.games.find((entry) => entry.id === id);
+    assert.ok(game, `${id} record is missing`);
+    for (const [key, value] of Object.entries(expected)) assert.equal(game[key], value);
+    assert.match(game.verifiedAt, /^2026-08-20T\d{2}:\d{2}:\d{2}(?:\.\d{3})?\+08:00$/);
+  }
+
+  const dave = archive.games.find((game) => game.id === "1868140");
+  const pubg = archive.games.find((game) => game.id === "578080");
+  const expedition = archive.games.find((game) => game.id === "1903340");
+  const overwatch = archive.games.find((game) => game.id === "manual-overwatch");
+
+  assert.equal(dave.note, "经营、探索与轻量叙事循环结合紧密，近期仍在持续体验。");
+  assert.equal(pubg.note, "战术竞技与团队生存向 FPS 经历，累计 143.0 小时。");
+  assert.deepEqual(archive.summary, {
+    localSteamGames: 66,
+    localSteamHours: 5551.2,
+    localPerfectGames: 27,
+    localAchievements: 2228,
+    manualGames: 12,
+    totalGames: 78,
+    platformCounts: { steam: 66, battlenet: 5, tencent: 4, other: 3 },
+  });
+
+  assert.equal(expedition.name, "光与影：33号远征队");
+  assert.equal(expedition.source, "steam");
+  assert.equal(expedition.platform, "steam");
+  assert.equal(expedition.primaryGenre, "角色扮演");
+  assert.equal(expedition.coreStructure, "回合制角色扮演");
+  assert.deepEqual(expedition.details, {
+    studio: ["Sandfall Interactive"],
+    themes: ["黑暗奇幻", "末世远征"],
+  });
+  assert.deepEqual(expedition.achievements, { achieved: 17, total: 55 });
+  assert.equal(expedition.achievementSource, "steam-client-cache");
+  assert.equal(expedition.perfect, false);
+  assert.equal(expedition.playPeriod, "2026");
+  assert.deepEqual(expedition.review, [
+    "回合制战斗里加入实时闪避和格挡，让养成与操作同时参与胜负；法式末世美术和远征叙事也很有辨识度。",
+  ]);
+  assert.equal(
+    expedition.workDescription,
+    "第33号远征队踏上阻止绘母再次抹去年龄数字的旅程，在逐渐崩坏的世界里追索此前远征失败的真相。回合制指令与实时闪避、格挡相互结合，让队伍构筑和临场操作共同决定战斗节奏。",
+  );
+  assert.equal(
+    expedition.workDescriptionSource,
+    "https://store.steampowered.com/app/1903340/?l=schinese&amp;cc=cn",
+  );
+
+  assert.equal(overwatch.source, "manual");
+  assert.equal(overwatch.platform, "battlenet");
+  assert.equal(overwatch.name, "守望先锋");
+  assert.equal(overwatch.hours, null);
+  assert.deepEqual(overwatch.achievements, { achieved: 0, total: 0 });
+  assert.equal(overwatch.perfect, false);
+  assert.equal(overwatch.primaryGenre, "第一人称射击");
+  assert.equal(overwatch.coreStructure, "英雄射击");
+  assert.deepEqual(overwatch.details, {
+    studio: ["Blizzard Entertainment"],
+    modes: ["多人竞技", "团队协作"],
+    themes: ["近未来"],
+  });
+  assert.deepEqual(overwatch.review, [
+    "英雄技能与枪法被压进短促密集的团队交锋里，不同阵容和地图目标让每局节奏都随配合方式变化。",
+  ]);
+  assert.equal(
+    overwatch.workDescription,
+    "来自不同阵营与背景的英雄在全球战场上围绕护送、占领等目标展开团队对抗。角色职责、技能联动与地图路线共同决定团战节奏，也让更换英雄成为临场策略的一部分。",
+  );
+  assert.equal(overwatch.cover, undefined);
+
+  for (const game of [expedition, overwatch]) {
+    if (!game.cover) continue;
+    const coverUrl = new URL(`../${game.cover}`, import.meta.url);
+    await access(coverUrl);
+    assert.ok((await stat(coverUrl)).size > 10_000, `${game.name} cover is too small`);
+  }
 });

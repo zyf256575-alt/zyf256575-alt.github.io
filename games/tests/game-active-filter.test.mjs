@@ -52,7 +52,9 @@ test("active filter combines Steam activity and explicit manual activity", () =>
       "Counter-Strike 2",
       "Lies of P",
       "Nioh 3",
+      "光与影：33号远征队",
       "潜水员戴夫",
+      "PUBG: BATTLEGROUNDS",
       "英雄联盟",
     ].sort((left, right) => left.localeCompare(right, "zh-CN")),
   );
