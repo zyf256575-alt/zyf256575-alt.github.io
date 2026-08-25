@@ -679,7 +679,7 @@
           <ul>
             <li><a class="active" href="#about">关于</a></li>
             <li><a href="#experience">实习</a></li>
-            <li><a href="#projects">项目</a></li>
+            <li><a href="#projects">项目 / 实践</a></li>
             <li><a href="#demos">演示</a></li>
             <li><a href="#game-log">游戏履历</a></li>
             <li><a href="resume.pdf" target="_blank" rel="nofollow noopener" class="external">Resume</a></li>
@@ -702,7 +702,7 @@
         <h2 class="section-label">关于</h2>
         <div class="about">
           <p>我目前在西安电子科技大学读物理学硕士，主要用 Python 做科研计算、AI 应用和自动化工具。做项目时，我习惯保留数据来源、验证结果和人工确认点，方便后续复现和继续迭代。</p>
-          <p>目前主要项目包括 Scatron 科研计算与验证工具、Workflow Evolution 本地 AI 协作工作台，以及 Yuxu Forge 3D 资产流程验证。住房市场内容生成来自一段 AI Content Engineer 实习，页面下方保留了实际生成的视频。</p>
+          <p>目前主要经历包括一段住房市场 AI 短视频内容原型开发实习，以及 Scatron AI4Science 科研工作台、Workflow Evolution 个人 AI Harness 实践和 Yuxu Forge AIGC 3D 游戏资产实践。页面下方保留了可公开展示的实际产物。</p>
           <p>业余大部分时间给了运动、音乐和 3A 游戏。魂系的晦暗美学、黑神话的中式表达、巫师 3 的叙事厚度，无形中塑造了我对世界的想象；而《戴森球计划》那种从零编织星河的浪漫，大概也是为什么我喜欢把管线一格一格跑通，看着系统活起来。</p>
         </div>
       </section>
@@ -710,31 +710,31 @@
       <section id="experience">
         <h2 class="section-label">实习</h2>
         <article class="entry project">
-          <h3>Trendinsight Corp · AI Content Engineer</h3>
-          <p class="desc">实习期间，我参与了从公开住房市场数据与城市新闻事件，到内容筛选、来源校验、故事卡生成与 FFmpeg 视频合成的端到端原型开发；首版范围较大的视频管线随后收敛为可独立评审的故事卡原型，相关实现最终合入项目仓库。</p>
+          <h3>意果科技（Trendinsight Corp）· AI Content Engineer</h3>
+          <p class="desc">参与住房市场 AI 短视频内容原型开发，负责抓取和处理美国住房市场公开数据与城市新闻事件，串联内容筛选、来源校验、故事卡生成及 FFmpeg 视频合成，完成从数据输入到短视频输出的端到端流程。根据项目评审需要，将首版范围较大的视频管线收敛为可独立评审的故事卡原型，保留来源追溯与视频就绪检查，相关实现最终合入项目仓库。</p>
           <div class="tags"><span class="tag">Python</span><span class="tag">LLM 应用</span><span class="tag">数据管线</span><span class="tag">FFmpeg</span></div>
           <div class="links"><a href="#reel-forge-demo">视频演示 ↘</a></div>
         </article>
       </section>
 
       <section id="projects">
-        <h2 class="section-label">项目</h2>
+        <h2 class="section-label">项目 / 在校实践</h2>
         <article class="entry project">
-          <h3>Scatron · 科研计算与验证工具</h3>
-          <p class="desc">围绕金属球光散射、光力和扭矩计算，我用 Python 封装 BSC、Mie 散射、材料介电模型与参数扫描，并建立覆盖守恒、收敛和独立公式交叉核对的测试流程。已验证的计算核心继续用于批量出图、结果核验和论文迭代。</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Scientific Computing</span><span class="tag">BSC</span><span class="tag">GLMT</span><span class="tag">pytest</span><span class="tag">Cross-validation</span></div>
+          <h3>Scatron · AI4Science 科研工作台</h3>
+          <p class="desc">基于导师与课题组确定的研究方向和核心公式，我独立开发光散射、光力与扭矩计算核心，并以自动化测试、独立公式和文献基准约束数值可信度；通过可复用 Skill 与可视化控制台统一组织 69 篇文献、研究图谱、图件管线和 Word 正文，将计算、批量出图、结果审查与格式核验串成可复现流程。工作台已用于 3 篇 SCI 论文，其中 2 篇已发表、1 篇在投。</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Scientific Computing</span><span class="tag">LLM Agent</span><span class="tag">Skills</span><span class="tag">pytest</span><span class="tag">HTML</span></div>
           <div class="links"><a href="#scatron-demo">可视化演示 ↘</a><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022407325003097" target="_blank" rel="noopener noreferrer">已发表前期论文（JQSRT） ↗</a></div>
         </article>
         <article class="entry project">
-          <h3>Workflow Evolution · 本地 AI 协作工作台</h3>
-          <p class="desc">以本地 DataBase 和 Obsidian 管理科研、开发、学习与求职资料，再通过任务规则、MCP 和可复用 Skill 接入 Codex、Claude Code 等工具。任务背景、文件边界、信息来源和人工确认点会随项目一起保留，方便跨会话接续、回滚和结果追溯。</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Obsidian</span><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">MCP</span><span class="tag">Skills</span></div>
+          <h3>Workflow Evolution · 个人 AI Harness 实践</h3>
+          <p class="desc">为解决 Coding Agent 跨会话失忆、上下文漂移与误操作，我以 DataBase 和 Obsidian 持久化任务状态，通过分层规则与按需上下文注入恢复长期任务现场；再以 MCP、可复用 Skill、人工确认、测试验收和 Git 回滚约束工具权限与执行闭环，并持续复用于科研、应用开发、学习系统、个人网站和求职材料。</p>
+          <div class="tags"><span class="tag">Obsidian</span><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">Rules</span><span class="tag">MCP</span><span class="tag">Skills</span><span class="tag">Git</span></div>
           <div class="links"><a href="#xp-bar">Workflow XP ↘</a></div>
         </article>
         <article class="entry project">
-          <h3>Yuxu Forge · AI 辅助 3D 资产流程验证</h3>
-          <p class="desc">以东方幻想青白玉柱为对象，从 AI 生成初始模型开始，在 Blender 中处理法线与结构，再进入 UE5 调整 PBR 材质。通过不同机位的渲染结果定位材质、结构和失真问题，并保留可编辑或可回滚的候选方案。</p>
-          <div class="tags"><span class="tag">AI 3D</span><span class="tag">Blender</span><span class="tag">Unreal Engine 5</span><span class="tag">PBR</span><span class="tag">MCP</span></div>
+          <h3>Yuxu Forge · AIGC 3D 游戏资产实践</h3>
+          <p class="desc">这次实践源于与朋友对游戏场景资产的讨论。我选择宫廷青白玉柱作为对象，独立完成图生 3D、Blender 组件与纹理/材质处理、GLB 导出及 UE5 导入，形成柱础、柱身、柱顶三组件的游戏资产原型；调用开源 MCP 与辅助脚本协助资产检查，并通过多机位渲染观察材质、结构与失真问题，按可编辑性和引擎表现筛选、回退方案。</p>
+          <div class="tags"><span class="tag">AIGC</span><span class="tag">Image-to-3D</span><span class="tag">Blender</span><span class="tag">Unreal Engine 5</span><span class="tag">MCP</span></div>
           <div class="links"><a href="#yuxu-forge-demo">视频演示 ↘</a></div>
         </article>
       </section>
@@ -752,22 +752,22 @@
           <p class="demo-caption">将公开住房市场数据与城市新闻事件接入内容筛选、来源校验和故事卡生成流程，并通过 FFmpeg 合成短视频；首版原型最终合入项目仓库。</p>
         </article>
         <article id="scatron-demo" class="entry project">
-          <h3>Scatron · 科研计算与结果验证</h3>
+          <h3>Scatron · AI4Science 科研工作台</h3>
           <div class="gallery duo">
             <a href="assets/img/project_3_3.png" target="_blank"><img src="assets/img/project_3_3.png" alt="Scatron Bessel wave research atlas and paper framework" loading="eager"></a>
             <a href="assets/img/project_3_4.png" target="_blank"><img src="assets/img/project_3_4.png" alt="Scatron force torque figure grammar board" loading="eager"></a>
           </div>
-          <p class="demo-caption">展示 Python 参数扫描、图件生成，以及守恒、收敛与独立公式交叉核对如何组成可复核的科研计算流程。</p>
+          <p class="demo-caption">展示参数扫描与批量出图、文献与研究图谱管理、图件管线和论文审查如何汇入一套可复现的 AI4Science 科研流程。</p>
         </article>
         <article id="yuxu-forge-demo" class="entry project">
-          <h3>Yuxu Forge · AI 辅助 3D 资产流程</h3>
+          <h3>Yuxu Forge · AIGC 3D 游戏资产实践</h3>
           <div class="demo-video-wrap">
             <video controls preload="metadata" playsinline>
               <source src="assets/video/project_1.mp4" type="video/mp4">
               你的浏览器不支持视频播放，请直接打开 assets/video/project_1.mp4。
             </video>
           </div>
-          <p class="demo-caption">从参考图生成初始模型，在 Blender 修正法线与结构、在 UE5 调整 PBR 材质，完成可渲染且可回滚的白玉神柱原型。</p>
+          <p class="demo-caption">以宫廷青白玉柱为对象，从图生 3D、Blender 组件与纹理/材质处理、GLB 导出到 UE5 导入，展示三组件游戏资产原型及多机位检查结果。</p>
         </article>
       </section>
 
