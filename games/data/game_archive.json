@@ -11,9 +11,9 @@
   },
   "summary": {
     "localSteamGames": 66,
-    "localSteamHours": 5583.8,
-    "localPerfectGames": 27,
-    "localAchievements": 2249,
+    "localSteamHours": 5603.5,
+    "localPerfectGames": 28,
+    "localAchievements": 2266,
     "manualGames": 12,
     "totalGames": 78,
     "platformCounts": {
@@ -3205,18 +3205,18 @@
           "末世远征"
         ]
       },
-      "hours": 52.0,
-      "playtimeMinutes": 3119,
-      "playtime2WeeksMinutes": 3119,
-      "lastPlayed": 1787594630,
+      "hours": 71.7,
+      "playtimeMinutes": 4304,
+      "playtime2WeeksMinutes": 3635,
+      "lastPlayed": 1788285607,
       "achievements": {
-        "achieved": 38,
+        "achieved": 55,
         "total": 55
       },
       "achievementSource": "steam-community",
       "playtimeSource": "steam-local-cache",
-      "verifiedAt": "2026-08-25T02:09:57+08:00",
-      "perfect": false,
+      "verifiedAt": "2026-09-02T02:00:20+08:00",
+      "perfect": true,
       "active": true,
       "cover": "assets/covers/1903340.jpg",
       "playPeriod": "2026",
