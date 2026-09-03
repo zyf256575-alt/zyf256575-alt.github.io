@@ -378,6 +378,11 @@
       aspect-ratio: 16 / 9;
     }
 
+    .gallery.esim-gallery img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
     .game-database-entry {
       min-height: 72px;
       padding: 10px 2px;
@@ -718,7 +723,7 @@
       </section>
 
       <section id="projects">
-        <h2 class="section-label">项目 / 在校实践</h2>
+        <h2 class="section-label">项目 / 实践</h2>
         <article class="entry project">
           <h3>Scatron · AI4Science 科研工作台</h3>
           <p class="desc">基于导师与课题组确定的研究方向和核心公式，我独立开发光散射、光力与扭矩计算核心，并以自动化测试、独立公式和文献基准约束数值可信度；通过可复用 Skill 与可视化控制台统一组织 69 篇文献、研究图谱、图件管线和 Word 正文，将计算、批量出图、结果审查与格式核验串成可复现流程。工作台已用于 3 篇 SCI 论文，其中 2 篇已发表、1 篇在投。</p>
@@ -736,6 +741,12 @@
           <p class="desc">这次实践源于与朋友对游戏场景资产的讨论。我选择宫廷青白玉柱作为对象，独立完成图生 3D、Blender 组件与纹理/材质处理、GLB 导出及 UE5 导入，形成柱础、柱身、柱顶三组件的游戏资产原型；调用开源 MCP 与辅助脚本协助资产检查，并通过多机位渲染观察材质、结构与失真问题，按可编辑性和引擎表现筛选、回退方案。</p>
           <div class="tags"><span class="tag">AIGC</span><span class="tag">Image-to-3D</span><span class="tag">Blender</span><span class="tag">Unreal Engine 5</span><span class="tag">MCP</span></div>
           <div class="links"><a href="#yuxu-forge-demo">视频演示 ↘</a></div>
+        </article>
+        <article class="entry project">
+          <h3>eSIM 配置写入与实体卡自用实践</h3>
+          <p class="desc">围绕个人通信需求，使用 USB 智能卡设备将本人 eSIM 配置写入可编程实体 SIM 载体，实现英国号码在国内的短信收发与日常自用。</p>
+          <div class="tags"><span class="tag">USB 智能卡</span><span class="tag">eSIM</span><span class="tag">可编程 SIM</span></div>
+          <div class="links"><a href="#esim-demo">设备与结果 ↘</a></div>
         </article>
       </section>
 
@@ -768,6 +779,15 @@
             </video>
           </div>
           <p class="demo-caption">以宫廷青白玉柱为对象，从图生 3D、Blender 组件与纹理/材质处理、GLB 导出到 UE5 导入，展示三组件游戏资产原型及多机位检查结果。</p>
+        </article>
+        <article id="esim-demo" class="entry project">
+          <h3>eSIM 配置写入与实体卡自用实践</h3>
+          <div class="gallery esim-gallery">
+            <a href="assets/img/esim-card-reader.jpg" target="_blank"><img src="assets/img/esim-card-reader.jpg" alt="可编程实体 SIM 与 USB 智能卡设备" loading="lazy"></a>
+            <a href="assets/img/esim-usb-connected.jpg" target="_blank"><img src="assets/img/esim-usb-connected.jpg" alt="USB 智能卡设备连接与写入过程" loading="lazy"></a>
+            <a href="assets/img/esim-sms-proof.png" target="_blank"><img src="assets/img/esim-sms-proof.png" alt="英国号码在国内收到运营商漫游短信的脱敏截图" loading="lazy"></a>
+          </div>
+          <p class="demo-caption">写入后，英国号码在国内成功完成短信收发。</p>
         </article>
       </section>
 
