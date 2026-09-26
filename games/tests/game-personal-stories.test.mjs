@@ -1076,6 +1076,7 @@ test("the approved personal-site game-log increment stays exact", async () => {
 
   const byId = (id) => archive.games.filter((game) => game.id === id);
   assert.equal(byId("1903340").length, 1);
+  assert.equal(byId("2638890").length, 1);
   assert.equal(byId("manual-overwatch").length, 1);
 
   for (const [id, expected] of [
@@ -1086,47 +1087,106 @@ test("the approved personal-site game-log increment stays exact", async () => {
       playtime2WeeksMinutes: 771,
       lastPlayed: 1787077392,
       playtimeSource: "steam-local-cache",
+      verifiedAt: "2026-08-20T16:01:05+08:00",
     }],
     ["578080", {
       appId: 578080,
-      hours: 143,
-      playtimeMinutes: 8578,
-      playtime2WeeksMinutes: 427,
-      lastPlayed: 1786981036,
+      hours: 189.4,
+      playtimeMinutes: 11361,
+      playtime2WeeksMinutes: 1736,
+      lastPlayed: 1790346702,
       playtimeSource: "steam-local-cache",
+      verifiedAt: "2026-09-26T13:18:10+08:00",
+    }],
+    ["3681010", {
+      appId: 3681010,
+      hours: 76.9,
+      playtimeMinutes: 4613,
+      playtime2WeeksMinutes: 727,
+      lastPlayed: 1789570384,
+      playtimeSource: "steam-local-cache",
+      verifiedAt: "2026-09-26T13:18:10+08:00",
+    }],
+    ["814380", {
+      appId: 814380,
+      hours: 173.6,
+      playtimeMinutes: 10415,
+      playtime2WeeksMinutes: 18,
+      lastPlayed: 1790226716,
+      playtimeSource: "steam-local-cache",
+      verifiedAt: "2026-09-26T13:18:10+08:00",
     }],
     ["1903340", {
       appId: 1903340,
-      active: true,
-      hours: 19.4,
-      playtimeMinutes: 1162,
-      playtime2WeeksMinutes: 1162,
-      lastPlayed: 1787214380,
+      hours: 71.7,
+      playtimeMinutes: 4304,
+      playtime2WeeksMinutes: 3635,
+      lastPlayed: 1788285607,
       playtimeSource: "steam-local-cache",
+      verifiedAt: "2026-09-02T02:00:20+08:00",
+    }],
+    ["2638890", {
+      appId: 2638890,
+      active: true,
+      hours: 38.2,
+      playtimeMinutes: 2293,
+      playtime2WeeksMinutes: 2293,
+      lastPlayed: 1790355001,
+      playtimeSource: "steam-local-cache",
+      verifiedAt: "2026-09-26T13:18:10+08:00",
     }],
   ]) {
     const game = archive.games.find((entry) => entry.id === id);
     assert.ok(game, `${id} record is missing`);
     for (const [key, value] of Object.entries(expected)) assert.equal(game[key], value);
-    assert.match(game.verifiedAt, /^2026-08-20T\d{2}:\d{2}:\d{2}(?:\.\d{3})?\+08:00$/);
   }
 
   const dave = archive.games.find((game) => game.id === "1868140");
   const pubg = archive.games.find((game) => game.id === "578080");
   const expedition = archive.games.find((game) => game.id === "1903340");
+  const onimusha = archive.games.find((game) => game.id === "2638890");
   const overwatch = archive.games.find((game) => game.id === "manual-overwatch");
 
   assert.equal(dave.note, "经营、探索与轻量叙事循环结合紧密，近期仍在持续体验。");
-  assert.equal(pubg.note, "战术竞技与团队生存向 FPS 经历，累计 143.0 小时。");
+  assert.equal(pubg.note, "战术竞技与团队生存向 FPS 经历，累计 189.4 小时。");
   assert.deepEqual(archive.summary, {
-    localSteamGames: 66,
-    localSteamHours: 5551.2,
-    localPerfectGames: 27,
-    localAchievements: 2228,
+    localSteamGames: 67,
+    localSteamHours: 5700.6,
+    localPerfectGames: 28,
+    localAchievements: 2320,
     manualGames: 12,
-    totalGames: 78,
-    platformCounts: { steam: 66, battlenet: 5, tencent: 4, other: 3 },
+    totalGames: 79,
+    platformCounts: { steam: 67, battlenet: 5, tencent: 4, other: 3 },
   });
+
+  assert.equal(onimusha.name, "鬼武者 Way of the Sword");
+  assert.equal(onimusha.source, "steam");
+  assert.equal(onimusha.platform, "steam");
+  assert.equal(onimusha.primaryGenre, "动作RPG");
+  assert.equal(onimusha.coreStructure, "剑戟动作");
+  assert.deepEqual(onimusha.details, {
+    studio: ["CAPCOM Co., Ltd."],
+    themes: ["江户时代", "黑暗奇幻"],
+  });
+  assert.deepEqual(onimusha.achievements, { achieved: 43, total: 52 });
+  assert.equal(onimusha.achievementSource, "steam-community");
+  assert.equal(onimusha.perfect, false);
+  assert.equal(onimusha.playPeriod, "2026–至今");
+  assert.equal(onimusha.cover, "assets/covers/2638890.jpg");
+  const onimushaCoverUrl = new URL(`../${onimusha.cover}`, import.meta.url);
+  await access(onimushaCoverUrl);
+  assert.ok((await stat(onimushaCoverUrl)).size > 10_000);
+  assert.deepEqual(onimusha.review, [
+    "目前累计 38.2 小时、解锁 43/52 项成就，主要游玩集中在近两周。",
+  ]);
+  assert.equal(
+    onimusha.workDescription,
+    "宫本武藏在瘴气笼罩、幻魔横行的江户初期京都挥刀前行，并借助鬼之笼手吸收灵魂、迎战强敌。剑戟攻防与黑暗奇幻舞台共同构成这段以牙还牙的武者之路。",
+  );
+  assert.equal(
+    onimusha.workDescriptionSource,
+    "https://store.steampowered.com/app/2638890/?l=schinese&cc=cn",
+  );
 
   assert.equal(expedition.name, "光与影：33号远征队");
   assert.equal(expedition.source, "steam");
@@ -1137,9 +1197,9 @@ test("the approved personal-site game-log increment stays exact", async () => {
     studio: ["Sandfall Interactive"],
     themes: ["黑暗奇幻", "末世远征"],
   });
-  assert.deepEqual(expedition.achievements, { achieved: 17, total: 55 });
-  assert.equal(expedition.achievementSource, "steam-client-cache");
-  assert.equal(expedition.perfect, false);
+  assert.deepEqual(expedition.achievements, { achieved: 55, total: 55 });
+  assert.equal(expedition.achievementSource, "steam-community");
+  assert.equal(expedition.perfect, true);
   assert.equal(expedition.playPeriod, "2026");
   assert.deepEqual(expedition.review, [
     "回合制战斗里加入实时闪避和格挡，让养成与操作同时参与胜负；法式末世美术和远征叙事也很有辨识度。",

@@ -43,9 +43,7 @@ function formatHours(hours) {
 }
 
 function isRecentlyActive(game) {
-  if (game?.active === true) return true;
-  const minutes = Number(game?.playtime2WeeksMinutes);
-  return Number.isFinite(minutes) && minutes > 0;
+  return game?.active === true;
 }
 
 function completionRatio(game) {

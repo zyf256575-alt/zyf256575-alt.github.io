@@ -39,7 +39,7 @@ test("recently playing is the middle segment and result count is absent", () => 
   );
 });
 
-test("active filter combines Steam activity and explicit manual activity", () => {
+test("active filter uses the explicit editorial activity flag only", () => {
   const isRecentlyActive = loadPureFunction("isRecentlyActive");
   const names = archive.games
     .filter(isRecentlyActive)
@@ -48,16 +48,11 @@ test("active filter combines Steam activity and explicit manual activity", () =>
 
   assert.deepEqual(
     names,
-    [
-      "Counter-Strike 2",
-      "Lies of P",
-      "Nioh 3",
-      "光与影：33号远征队",
-      "潜水员戴夫",
-      "PUBG: BATTLEGROUNDS",
-      "英雄联盟",
-    ].sort((left, right) => left.localeCompare(right, "zh-CN")),
+    ["鬼武者 Way of the Sword"],
   );
+
+  assert.equal(isRecentlyActive({ playtime2WeeksMinutes: 999 }), false);
+  assert.equal(isRecentlyActive({ active: true, playtime2WeeksMinutes: 0 }), true);
 });
 
 test("active filter stays within the selected platform", () => {
@@ -67,10 +62,13 @@ test("active filter stays within the selected platform", () => {
     platformOf,
     isRecentlyActive,
   });
+  const onimusha = archive.games.find((game) => game.id === "2638890");
   const league = archive.games.find((game) => game.id === "manual-lol");
 
+  assert.equal(matchesPlatformFilter(onimusha, "active", "steam"), true);
+  assert.equal(matchesPlatformFilter(onimusha, "active", "tencent"), false);
   assert.equal(matchesPlatformFilter(league, "active", "steam"), false);
-  assert.equal(matchesPlatformFilter(league, "active", "tencent"), true);
+  assert.equal(matchesPlatformFilter(league, "active", "tencent"), false);
   assert.equal(matchesPlatformFilter(league, "all", "steam"), false);
   assert.equal(matchesPlatformFilter(league, "all", "tencent"), true);
 });
