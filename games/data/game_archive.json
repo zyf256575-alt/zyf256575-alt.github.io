@@ -11,9 +11,9 @@
   },
   "summary": {
     "localSteamGames": 67,
-    "localSteamHours": 5700.6,
-    "localPerfectGames": 28,
-    "localAchievements": 2320,
+    "localSteamHours": 5716.4,
+    "localPerfectGames": 29,
+    "localAchievements": 2329,
     "manualGames": 12,
     "totalGames": 79,
     "platformCounts": {
@@ -3249,23 +3249,23 @@
           "黑暗奇幻"
         ]
       },
-      "hours": 38.2,
-      "playtimeMinutes": 2293,
-      "playtime2WeeksMinutes": 2293,
-      "lastPlayed": 1790355001,
+      "hours": 54,
+      "playtimeMinutes": 3240,
+      "playtime2WeeksMinutes": 2958,
+      "lastPlayed": 1791010298,
       "achievements": {
-        "achieved": 43,
+        "achieved": 52,
         "total": 52
       },
       "achievementSource": "steam-community",
       "playtimeSource": "steam-local-cache",
-      "verifiedAt": "2026-09-26T13:18:10+08:00",
-      "perfect": false,
+      "verifiedAt": "2026-10-03T15:02:01+08:00",
+      "perfect": true,
       "active": true,
       "cover": "assets/covers/2638890.jpg",
       "playPeriod": "2026–至今",
       "review": [
-        "目前累计 38.2 小时、解锁 43/52 项成就，主要游玩集中在近两周。"
+        "累计游玩 54.0 小时，已解锁 52/52 项成就，达成全成就。"
       ],
       "workDescription": "宫本武藏在瘴气笼罩、幻魔横行的江户初期京都挥刀前行，并借助鬼之笼手吸收灵魂、迎战强敌。剑戟攻防与黑暗奇幻舞台共同构成这段以牙还牙的武者之路。",
       "workDescriptionSource": "https://store.steampowered.com/app/2638890/?l=schinese&cc=cn"

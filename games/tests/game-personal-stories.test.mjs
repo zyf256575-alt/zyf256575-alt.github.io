@@ -1128,12 +1128,12 @@ test("the approved personal-site game-log increment stays exact", async () => {
     ["2638890", {
       appId: 2638890,
       active: true,
-      hours: 38.2,
-      playtimeMinutes: 2293,
-      playtime2WeeksMinutes: 2293,
-      lastPlayed: 1790355001,
+      hours: 54,
+      playtimeMinutes: 3240,
+      playtime2WeeksMinutes: 2958,
+      lastPlayed: 1791010298,
       playtimeSource: "steam-local-cache",
-      verifiedAt: "2026-09-26T13:18:10+08:00",
+      verifiedAt: "2026-10-03T15:02:01+08:00",
     }],
   ]) {
     const game = archive.games.find((entry) => entry.id === id);
@@ -1151,9 +1151,9 @@ test("the approved personal-site game-log increment stays exact", async () => {
   assert.equal(pubg.note, "战术竞技与团队生存向 FPS 经历，累计 189.4 小时。");
   assert.deepEqual(archive.summary, {
     localSteamGames: 67,
-    localSteamHours: 5700.6,
-    localPerfectGames: 28,
-    localAchievements: 2320,
+    localSteamHours: 5716.4,
+    localPerfectGames: 29,
+    localAchievements: 2329,
     manualGames: 12,
     totalGames: 79,
     platformCounts: { steam: 67, battlenet: 5, tencent: 4, other: 3 },
@@ -1168,16 +1168,16 @@ test("the approved personal-site game-log increment stays exact", async () => {
     studio: ["CAPCOM Co., Ltd."],
     themes: ["江户时代", "黑暗奇幻"],
   });
-  assert.deepEqual(onimusha.achievements, { achieved: 43, total: 52 });
+  assert.deepEqual(onimusha.achievements, { achieved: 52, total: 52 });
   assert.equal(onimusha.achievementSource, "steam-community");
-  assert.equal(onimusha.perfect, false);
+  assert.equal(onimusha.perfect, true);
   assert.equal(onimusha.playPeriod, "2026–至今");
   assert.equal(onimusha.cover, "assets/covers/2638890.jpg");
   const onimushaCoverUrl = new URL(`../${onimusha.cover}`, import.meta.url);
   await access(onimushaCoverUrl);
   assert.ok((await stat(onimushaCoverUrl)).size > 10_000);
   assert.deepEqual(onimusha.review, [
-    "目前累计 38.2 小时、解锁 43/52 项成就，主要游玩集中在近两周。",
+    "累计游玩 54.0 小时，已解锁 52/52 项成就，达成全成就。",
   ]);
   assert.equal(
     onimusha.workDescription,
