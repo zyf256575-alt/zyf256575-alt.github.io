@@ -17,7 +17,7 @@ const homepageSource = await readFile(homepageUrl, "utf8");
 test("the homepage opens Game Log through its explicit HTML entry", () => {
   assert.match(
     homepageSource,
-    /<a class="game-database-entry" href="games\/index\.html" aria-label="打开游戏履历">/,
+    /<a id="game-log" class="game-database-entry" href="games\/index\.html" aria-label="打开游戏履历">/,
   );
 });
 
@@ -1068,7 +1068,7 @@ test("Battle.net work cards stay product-focused and use local recognizable cove
 
 test("the approved personal-site game-log increment stays exact", async () => {
   const approvedIntro =
-    "Codex 重度使用患者，喜欢瞎折腾，也总忍不住把事情做到尽可能完善；热衷自动化，努力把每一个冒出来的点子真正落地。";
+    "物理学硕士在读，主要用 Python / MATLAB 做数值建模、仿真与图像分析，也开发 AI 应用和自动化工具。";
   const oldIntro =
     "物理学硕士在读，喜欢折腾工具，把想法做成能运行的东西，也把重复的事情交给自动化。";
   assert.ok(homepageSource.includes(`<p class="intro">${approvedIntro}</p>`));

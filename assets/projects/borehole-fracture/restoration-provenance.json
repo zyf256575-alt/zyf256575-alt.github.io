@@ -1,0 +1,327 @@
+{
+  "model": "KAIR DnCNN grayscale blind, 20 layers, 64 channels",
+  "model_repository": "https://github.com/cszn/KAIR",
+  "visual_source": "programmatically_generated_structure_chart",
+  "natural_images_published": false,
+  "data_split": [
+    160,
+    20,
+    20
+  ],
+  "test_images": 20,
+  "reference_scale": "max side 512, grayscale",
+  "training_steps_per_arm": 1000,
+  "selected_steps": {
+    "gaussian": 0,
+    "mixed": 1000
+  },
+  "checkpoint_sha256": {
+    "original": "cc2ac7fa2f248a7f7a3da414a848326634511ec8b5adb7799e857ed788067bfe",
+    "gaussian_ft": "36a9ab1fc2660a0b2f4a8fddadab6c0a2d9741066532327d57b225253676fffa",
+    "mixed_ft": "0047613da38b96d90ebf72da58227f47b6f83a3ba83311dcacf2468de40e97cc"
+  },
+  "evaluation_summary_sha256": "c1721deef434373ef960ed52578a3e75106edd459dcdac1a3ac62f6f891a23a0",
+  "restoration_used_in_gallery_segmentation": false,
+  "restoration_evaluated_with_segmentation": true,
+  "restoration_default_preprocessing": false,
+  "segmentation_accuracy_gain_established": false,
+  "aggregate": {
+    "gaussian": {
+      "input": {
+        "count": 20,
+        "psnr_db": 24.905454845965085,
+        "ssim": 0.6368052850656019,
+        "gradient_mae": 0.06342189368937307,
+        "directional_rms": 0.004068387003321227
+      },
+      "classical": {
+        "count": 20,
+        "psnr_db": 23.801174168133905,
+        "ssim": 0.652028840026897,
+        "gradient_mae": 0.05829835410944921,
+        "directional_rms": 0.02601977293477999
+      },
+      "original": {
+        "count": 20,
+        "psnr_db": 30.845908614114013,
+        "ssim": 0.8905745123503113,
+        "gradient_mae": 0.0233971574092487,
+        "directional_rms": 0.0033632814775568743
+      },
+      "gaussian_ft": {
+        "count": 20,
+        "psnr_db": 30.845908614114013,
+        "ssim": 0.8905745123503113,
+        "gradient_mae": 0.0233971574092487,
+        "directional_rms": 0.0033632814775568743
+      },
+      "mixed_ft": {
+        "count": 20,
+        "psnr_db": 30.124558401328652,
+        "ssim": 0.8732625903861809,
+        "gradient_mae": 0.025035017354786727,
+        "directional_rms": 0.0033930210274714574
+      }
+    },
+    "stripe": {
+      "input": {
+        "count": 20,
+        "psnr_db": 27.218270777262553,
+        "ssim": 0.7895093163086628,
+        "gradient_mae": 0.008725687773793952,
+        "directional_rms": 0.030713289712434783
+      },
+      "classical": {
+        "count": 20,
+        "psnr_db": 28.73876488884657,
+        "ssim": 0.8800669649241144,
+        "gradient_mae": 0.012528126855451243,
+        "directional_rms": 0.02619528896184653
+      },
+      "original": {
+        "count": 20,
+        "psnr_db": 27.215546647805912,
+        "ssim": 0.7879788716211963,
+        "gradient_mae": 0.011205935733329349,
+        "directional_rms": 0.030509895135533215
+      },
+      "gaussian_ft": {
+        "count": 20,
+        "psnr_db": 27.215546647805912,
+        "ssim": 0.7879788716211963,
+        "gradient_mae": 0.011205935733329349,
+        "directional_rms": 0.030509895135533215
+      },
+      "mixed_ft": {
+        "count": 20,
+        "psnr_db": 28.954112240166932,
+        "ssim": 0.8693572208168387,
+        "gradient_mae": 0.013970689656539559,
+        "directional_rms": 0.022765027910552522
+      }
+    },
+    "mixed": {
+      "input": {
+        "count": 20,
+        "psnr_db": 23.014919492882274,
+        "ssim": 0.5891010815076625,
+        "gradient_mae": 0.06554321308291414,
+        "directional_rms": 0.03021777863271712
+      },
+      "classical": {
+        "count": 20,
+        "psnr_db": 23.72432974970842,
+        "ssim": 0.6525417061316016,
+        "gradient_mae": 0.057511865350383086,
+        "directional_rms": 0.027185148134415433
+      },
+      "original": {
+        "count": 20,
+        "psnr_db": 25.946341914359078,
+        "ssim": 0.7319118082507371,
+        "gradient_mae": 0.02906405250866769,
+        "directional_rms": 0.02785379555446626
+      },
+      "gaussian_ft": {
+        "count": 20,
+        "psnr_db": 25.946341914359078,
+        "ssim": 0.7319118082507371,
+        "gradient_mae": 0.02906405250866769,
+        "directional_rms": 0.02785379555446626
+      },
+      "mixed_ft": {
+        "count": 20,
+        "psnr_db": 27.140734818554797,
+        "ssim": 0.8094118176104594,
+        "gradient_mae": 0.026865168771885016,
+        "directional_rms": 0.021374867821738457
+      }
+    },
+    "clean": {
+      "input": {
+        "count": 20,
+        "psnr_db": 100.0,
+        "ssim": 1.0,
+        "gradient_mae": 0.0,
+        "directional_rms": 0.0
+      },
+      "classical": {
+        "count": 20,
+        "psnr_db": 28.940702042318055,
+        "ssim": 0.8864751139401031,
+        "gradient_mae": 0.012451939786514456,
+        "directional_rms": 0.025802570435229787
+      },
+      "original": {
+        "count": 20,
+        "psnr_db": 49.960844965477335,
+        "ssim": 0.9971883253615481,
+        "gradient_mae": 0.0031137772200072735,
+        "directional_rms": 0.0002784981017827734
+      },
+      "gaussian_ft": {
+        "count": 20,
+        "psnr_db": 49.960844965477335,
+        "ssim": 0.9971883253615481,
+        "gradient_mae": 0.0031137772200072735,
+        "directional_rms": 0.0002784981017827734
+      },
+      "mixed_ft": {
+        "count": 20,
+        "psnr_db": 36.872478234061106,
+        "ssim": 0.9550283512657021,
+        "gradient_mae": 0.009853994043120689,
+        "directional_rms": 0.002461405124781315
+      }
+    }
+  },
+  "gallery": [
+    {
+      "id": "structure-chart-stripe",
+      "images": {
+        "reference": "restoration-stripe-reference.png",
+        "input": "restoration-stripe-input.png",
+        "classical": "restoration-stripe-classical.png",
+        "original": "restoration-stripe-original.png",
+        "mixed_ft": "restoration-stripe-mixed_ft.png"
+      },
+      "sha256": {
+        "reference": "db8273ba5fd2a0ceaebd8448621817b5df1f5f3b882c02faf39ae4353736a54d",
+        "input": "e55315a6400494bb96c381bcc9e79c3e57b5f61fe1ce652d833d6263519a887c",
+        "classical": "edc6ea17f7b5e9da991cccf8d3f219a101ab16225529f79904db714931ed4483",
+        "original": "2833ab56c0ea8e256d86a26adad58de41f0246d72422ca76ff6bff5b0ed836cb",
+        "mixed_ft": "23c443769831b4f7a31d33521710243974405e88572b71f53ff7f06f709ce392"
+      },
+      "metrics": {
+        "input": {
+          "psnr_db": 26.612223328324788,
+          "ssim": 0.6355131929047771,
+          "gradient_mae": 0.008362102021103416,
+          "directional_rms": 0.033027358133001006
+        },
+        "classical": {
+          "psnr_db": 30.10090574582182,
+          "ssim": 0.9775830054654587,
+          "gradient_mae": 0.003945224728391856,
+          "directional_rms": 0.022156050854545965
+        },
+        "original": {
+          "psnr_db": 26.60069511144902,
+          "ssim": 0.6338625472463748,
+          "gradient_mae": 0.009059892614582917,
+          "directional_rms": 0.03306403815187167
+        },
+        "gaussian_ft": {
+          "psnr_db": 26.60069511144902,
+          "ssim": 0.6338625472463748,
+          "gradient_mae": 0.009059892614582917,
+          "directional_rms": 0.03306403815187167
+        },
+        "mixed_ft": {
+          "psnr_db": 29.109789912691234,
+          "ssim": 0.8815806925646104,
+          "gradient_mae": 0.006347000254638295,
+          "directional_rms": 0.023718533960836695
+        }
+      }
+    },
+    {
+      "id": "structure-chart-mixed",
+      "images": {
+        "reference": "restoration-mixed-reference.png",
+        "input": "restoration-mixed-input.png",
+        "classical": "restoration-mixed-classical.png",
+        "original": "restoration-mixed-original.png",
+        "mixed_ft": "restoration-mixed-mixed_ft.png"
+      },
+      "sha256": {
+        "reference": "db8273ba5fd2a0ceaebd8448621817b5df1f5f3b882c02faf39ae4353736a54d",
+        "input": "f0e09e97a77f61f49cfb6df8c97eb8ab43665d37fe6dedb0b81c122566562384",
+        "classical": "b4cbcba4647d3d8e8a0aa3d2cbf535176d7cf0cc8129e8b47ced7ccc7b07e7f7",
+        "original": "3175c43e54a589f92a6256749be39b925bd16e952bbcd4dfd2a54839cb9b235d",
+        "mixed_ft": "f1f64f7bb0642fd42c431b5a703019efb3a60e510f6b36b184aa4cabc820996c"
+      },
+      "metrics": {
+        "input": {
+          "psnr_db": 22.78354293873989,
+          "ssim": 0.36701634622245155,
+          "gradient_mae": 0.06848580320435595,
+          "directional_rms": 0.030341246977958772
+        },
+        "classical": {
+          "psnr_db": 24.784644048007838,
+          "ssim": 0.47474286564056234,
+          "gradient_mae": 0.054448274403368115,
+          "directional_rms": 0.022144610793690827
+        },
+        "original": {
+          "psnr_db": 27.302330774930823,
+          "ssim": 0.6949195137915918,
+          "gradient_mae": 0.013143427432361899,
+          "directional_rms": 0.028597353377799648
+        },
+        "gaussian_ft": {
+          "psnr_db": 27.302330774930823,
+          "ssim": 0.6949195137915918,
+          "gradient_mae": 0.013143427432361899,
+          "directional_rms": 0.028597353377799648
+        },
+        "mixed_ft": {
+          "psnr_db": 29.148569909412064,
+          "ssim": 0.8807305146651582,
+          "gradient_mae": 0.010196383014685763,
+          "directional_rms": 0.02124706114150169
+        }
+      }
+    },
+    {
+      "id": "structure-chart-clean",
+      "images": {
+        "reference": "restoration-clean-reference.png",
+        "input": "restoration-clean-input.png",
+        "classical": "restoration-clean-classical.png",
+        "original": "restoration-clean-original.png",
+        "mixed_ft": "restoration-clean-mixed_ft.png"
+      },
+      "sha256": {
+        "reference": "db8273ba5fd2a0ceaebd8448621817b5df1f5f3b882c02faf39ae4353736a54d",
+        "input": "db8273ba5fd2a0ceaebd8448621817b5df1f5f3b882c02faf39ae4353736a54d",
+        "classical": "7828e37c47f9cf0ba055929a47afcf0e86c3fbbba3eaaa1d5ad721afa7fbc5b2",
+        "original": "0fd0f5120b18e99d43cc3449b2f3a39aea07170c63820d6cbf68cfc33196493f",
+        "mixed_ft": "390701e494090450c1c12dd427a6be531c87df6c278a02e8a14fba916ed0b23a"
+      },
+      "metrics": {
+        "input": {
+          "psnr_db": 100.0,
+          "ssim": 1.0,
+          "gradient_mae": 0.0,
+          "directional_rms": 0.0
+        },
+        "classical": {
+          "psnr_db": 33.14703934410573,
+          "ssim": 0.9822897430014907,
+          "gradient_mae": 0.0034587114117625886,
+          "directional_rms": 0.01581113177120844
+        },
+        "original": {
+          "psnr_db": 59.27257063650376,
+          "ssim": 0.9996598845784007,
+          "gradient_mae": 0.0006651079894335355,
+          "directional_rms": 0.0004315888352462526
+        },
+        "gaussian_ft": {
+          "psnr_db": 59.27257063650376,
+          "ssim": 0.9996598845784007,
+          "gradient_mae": 0.0006651079894335355,
+          "directional_rms": 0.0004315888352462526
+        },
+        "mixed_ft": {
+          "psnr_db": 38.306381494438774,
+          "ssim": 0.9854745066192504,
+          "gradient_mae": 0.0029963830600885184,
+          "directional_rms": 0.004731946740927751
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="基于2025年数模C题的个人算法实践：RIFT 长图分割、候选曲线与参数质检，PyTorch / ONNX Runtime 推理对照，以及 DnCNN 合成噪声适配。">
+  <title>钻孔图像裂隙识别 · 周钰峰</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0f172a;--panel:#152238;--ink:#e2e8f0;--muted:#a5b4c8;--accent:#67e8f9;--line:#2a3b54}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1080px;margin:auto;padding:40px 26px 64px}a{color:var(--accent);text-underline-offset:4px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}h1{font-size:clamp(29px,5vw,44px);line-height:1.3;margin:20px 0 12px}h2{font-size:23px;margin:36px 0 12px}h3{font-size:17px;margin:8px 0}p{margin:10px 0}.eyebrow,.muted,figcaption,footer{color:var(--muted)}.eyebrow{font-size:12px;letter-spacing:.12em;margin-top:28px}.lead{max-width:820px}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}.facts strong{font-size:24px;display:block}.facts span{font-size:13px;color:var(--muted)}.tabs{display:flex;gap:8px;margin:18px 0 0;flex-wrap:wrap}.tabs button{font:inherit;font-size:14px;padding:8px 18px;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:7px;cursor:pointer}.tabs button[aria-selected="true"]{color:var(--bg);background:var(--accent);border-color:var(--accent)}figure{margin:14px 0;padding:18px;background:var(--panel);border-radius:12px}figure img{display:block;width:100%;height:auto;background:#edf2f8}figcaption{font-size:14px;margin-top:14px}.hint{font-size:13px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:10px}.step .number{font-size:13px;color:var(--accent)}.step p{font-size:14px;color:var(--muted);margin-bottom:0}table{width:100%;border-collapse:collapse;margin:16px 0}td,th{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}.small{font-size:14px}details{margin:30px 0}summary{cursor:pointer;color:var(--accent);font-weight:650}.context-image{max-height:620px;object-fit:contain}.scope{padding:16px 18px;background:var(--panel);border-radius:10px}.scope p{margin:5px 0}footer{font-size:13px;border-top:1px solid var(--line);padding-top:20px;margin-top:34px}.links{display:flex;gap:20px;flex-wrap:wrap}@media(max-width:640px){main{padding:24px 16px 44px}.steps{grid-template-columns:1fr}.facts{gap:12px}.facts strong{font-size:22px}.facts span{font-size:12px}figure{padding:9px}.tabs button{padding:7px 12px}td,th{padding:10px 6px;font-size:14px}}
+  </style>
+  <style>
+    /* Keep tall source images readable without letting the preview dominate the page. */
+    [role="tabpanel"] figure{max-width:680px;margin:14px auto}
+    figure img{width:auto;max-width:100%;height:auto;max-height:min(68vh,600px);margin:0 auto;object-fit:contain}
+    .context-image{max-height:min(68vh,600px)}
+    .section-nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:22px 0}
+    .restore-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:16px 0}
+    .restore-grid figure{padding:8px;margin:0;min-width:0;border:1px solid var(--line)}
+    .restore-grid img{width:100%;max-height:none;background:#aaa}
+    .restore-grid figcaption{font-size:12px;margin:0 0 8px}
+    .table-scroll{overflow-x:auto}
+    #restoration{border-top:1px solid var(--line);margin-top:40px;padding-top:5px;scroll-margin-top:20px}
+    .result-note{border-left:3px solid var(--accent);padding:2px 0 2px 16px;margin:20px 0}
+    .facts strong{font-size:20px;line-height:1.5}
+    .curve-grid{display:grid;grid-template-columns:minmax(180px,.7fr) minmax(0,1.3fr);gap:20px;align-items:start}
+    .curve-grid figure{margin:0}
+    .curve-grid .curve-detail{max-height:none;width:100%}
+    .curve-grid table{font-size:14px}
+    @media(max-width:640px){.facts{grid-template-columns:1fr}.curve-grid{grid-template-columns:1fr}}
+    @media(max-width:800px){.restore-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.restore-grid figure:last-child{grid-column:1/-1;max-width:420px;justify-self:center}}
+  </style>
+</head>
+<body>
+<main>
+  <a href="../../../index.html#borehole-fracture">← 返回个人网站</a>
+  <p class="eyebrow">个人算法实践 / SCIENTIFIC IMAGE ANALYSIS</p>
+  <h1>钻孔图像裂隙识别</h1>
+  <p class="muted small">题目来源：2025 年研究生数学建模 C 题</p>
+  <p class="lead">面向钻孔壁展开长图，基于 RIFT 构建分块分割、候选曲线拟合与参数质检管线，并比较 PyTorch 与 ONNX Runtime 的 CPU 推理表现。另以 DnCNN 开展合成噪声适配实验，分析条带抑制与细节保真的取舍。</p>
+  <nav class="section-nav" aria-label="项目内容"><a href="#results-title">长图分割</a><a href="#curve-example">曲线与参数</a><a href="#benchmark-title">推理对照</a><a href="#restoration">恢复实验</a></nav>
+  <div class="facts">
+    <div><strong>长图分割</strong><span>保比例分块 · 重叠融合</span></div>
+    <div><strong>候选曲线分析</strong><span>正弦拟合 · 参数质检</span></div>
+    <div><strong>推理与恢复对照</strong><span>运行后端 · 合成退化</span></div>
+  </div>
+
+  <section aria-labelledby="results-title">
+    <h2 id="results-title">结果对照</h2>
+    <p class="muted small">钻孔壁展开图的分割结果，依次为原图、候选掩码和叠加图。点击图片可查看完整对照。</p>
+    <div class="tabs" role="tablist" aria-label="切换图像样例">
+      <button id="tab-1" type="button" role="tab" aria-selected="true" aria-controls="panel-1" tabindex="0">案例01</button>
+      <button id="tab-2" type="button" role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1">案例02</button>
+      <button id="tab-3" type="button" role="tab" aria-selected="false" aria-controls="panel-3" tabindex="-1">案例03</button>
+      <button id="tab-4" type="button" role="tab" aria-selected="false" aria-controls="panel-4" tabindex="-1">案例04</button>
+      <button id="tab-5" type="button" role="tab" aria-selected="false" aria-controls="panel-5" tabindex="-1">案例05</button>
+      <button id="tab-6" type="button" role="tab" aria-selected="false" aria-controls="panel-6" tabindex="-1">案例06</button>
+      <button id="tab-7" type="button" role="tab" aria-selected="false" aria-controls="panel-7" tabindex="-1">案例07</button>
+      <button id="tab-8" type="button" role="tab" aria-selected="false" aria-controls="panel-8" tabindex="-1">案例08</button>
+      <button id="tab-9" type="button" role="tab" aria-selected="false" aria-controls="panel-9" tabindex="-1">案例09</button>
+    </div>
+    <div id="panel-1" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+      <figure><a href="case-01.jpg"><img src="case-01.jpg" width="800" height="1434" alt="图1-1原图、候选掩码与叠加对照"></a><figcaption>案例01 · 原图 1-1</figcaption></figure>
+    </div>
+    <div id="panel-2" role="tabpanel" aria-labelledby="tab-2" tabindex="0" hidden>
+      <figure><a href="case-02.jpg"><img loading="lazy" src="case-02.jpg" width="800" height="1434" alt="图1-2原图、候选掩码与叠加对照"></a><figcaption>案例02 · 原图 1-2</figcaption></figure>
+    </div>
+    <div id="panel-3" role="tabpanel" aria-labelledby="tab-3" tabindex="0" hidden>
+      <figure><a href="case-04.jpg"><img loading="lazy" src="case-04.jpg" width="800" height="1434" alt="图1-4原图、候选掩码与叠加对照"></a><figcaption>案例03 · 原图 1-4</figcaption></figure>
+    </div>
+    <div id="panel-4" role="tabpanel" aria-labelledby="tab-4" tabindex="0" hidden>
+      <figure><a href="case-05.jpg"><img loading="lazy" src="case-05.jpg" width="800" height="1434" alt="图1-5原图、候选掩码与叠加对照"></a><figcaption>案例04 · 原图 1-5</figcaption></figure>
+    </div>
+    <div id="panel-5" role="tabpanel" aria-labelledby="tab-5" tabindex="0" hidden>
+      <figure><a href="case-a1-006.jpg"><img loading="lazy" src="case-a1-006.jpg" width="800" height="1434" alt="图1-6原图、候选掩码与叠加对照"></a><figcaption>案例05 · 原图 1-6</figcaption></figure>
+    </div>
+    <div id="panel-6" role="tabpanel" aria-labelledby="tab-6" tabindex="0" hidden>
+      <figure><a href="case-a2-001.jpg"><img loading="lazy" src="case-a2-001.jpg" width="800" height="1434" alt="图2-1原图、候选掩码与叠加对照"></a><figcaption>案例06 · 原图 2-1</figcaption></figure>
+    </div>
+    <div id="panel-7" role="tabpanel" aria-labelledby="tab-7" tabindex="0" hidden>
+      <figure><a href="case-a2-002.jpg"><img loading="lazy" src="case-a2-002.jpg" width="800" height="1434" alt="图2-2原图、候选掩码与叠加对照"></a><figcaption>案例07 · 原图 2-2</figcaption></figure>
+    </div>
+    <div id="panel-8" role="tabpanel" aria-labelledby="tab-8" tabindex="0" hidden>
+      <figure><a href="case-a2-005.jpg"><img loading="lazy" src="case-a2-005.jpg" width="800" height="1434" alt="图2-5原图、候选掩码与叠加对照"></a><figcaption>案例08 · 原图 2-5</figcaption></figure>
+    </div>
+    <div id="panel-9" role="tabpanel" aria-labelledby="tab-9" tabindex="0" hidden>
+      <figure><a href="case-a3-003.jpg"><img loading="lazy" src="case-a3-003.jpg" width="800" height="1434" alt="图3-3原图、候选掩码与叠加对照"></a><figcaption>案例09 · 原图 3-3</figcaption></figure>
+    </div>
+    <p class="muted hint">黑色为分割掩码中的候选区域，红色为原图上的对应叠加。</p>
+  </section>
+
+  <section aria-labelledby="method-title">
+    <h2 id="method-title">处理流程</h2>
+    <div class="steps">
+      <article class="step"><span class="number">01 / 输入适配</span><h3>长图分块与预处理</h3><p>保留展开图比例，按 256×256 视野、192 像素步长分块，补齐边缘并适配网络输入。</p></article>
+      <article class="step"><span class="number">02 / 语义分割</span><h3>RIFT 推理与重叠融合</h3><p>对分块进行模型推理，通过重叠概率平均恢复原图尺寸，阈值分割后去除非成像白边，输出掩码与叠加图。</p></article>
+      <article class="step"><span class="number">03 / 曲线分析</span><h3>候选曲线拟合与参数质检</h3><p>从骨架点构建多组曲线假设，结合覆盖率、间隙与残差筛选结果，输出编号图、参数表及待复核片段。</p></article>
+    </div>
+  </section>
+
+  <section id="curve-example" aria-labelledby="curve-example-title">
+    <h2 id="curve-example-title">候选曲线与参数示例</h2>
+    <p class="small muted">图 1-2 · C01。对分割候选点进行固定周期正弦拟合；绿色实线表示观测支持，虚线表示观测间隙内的拟合轨迹。其他编号保留为待复核候选。</p>
+    <div class="curve-grid">
+      <figure><a href="curve-numbered.png"><img loading="lazy" src="curve-numbered.png" width="244" height="1350" alt="图1-2的候选曲线编号及C01拟合轨迹"></a><figcaption>原尺寸编号图 · 点击放大</figcaption></figure>
+      <div>
+        <figure><a href="curve-detail.png"><img class="curve-detail" loading="lazy" src="curve-detail.png" width="732" height="459" alt="C01观测点与正弦拟合局部对照"></a><figcaption>C01 · 观测支持与拟合局部</figcaption></figure>
+        <table aria-label="C01像素参数"><thead><tr><th>参数</th><th>数值</th></tr></thead><tbody>
+          <tr><td>振幅</td><td>44.65 px</td></tr><tr><td>相位</td><td>−2.913 rad</td></tr><tr><td>中心纵坐标</td><td>142.47 px</td></tr><tr><td>固定周期</td><td>244 px（图宽）</td></tr><tr><td>观测列覆盖</td><td>50.82%</td></tr><tr><td>拟合残差 RMSE</td><td>2.18 px</td></tr>
+        </tbody></table>
+        <p class="hint muted">参数基于模型候选点，坐标原点为图像左上角；通过几何门槛表示拟合条件满足，不代表地质身份已确认。</p>
+        <p class="small"><a href="curve-parameters.csv">全部候选参数 CSV</a> · <a href="curve-example-provenance.json">曲线素材与参数来源</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="benchmark-title">
+    <h2 id="benchmark-title">推理后端对照 · PyTorch 与 ONNX Runtime</h2>
+    <p class="muted small">将同一权重导出为 FP32 ONNX，以独立推理入口对照 PyTorch 的输出与整图耗时。</p>
+    <table><thead><tr><th>同一 RIFT 权重</th><th>整图耗时</th><th>输出对照</th></tr></thead><tbody><tr><td>PyTorch CPU</td><td>2.49 秒/图</td><td rowspan="2">三图阈值掩码一致<br>概率最大绝对差 8.06e-5</td></tr><tr><td>ONNX Runtime CPU</td><td>1.41 秒/图</td></tr></tbody></table>
+    <p class="muted small">本机 CPU、两线程，3 张图各重复 3 次，汇总各图耗时中位值；含预处理、推理与拼接，不含模型加载和磁盘 IO。速度比约 1.76×。</p>
+  </section>
+
+  <section aria-labelledby="input-comparison-title">
+    <h2 id="input-comparison-title">输入处理对照</h2>
+    <p class="small">在五张固定钻孔图上比较 RGB、灰度、DnCNN 恢复后分割与传统 Frangi 分割。结合候选连续性、纹理响应与几何质检，保留 RGB 输入为主线；恢复模型不作为裂隙分割的默认预处理。</p>
+  </section>
+
+  <section id="restoration" aria-labelledby="restoration-title">
+    <p class="eyebrow">IMAGE RESTORATION / CONTROLLED FINE-TUNING</p>
+    <h2 id="restoration-title">恢复训练 · 混合噪声适配</h2>
+    <p>复用 KAIR 的 DnCNN 预训练权重，开发配对退化生成、微调选模、统一评测与报告管线。将随机噪声与行/列条带组合为训练输入，对照原版、传统方法和微调模型。</p>
+    <div class="steps">
+      <article class="step"><span class="number">01 / 数据与退化</span><h3>按原图隔离数据</h3><p>200 张 DIV2K 灰度工作图按 160 / 20 / 20 划分训练、验证和测试；固定种子生成高斯、条带、混合退化及干净输入。</p></article>
+      <article class="step"><span class="number">02 / 训练与选模</span><h3>同预算控制变量</h3><p>两臂使用相同预训练初始化、裁块序列与 1000 步预算，仅改变退化分布；验证集选模，测试集独立评测。</p></article>
+      <article class="step"><span class="number">03 / 图像质量</span><h3>联合检查恢复与保真</h3><p>以 PSNR / SSIM、梯度误差和方向残差评价结果；保存逐图输出与结构测试图，检查细线、纹理和干净输入损伤。</p></article>
+    </div>
+    <h3>独立测试 · PSNR（dB，越高越好）</h3>
+    <div class="table-scroll"><table>
+      <thead><tr><th>测试输入</th><th>传统方法</th><th>原版 DnCNN</th><th>混合微调</th><th>相对原版</th></tr></thead>
+      <tbody>
+        <tr><td>合成条带</td><td>28.74</td><td>27.22</td><td>28.95</td><td>+1.74</td></tr>
+        <tr><td>高斯＋条带</td><td>23.72</td><td>25.95</td><td>27.14</td><td>+1.19</td></tr>
+        <tr><td>纯高斯</td><td>23.80</td><td>30.85</td><td>30.12</td><td>−0.72</td></tr>
+        <tr><td>干净输入保真</td><td>28.94</td><td>49.96</td><td>36.87</td><td>−13.09</td></tr>
+      </tbody>
+    </table></div>
+    <p class="muted hint">同一组 20 张独立测试图，每图生成四类输入，按图计算指标再取均值。参考图为最长边 512 的灰度工作图；单次训练、固定合成退化。传统方法为行列趋势校正＋非局部均值去噪。</p>
+    <div class="result-note"><p>合成条带与混合退化上的 PSNR 高于原版，但纯高斯和干净输入保真下降，部分细纹理被平滑。条带条件下微调版与传统方法的 PSNR 接近，SSIM 分别为 0.869 / 0.880；不据单一指标判断全面优劣。</p></div>
+
+    <h3>结构测试图 · 条带抑制</h3>
+    <p class="muted small">程序生成宽暗带、细线与高频纹理，观察处理前后的结构变化。下图是单个结构测试案例，与上表自然图均值分开统计。</p>
+    <div class="restore-grid" aria-label="条带恢复图像对照">
+      <figure><figcaption>干净参考</figcaption><a href="restoration-stripe-reference.png"><img loading="lazy" src="restoration-stripe-reference.png" width="384" height="256" alt="自生成结构图干净参考"></a></figure>
+      <figure><figcaption>合成退化</figcaption><a href="restoration-stripe-input.png"><img loading="lazy" src="restoration-stripe-input.png" width="384" height="256" alt="添加横向条带的结构图"></a></figure>
+      <figure><figcaption>传统方法</figcaption><a href="restoration-stripe-classical.png"><img loading="lazy" src="restoration-stripe-classical.png" width="384" height="256" alt="传统方法处理条带结构图"></a></figure>
+      <figure><figcaption>原版 DnCNN</figcaption><a href="restoration-stripe-original.png"><img loading="lazy" src="restoration-stripe-original.png" width="384" height="256" alt="原版DnCNN处理条带结构图"></a></figure>
+      <figure><figcaption>混合微调</figcaption><a href="restoration-stripe-mixed_ft.png"><img loading="lazy" src="restoration-stripe-mixed_ft.png" width="384" height="256" alt="混合微调处理条带结构图"></a></figure>
+    </div>
+    <p class="muted hint">此例中，微调版的条带响应较原版减弱，仍有残留；传统方法的抑制更充分。算法选择需要同时观察噪声类型与结构损伤。</p>
+    <details><summary>混合噪声与干净输入对照</summary>
+      <h3>高斯＋条带</h3>
+      <div class="restore-grid" aria-label="混合噪声恢复对照">
+        <figure><figcaption>干净参考</figcaption><a href="restoration-mixed-reference.png"><img loading="lazy" src="restoration-mixed-reference.png" width="384" height="256" alt="混合噪声案例的干净参考"></a></figure>
+        <figure><figcaption>合成退化</figcaption><a href="restoration-mixed-input.png"><img loading="lazy" src="restoration-mixed-input.png" width="384" height="256" alt="高斯与条带混合退化"></a></figure>
+        <figure><figcaption>传统方法</figcaption><a href="restoration-mixed-classical.png"><img loading="lazy" src="restoration-mixed-classical.png" width="384" height="256" alt="传统方法处理混合噪声"></a></figure>
+        <figure><figcaption>原版 DnCNN</figcaption><a href="restoration-mixed-original.png"><img loading="lazy" src="restoration-mixed-original.png" width="384" height="256" alt="原版DnCNN处理混合噪声"></a></figure>
+        <figure><figcaption>混合微调</figcaption><a href="restoration-mixed-mixed_ft.png"><img loading="lazy" src="restoration-mixed-mixed_ft.png" width="384" height="256" alt="微调DnCNN处理混合噪声"></a></figure>
+      </div>
+      <h3>干净输入 · 结构保真</h3>
+      <div class="restore-grid" aria-label="干净输入结构保真对照">
+        <figure><figcaption>干净参考</figcaption><a href="restoration-clean-reference.png"><img loading="lazy" src="restoration-clean-reference.png" width="384" height="256" alt="干净结构参考"></a></figure>
+        <figure><figcaption>无退化输入</figcaption><a href="restoration-clean-input.png"><img loading="lazy" src="restoration-clean-input.png" width="384" height="256" alt="未添加噪声的输入"></a></figure>
+        <figure><figcaption>传统方法</figcaption><a href="restoration-clean-classical.png"><img loading="lazy" src="restoration-clean-classical.png" width="384" height="256" alt="传统方法对干净结构的影响"></a></figure>
+        <figure><figcaption>原版 DnCNN</figcaption><a href="restoration-clean-original.png"><img loading="lazy" src="restoration-clean-original.png" width="384" height="256" alt="原版对干净结构的影响"></a></figure>
+        <figure><figcaption>混合微调</figcaption><a href="restoration-clean-mixed_ft.png"><img loading="lazy" src="restoration-clean-mixed_ft.png" width="384" height="256" alt="微调对干净细线与纹理的影响"></a></figure>
+      </div>
+    </details>
+    <p class="muted hint">代码与权重参考 <a href="https://github.com/cszn/KAIR" target="_blank" rel="noopener noreferrer">KAIR / DnCNN ↗</a>；训练与评测数据来自 <a href="https://data.vision.ee.ethz.ch/cvl/DIV2K/" target="_blank" rel="noopener noreferrer">DIV2K ↗</a>。本页恢复图片均为程序生成测试图。</p>
+    <p class="small"><a href="restoration-provenance.json">恢复实验指标与素材来源</a></p>
+  </section>
+
+  <details>
+    <summary>成像干扰场景</summary>
+    <figure><a href="imaging-context.jpg"><img class="context-image" loading="lazy" src="imaging-context.jpg" width="800" height="592" alt="附件4中1号孔0至1米图像的上部1800行，原图与候选对照"></a><figcaption>附件 4 · 1 号孔 0–1 m。原图 864×9167，展示上部 1800 行：横向成像条带附近的分割响应。</figcaption></figure>
+    <p class="muted small">拼接线、泥浆与钻进痕迹会影响候选分布，此例用于观察复杂成像条件下的模型输出。</p>
+  </details>
+
+  <footer>
+    <p>数据：2025 年研究生数学建模 C 题钻孔壁展开图，共处理 71 份附件，去重后 70 张。本页展示基于赛题原图开展的个人算法实践。</p>
+    <p>分割网络：<a href="https://github.com/xauat-liushipeng/RIFT" target="_blank" rel="noopener noreferrer">RIFT ↗</a>，使用作者提供的 DeepCrack 数据集预训练权重。</p>
+    <p>合成噪声适配改善了部分恢复指标，但存在细节平滑；五图连接对照未显示稳定的分割收益，因此主分割流程保留 RGB 输入。</p>
+    <div class="links"><a href="provenance.json">素材来源与实测摘要</a><a href="../../../index.html#borehole-fracture">返回首页</a></div>
+  </footer>
+</main>
+<script>
+  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+  function selectTab(tab, focus = false) {
+    for (const candidate of tabs) {
+      const active = candidate === tab;
+      candidate.setAttribute('aria-selected', String(active));
+      candidate.tabIndex = active ? 0 : -1;
+      document.getElementById(candidate.getAttribute('aria-controls')).hidden = !active;
+    }
+    if (focus) tab.focus();
+  }
+  for (const tab of tabs) {
+    tab.addEventListener('click', () => selectTab(tab));
+    tab.addEventListener('keydown', event => {
+      const index = tabs.indexOf(tab);
+      const next = {ArrowRight:(index+1)%tabs.length, ArrowLeft:(index+tabs.length-1)%tabs.length, Home:0, End:tabs.length-1}[event.key];
+      if (next !== undefined) {event.preventDefault(); selectTab(tabs[next], true);}
+    });
+  }
+</script>
+</body>
+</html>

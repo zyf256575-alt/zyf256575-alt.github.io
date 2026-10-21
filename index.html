@@ -35,7 +35,6 @@
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
-      padding-bottom: 58px;
     }
 
     body::before {
@@ -204,7 +203,13 @@
     }
 
     section { margin-bottom: 128px; scroll-margin-top: 96px; }
-    .section-label { display: none; }
+    .section-label {
+      margin: 0 0 24px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
 
     .about p {
       margin: 0 0 18px;
@@ -293,6 +298,25 @@
     }
 
     .project .desc { max-width: 580px; }
+    .desc + .desc { margin-top: 12px; }
+
+    .practice { padding-top: 14px; padding-bottom: 14px; }
+    .practice h3 { font-size: 17px; }
+    .practice .desc { font-size: 15px; }
+    details { margin-top: 16px; }
+    summary {
+      width: fit-content;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    summary:hover { color: var(--accent); }
+    summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+    details[open] > summary { margin-bottom: 16px; }
+    .other-explorations { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 20px; }
+    .other-explorations > summary { font-size: 15px; }
+    #game-log { margin-top: 24px; }
 
     .links {
       margin-top: 12px;
@@ -447,175 +471,6 @@
     }
 
 
-    /* Bottom XP easter egg: linked from Project 1 without covering content */
-    .fixed-xp-hud {
-      position: relative;
-      z-index: 1;
-      height: 54px;
-      margin-top: 18px;
-      overflow: hidden;
-      border-top: 1px solid rgba(94, 234, 212, .30);
-      border-bottom: 1px solid rgba(94, 234, 212, .16);
-      background:
-        linear-gradient(180deg, rgba(15, 23, 42, .86), rgba(15, 23, 42, .98)),
-        radial-gradient(760px 54px at 50% 50%, rgba(94, 234, 212, .10), transparent 74%);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: inset 0 1px 0 rgba(148, 163, 184, .06);
-    }
-
-    .fixed-xp-hud::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0;
-      background:
-        linear-gradient(90deg, rgba(94, 234, 212, .12), rgba(56, 189, 248, .18), rgba(94, 234, 212, .12)),
-        radial-gradient(620px 54px at 50% 50%, rgba(94, 234, 212, .26), transparent 74%);
-      box-shadow:
-        inset 0 0 0 1px rgba(94, 234, 212, .38),
-        inset 0 0 32px rgba(94, 234, 212, .16);
-    }
-
-    .fixed-xp-inner {
-      position: relative;
-      z-index: 1;
-      width: min(960px, calc(100% - 48px));
-      height: 54px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 22px;
-      color: var(--muted-2);
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .045em;
-      text-transform: uppercase;
-    }
-
-    .xp-label {
-      flex: 0 0 auto;
-      color: var(--text);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .11em;
-      white-space: nowrap;
-    }
-
-    .xp-level {
-      flex: 0 0 auto;
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .07em;
-      white-space: nowrap;
-    }
-
-    .xp-track {
-      position: relative;
-      flex: 0 1 520px;
-      height: 17px;
-      min-width: 260px;
-      max-width: 520px;
-      border-radius: 999px;
-      background: rgba(51, 65, 85, .80);
-      box-shadow: inset 0 1px 3px rgba(2, 6, 23, .70);
-      overflow: hidden;
-    }
-
-    .xp-percent {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 900;
-      letter-spacing: .075em;
-      line-height: 1;
-      text-shadow:
-        0 1px 2px rgba(2, 6, 23, .95),
-        0 0 8px rgba(15, 23, 42, .72),
-        0 0 12px rgba(226, 232, 240, .24);
-      pointer-events: none;
-    }
-
-    .xp-track::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      inset: 0 auto 0 0;
-      width: 99%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, rgba(94, 234, 212, .98), rgba(56, 189, 248, .82));
-      box-shadow: 0 0 22px rgba(94, 234, 212, .32);
-    }
-
-    .xp-stats {
-      flex: 0 1 auto;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      min-width: 0;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-size: 11px;
-    }
-
-    .xp-stats b {
-      color: var(--text);
-      font-weight: 800;
-    }
-
-    .fixed-xp-hud.is-pulsing {
-      animation: xpHudModuleFlash .48s ease-in-out 2;
-    }
-
-    .fixed-xp-hud.is-pulsing::before {
-      animation: xpHudOverlayFlash .48s ease-in-out 2;
-    }
-
-    .fixed-xp-hud.is-pulsing .fixed-xp-inner {
-      animation: xpInnerFlash .48s ease-in-out 2;
-    }
-
-    .fixed-xp-hud.is-pulsing .xp-track::before {
-      animation: xpFillFlash .48s ease-in-out 2;
-    }
-
-    @keyframes xpHudModuleFlash {
-      0%, 100% {
-        border-top-color: rgba(94, 234, 212, .30);
-        box-shadow: inset 0 1px 0 rgba(148, 163, 184, .06);
-      }
-      50% {
-        border-top-color: rgba(94, 234, 212, .95);
-        box-shadow:
-          inset 0 1px 0 rgba(94, 234, 212, .42),
-          inset 0 0 34px rgba(94, 234, 212, .13);
-      }
-    }
-
-    @keyframes xpHudOverlayFlash {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
-    }
-
-    @keyframes xpInnerFlash {
-      0%, 100% { filter: brightness(1); }
-      50% { filter: brightness(1.45); }
-    }
-
-    @keyframes xpFillFlash {
-      0%, 100% { filter: brightness(1); box-shadow: 0 0 22px rgba(94, 234, 212, .32); }
-      50% { filter: brightness(1.9); box-shadow: 0 0 42px rgba(94, 234, 212, .86); }
-    }
 
     footer {
       color: var(--muted-2);
@@ -653,13 +508,6 @@
       section { margin-bottom: 88px; }
       .entry { grid-template-columns: 1fr; gap: 8px; margin-left: -12px; margin-right: -12px; }
       .date { padding-top: 0; }
-      .fixed-xp-hud { height: 50px; }
-      .fixed-xp-inner { width: min(100% - 32px, 680px); height: 50px; gap: 10px; font-size: 10px; justify-content: center; }
-      .xp-label { display: none; }
-      .xp-level { font-size: 11px; }
-      .xp-track { flex: 1 1 auto; max-width: none; min-width: 90px; height: 16px; }
-      .xp-percent { font-size: 12px; letter-spacing: .06em; }
-      .xp-stats { gap: 9px; }
       .gallery { grid-template-columns: 1fr; }
       .game-database-entry {
         min-height: 68px;
@@ -677,16 +525,15 @@
     <aside class="sidebar">
       <div>
         <h1 class="name">周钰峰</h1>
-        <h2 class="subtitle">Python / AI 应用与智能工具</h2>
-        <p class="intro">Codex 重度使用患者，喜欢瞎折腾，也总忍不住把事情做到尽可能完善；热衷自动化，努力把每一个冒出来的点子真正落地。</p>
+        <h2 class="subtitle">科学计算与图像处理</h2>
+        <p class="intro">物理学硕士在读，主要用 Python / MATLAB 做数值建模、仿真与图像分析，也开发 AI 应用和自动化工具。</p>
 
         <nav class="nav" aria-label="主导航">
           <ul>
             <li><a class="active" href="#about">关于</a></li>
-            <li><a href="#experience">实习</a></li>
-            <li><a href="#projects">项目 / 实践</a></li>
-            <li><a href="#demos">演示</a></li>
-            <li><a href="#game-log">游戏履历</a></li>
+            <li><a href="#projects">代表项目</a></li>
+            <li><a href="#experience">实习经历</a></li>
+            <li><a href="#practices">个人实践</a></li>
             <li><a href="resume.pdf" target="_blank" rel="nofollow noopener" class="external">Resume</a></li>
           </ul>
         </nav>
@@ -706,97 +553,96 @@
       <section id="about">
         <h2 class="section-label">关于</h2>
         <div class="about">
-          <p>我目前在西安电子科技大学读物理学硕士，主要用 Python 做科研计算、AI 应用和自动化工具。做项目时，我习惯保留数据来源、验证结果和人工确认点，方便后续复现和继续迭代。</p>
-          <p>目前主要经历包括一段住房市场 AI 短视频内容原型开发实习，以及 Scatron AI4Science 科研工作台、Workflow Evolution 个人 AI Harness 实践和 Yuxu Forge AIGC 3D 游戏资产实践。页面下方保留了可公开展示的实际产物。</p>
-          <p>业余大部分时间给了运动、音乐和 3A 游戏。魂系的晦暗美学、黑神话的中式表达、巫师 3 的叙事厚度，无形中塑造了我对世界的想象；而《戴森球计划》那种从零编织星河的浪漫，大概也是为什么我喜欢把管线一格一格跑通，看着系统活起来。</p>
+          <p>我目前在西安电子科技大学攻读物理学硕士，研究光与粒子的相互作用。主要工作是将理论模型实现为计算程序，开展数值仿真、参数分析和结果验证，相关代码已用于科研论文的计算与图件制作。</p>
+          <p>研究之外，我也持续学习 AI 技术，了解 Transformer 架构与大语言模型的基本原理，并围绕 Agent 开发、RAG 知识检索和 AI 辅助工作流开展实践。图像处理方面，完成了钻孔图像的分割、曲线拟合和 CPU 部署验证；实习中参与住房市场 AI 内容原型开发，负责数据处理、内容生成与视频合成。</p>
+          <p>业余喜欢运动、音乐和 3A 游戏。偏爱魂系的美术、《黑神话》的中式表达，也喜欢《巫师3》的叙事和《戴森球计划》的系统搭建。游戏记录和资产制作尝试，也收录在这个网站里。</p>
         </div>
       </section>
 
-      <section id="experience">
-        <h2 class="section-label">实习</h2>
-        <article class="entry project">
-          <h3>意果科技（Trendinsight Corp）· AI Content Engineer</h3>
-          <p class="desc">参与住房市场 AI 短视频内容原型开发，负责抓取和处理美国住房市场公开数据与城市新闻事件，串联内容筛选、来源校验、故事卡生成及 FFmpeg 视频合成，完成从数据输入到短视频输出的端到端流程。根据项目评审需要，将首版范围较大的视频管线收敛为可独立评审的故事卡原型，保留来源追溯与视频就绪检查，相关实现最终合入项目仓库。</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">LLM 应用</span><span class="tag">数据管线</span><span class="tag">FFmpeg</span></div>
-          <div class="links"><a href="#reel-forge-demo">视频演示 ↘</a></div>
-        </article>
-      </section>
-
       <section id="projects">
-        <h2 class="section-label">项目 / 实践</h2>
+        <h2 class="section-label">代表项目</h2>
         <article class="entry project">
-          <h3>Scatron · AI4Science 科研工作台</h3>
-          <p class="desc">基于导师与课题组确定的研究方向和核心公式，我独立开发光散射、光力与扭矩计算核心，并以自动化测试、独立公式和文献基准约束数值可信度；通过可复用 Skill 与可视化控制台统一组织 69 篇文献、研究图谱、图件管线和 Word 正文，将计算、批量出图、结果审查与格式核验串成可复现流程。工作台已用于 3 篇科研论文的计算与图件制作，其中 2 篇已发表于 SCI 期刊。</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Scientific Computing</span><span class="tag">LLM Agent</span><span class="tag">Skills</span><span class="tag">pytest</span><span class="tag">HTML</span></div>
-          <div class="links"><a href="#scatron-demo">可视化演示 ↘</a><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022407325003097" target="_blank" rel="noopener noreferrer">已发表前期论文（JQSRT） ↗</a></div>
+          <h3>光散射与光学力矩建模仿真</h3>
+          <p class="desc">围绕光束与球形粒子的相互作用，将波束展开、散射系数及光力与力矩公式实现为模块化 Python 计算程序，支持轴向、离轴响应求解与多参数扫描。</p>
+          <p class="desc">结合独立公式、文献基准和自动化回归测试验证数值结果，建立参数配置、批量计算与图件输出流程，相关实现已用于科研论文的计算与图件制作。</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">NumPy / SciPy</span><span class="tag">数值仿真</span><span class="tag">pytest</span></div>
+          <div class="links"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022407325003097" target="_blank" rel="noopener noreferrer">已发表前期论文（JQSRT） ↗</a></div>
+          <details id="scatron-demo">
+            <summary>研究工作台界面</summary>
+            <div class="gallery duo">
+              <a href="assets/img/project_3_3.png" target="_blank"><img src="assets/img/project_3_3.png" alt="Scatron 研究问题、计算分支与论文关联图谱" loading="lazy"></a>
+              <a href="assets/img/project_3_4.png" target="_blank"><img src="assets/img/project_3_4.png" alt="Scatron 参数扫描与图件规划界面" loading="lazy"></a>
+            </div>
+            <p class="demo-caption">研究工作台用于组织计算分支、参数扫描与图件规划；数值方法与前期研究结果见论文。</p>
+          </details>
         </article>
-        <article class="entry project">
-          <h3>Workflow Evolution · 个人 AI Harness 实践</h3>
-          <p class="desc">针对 Coding Agent 跨会话任务信息丢失的问题，在 Codex、Claude Code 的使用流程中，我将任务状态与关键约束保存为 Markdown 文档，并通过分层规则与按需读取，在新会话中恢复任务上下文；再以 MCP、可复用 Skill、人工确认、测试验收和 Git 回滚约束工具权限与执行闭环，并持续复用于科研、应用开发、学习系统、个人网站和求职材料。</p>
-          <div class="tags"><span class="tag">Obsidian</span><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">Rules</span><span class="tag">MCP</span><span class="tag">Skills</span><span class="tag">Git</span></div>
-          <!-- <div class="links"><a href="#xp-bar">Workflow XP ↘</a></div> -->
-        </article>
-        <article class="entry project">
-          <h3>Yuxu Forge · AIGC 3D 游戏资产实践</h3>
-          <p class="desc">这次实践源于与朋友对游戏场景资产的讨论。我选择宫廷青白玉柱作为对象，独立完成图生 3D、Blender 组件与纹理/材质处理、GLB 导出及 UE5 导入，形成柱础、柱身、柱顶三组件的游戏资产原型；调用开源 MCP 与辅助脚本协助资产检查，并通过多机位渲染观察材质、结构与失真问题，按可编辑性和引擎表现筛选、回退方案。</p>
-          <div class="tags"><span class="tag">AIGC</span><span class="tag">Image-to-3D</span><span class="tag">Blender</span><span class="tag">Unreal Engine 5</span><span class="tag">MCP</span></div>
-          <div class="links"><a href="#yuxu-forge-demo">视频演示 ↘</a></div>
-        </article>
-        <article class="entry project">
-          <h3>eSIM 配置写入与实体卡自用实践</h3>
-          <p class="desc">围绕个人通信需求，使用 USB 智能卡设备将本人 eSIM 配置写入可编程实体 SIM 载体，实现英国号码在国内的短信收发与日常自用。</p>
-          <div class="tags"><span class="tag">USB 智能卡</span><span class="tag">eSIM</span><span class="tag">可编程 SIM</span></div>
-          <div class="links"><a href="#esim-demo">设备与结果 ↘</a></div>
+        <article id="borehole-fracture" class="entry project">
+          <h3>钻孔图像裂隙识别</h3>
+          <p class="desc">基于2025年研究生数学建模C题开展个人算法实践，开发长图分块分割、候选曲线拟合与参数质检管线，并完成 ONNX CPU 推理对照。另开展 DnCNN 合成噪声适配实验，比较恢复收益与细节保真的取舍。</p>
+          <div class="tags"><span class="tag">PyTorch</span><span class="tag">图像分割</span><span class="tag">模型微调</span><span class="tag">ONNX Runtime</span></div>
+          <div class="links"><a href="assets/projects/borehole-fracture/index.html">查看项目 ↗</a></div>
         </article>
       </section>
 
-      <section id="demos">
-        <h2 class="section-label">演示</h2>
-        <article id="reel-forge-demo" class="entry project">
-          <h3>住房市场 AI 内容生成管线</h3>
-          <div class="demo-video-wrap">
-            <video controls preload="metadata" playsinline>
-              <source src="assets/video/project_2.mp4" type="video/mp4">
-              你的浏览器不支持视频播放，请直接打开 assets/video/project_2.mp4。
-            </video>
-          </div>
-          <p class="demo-caption">将公开住房市场数据与城市新闻事件接入内容筛选、来源校验和故事卡生成流程，并通过 FFmpeg 合成短视频；首版原型最终合入项目仓库。</p>
-        </article>
-        <article id="scatron-demo" class="entry project">
-          <h3>Scatron · AI4Science 科研工作台</h3>
-          <div class="gallery duo">
-            <a href="assets/img/project_3_3.png" target="_blank"><img src="assets/img/project_3_3.png" alt="Scatron Bessel wave research atlas and paper framework" loading="eager"></a>
-            <a href="assets/img/project_3_4.png" target="_blank"><img src="assets/img/project_3_4.png" alt="Scatron force torque figure grammar board" loading="eager"></a>
-          </div>
-          <p class="demo-caption">展示参数扫描与批量出图、文献与研究图谱管理、图件管线和论文审查如何汇入一套可复现的 AI4Science 科研流程。</p>
-        </article>
-        <article id="yuxu-forge-demo" class="entry project">
-          <h3>Yuxu Forge · AIGC 3D 游戏资产实践</h3>
-          <div class="demo-video-wrap">
-            <video controls preload="metadata" playsinline>
-              <source src="assets/video/project_1.mp4" type="video/mp4">
-              你的浏览器不支持视频播放，请直接打开 assets/video/project_1.mp4。
-            </video>
-          </div>
-          <p class="demo-caption">以宫廷青白玉柱为对象，从图生 3D、Blender 组件与纹理/材质处理、GLB 导出到 UE5 导入，展示三组件游戏资产原型及多机位检查结果。</p>
-        </article>
-        <article id="esim-demo" class="entry project">
-          <h3>eSIM 配置写入与实体卡自用实践</h3>
-          <div class="gallery esim-gallery">
-            <a href="assets/img/esim-card-reader.jpg" target="_blank"><img src="assets/img/esim-card-reader.jpg" alt="可编程实体 SIM 与 USB 智能卡设备" loading="lazy"></a>
-            <a href="assets/img/esim-usb-connected.jpg" target="_blank"><img src="assets/img/esim-usb-connected.jpg" alt="USB 智能卡设备连接与写入过程" loading="lazy"></a>
-            <a href="assets/img/esim-sms-proof.png" target="_blank"><img src="assets/img/esim-sms-proof.png" alt="英国号码在国内收到运营商漫游短信的脱敏截图" loading="lazy"></a>
-          </div>
-          <p class="demo-caption">写入后，英国号码在国内成功完成短信收发。</p>
+      <section id="experience">
+        <h2 class="section-label">实习经历</h2>
+        <article class="entry project">
+          <h3>意果科技 · AI 内容工程实习</h3>
+          <p class="desc">参与住房市场 AI 内容原型开发，负责公开数据与新闻事件处理，串联内容筛选、来源校验、故事卡生成和 FFmpeg 视频合成。</p>
+          <p class="desc">根据项目评审需求，将首版视频管线收敛为可独立评审的故事卡原型，保留来源追溯与视频就绪检查，相关实现最终合入项目仓库。</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">数据处理</span><span class="tag">LLM 应用</span><span class="tag">FFmpeg</span></div>
+          <details id="reel-forge-demo">
+            <summary>住房市场 AI 内容管线 · 视频演示</summary>
+            <div class="demo-video-wrap">
+              <video controls preload="none" playsinline>
+                <source src="assets/video/project_2.mp4" type="video/mp4">
+                你的浏览器不支持视频播放，请直接打开 assets/video/project_2.mp4。
+              </video>
+            </div>
+            <p class="demo-caption">公开数据与新闻事件经内容处理、故事卡生成和 FFmpeg 合成后输出视频。</p>
+          </details>
         </article>
       </section>
 
-      <section id="game-log">
-        <a class="game-database-entry" href="games/index.html" aria-label="打开游戏履历">
+      <section id="practices">
+        <h2 class="section-label">个人实践</h2>
+        <article class="entry project practice">
+          <h3>3D 游戏资产</h3>
+          <p class="desc">使用图生 3D 工具制作青白玉柱资产，并完成 Blender 材质处理。</p>
+          <div class="tags"><span class="tag">Image-to-3D</span><span class="tag">Blender</span></div>
+          <details id="yuxu-forge-demo">
+            <summary>游戏资产 · 视频演示</summary>
+            <div class="demo-video-wrap">
+              <video controls preload="none" playsinline>
+                <source src="assets/video/project_1.mp4" type="video/mp4">
+                你的浏览器不支持视频播放，请直接打开 assets/video/project_1.mp4。
+              </video>
+            </div>
+            <p class="demo-caption">青白玉柱 · 3D 游戏资产展示。</p>
+          </details>
+        </article>
+        <article class="entry project practice">
+          <h3>AI 辅助工作流实践</h3>
+          <p class="desc">使用 Codex、Claude Code 辅助科研计算与工具开发，通过 Markdown 保存任务进度和关键约束，整理可复用的 Skill，并结合人工确认、测试和 Git 管理修改与验收。</p>
+          <div class="tags"><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">Skills</span><span class="tag">Git</span></div>
+        </article>
+        <a id="game-log" class="game-database-entry" href="games/index.html" aria-label="打开游戏履历">
           <span class="game-database-title">游戏履历</span>
           <span class="game-database-entry-action">查看履历 <span aria-hidden="true">↗</span></span>
         </a>
-
+        <details id="other-explorations" class="other-explorations">
+          <summary>其他探索</summary>
+          <article id="esim-demo" class="entry project practice">
+            <h3>eSIM 配置写入与实体卡自用实践</h3>
+            <p class="desc">围绕个人通信需求，使用 USB 智能卡设备将本人 eSIM 配置写入可编程实体 SIM 载体，实现英国号码在国内的短信收发与日常自用。</p>
+            <div class="gallery esim-gallery">
+              <a href="assets/img/esim-card-reader.jpg" target="_blank"><img src="assets/img/esim-card-reader.jpg" alt="可编程实体 SIM 与 USB 智能卡设备" loading="lazy"></a>
+              <a href="assets/img/esim-usb-connected.jpg" target="_blank"><img src="assets/img/esim-usb-connected.jpg" alt="USB 智能卡设备连接与写入过程" loading="lazy"></a>
+              <a href="assets/img/esim-sms-proof.png" target="_blank"><img src="assets/img/esim-sms-proof.png" alt="英国号码在国内收到运营商漫游短信的脱敏截图" loading="lazy"></a>
+            </div>
+            <p class="demo-caption">写入后，英国号码在国内成功完成短信收发。</p>
+          </article>
+        </details>
       </section>
 
 
@@ -804,16 +650,6 @@
     </main>
   </div>
 
-  <div id="xp-bar" class="fixed-xp-hud" aria-label="Human-AI Workflow Evolution XP">
-    <div class="fixed-xp-inner">
-      <span class="xp-label">Workflow XP</span>
-      <span class="xp-track" aria-label="99% to next local Codex token milestone"><span class="xp-percent">99%</span></span>
-      <div class="xp-stats">
-        <span title="本地 Codex 任务日志累计（2026-06-10 起）"><b>1483亿+</b> / 1500亿 Codex tokens</span>
-        <span><b>human + AI</b> evolving</span>
-      </div>
-    </div>
-  </div>
   <script>
     const root = document.documentElement;
     let raf = 0;
@@ -839,25 +675,11 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    // Navigation click feedback: left nav switches immediately, Project 1's Workflow XP scrolls to the bottom easter egg.
+    // Navigation click feedback switches the active item immediately.
     links.forEach(link => {
       link.addEventListener('click', () => {
         links.forEach(item => item.classList.remove('active'));
         link.classList.add('active');
-      });
-    });
-
-    const xpBar = document.getElementById('xp-bar');
-    const xpTriggers = [...document.querySelectorAll('a[href="#xp-bar"]')];
-    xpTriggers.forEach(trigger => {
-      trigger.addEventListener('click', (event) => {
-        event.preventDefault();
-        if (!xpBar) return;
-        xpBar.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        xpBar.classList.remove('is-pulsing');
-        void xpBar.offsetWidth;
-        window.setTimeout(() => xpBar.classList.add('is-pulsing'), 180);
-        window.setTimeout(() => xpBar.classList.remove('is-pulsing'), 1500);
       });
     });
 

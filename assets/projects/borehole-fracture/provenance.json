@@ -1,0 +1,400 @@
+{
+  "files": 71,
+  "completed": 71,
+  "failed": 0,
+  "unique_images": 70,
+  "speedup": 1.7631264844244092,
+  "torch_seconds_per_image": 2.490445,
+  "onnx_seconds_per_image": 1.412516,
+  "benchmark_images": 3,
+  "benchmark_repeats": 3,
+  "threads": 2,
+  "precision": "FP32",
+  "training": false,
+  "accuracy_evaluated": false,
+  "model": "RIFT base / DeepCrack",
+  "model_repository": "https://github.com/xauat-liushipeng/RIFT",
+  "figures": {
+    "case-01.jpg": {
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "ce163d3303078f666b49d1aa0119d69da81bf81914477147e8e7ddea714031ca",
+        "filtered_mask.png": "3b2ca44671e798f7415854471c5acf931234fbdf80083c0d9fc9c0011a9a9f62",
+        "overlay.jpg": "7e615201ec64ce1d13eccb93b0ff8d799b5049f0d820b394634df190ea149913"
+      },
+      "output_sha256": "b44108cdc719de498098e89b08352cfa53349cfff31a37ad3a716fd6a558c241",
+      "source": "attachment1/图1-1.jpg"
+    },
+    "case-02.jpg": {
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "2308e12dc769886cf4bf299d8796260eb05ba5dcad3c3e4ec25c2c9a39ef6407",
+        "filtered_mask.png": "06b9c7b40ead464877741bee752e95344fd8e5f8159bf1bc7359b28a9f40f893",
+        "overlay.jpg": "f626e89e95b265640695de41de4777438b0e6b99cd3b3f5d5c643bbc7348f9d2"
+      },
+      "output_sha256": "44e85108d52e547937a06c14e8becad6e7c1441520b71ec366ead4386d378407",
+      "source": "attachment1/图1-2.jpg"
+    },
+    "case-04.jpg": {
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "e35cd738091e7aaecf9764f0c96616ff4c34ba042bc9a0989056f14dc73b5826",
+        "filtered_mask.png": "1d050f8662b5f10389e74259d8059e09eb340d61d0b3dfdaa344ea19ea436932",
+        "overlay.jpg": "03ec560fd0cb9fd4f2acbe441641d2ad1fef7a303d9f374ed6938f6c977692a8"
+      },
+      "output_sha256": "bb3a73cc43915ddf4955605f64fc9b6656ddaa06fa1d854e068fa9937eaa3d28",
+      "source": "attachment1/图1-4.jpg"
+    },
+    "case-05.jpg": {
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "d8c35085a58da7810eeef606311bb467f271bd533f2454d6a317f355d9f2bda9",
+        "filtered_mask.png": "531a8c12fce83034be398e44942cfd9cd5d724990ee1009d81f6bd0ab9c816b3",
+        "overlay.jpg": "0806da4896635c5732be38ed870ba52e3326f6bb7630babc733edb9107dac0ae"
+      },
+      "output_sha256": "6d52fe57e1f5bb6a8e5513e7d896f5b505f4baa782f80ca3beae9e03e18030c7",
+      "source": "attachment1/图1-5.jpg"
+    },
+    "case-a1-006.jpg": {
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "103998fad76ae5c6f301d5dea07ce8661817d046020cd8b2d665c20c885b8159",
+        "filtered_mask.png": "621f1c01f60c257aa41f82956e9f64eb948b65816655912af9ae4e67371884b9",
+        "overlay.jpg": "e6744a7569f689fe8cf5d5b7b937719b3fade67f441e70e1d27e52d074515218"
+      },
+      "output_sha256": "558a2cdde5569bf0ce1abae623e70d13f3db475e980f0743a6938c0e0116a92b",
+      "source": "attachment1/图1-6.jpg"
+    },
+    "case-a2-001.jpg": {
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "4310ae748e4fc18e6da782855bf440621598b319baa176d4d9207d7338837a6c",
+        "filtered_mask.png": "4e67f40ed02be9b506349073759a9574b45312975a04e430e8e942aaaae0c461",
+        "overlay.jpg": "afa2c8c31f4054e1123c065f2a7d23a62d91cf2ceb840d6fce092f1406c9a079"
+      },
+      "output_sha256": "8b2f6b1432beaa20f21899ce2b2041314e489651c7d8d37cf27af975aa6fddc8",
+      "source": "attachment2/图2-1.jpg"
+    },
+    "case-a2-002.jpg": {
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "d7280790dd546ca27b3706757cde19ced3439a21d0776144822724ef03749f54",
+        "filtered_mask.png": "bb163fcd48eb076466dc1a65f9cbf0f9bc4e5d9798d5ef880f028374c8c33e86",
+        "overlay.jpg": "6251bdcde675bfb7cd95ac39b76927f33dbf92d384ea794087939e75d68a4566"
+      },
+      "output_sha256": "030765229ba1192797feae7089212b3bda32d482d1d978781f0639d46c13fe70",
+      "source": "attachment2/图2-2.jpg"
+    },
+    "case-a2-005.jpg": {
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "9408ca5699706ada66e3005d0762cbd0245584e97f1c10886d50dc8ba2ad3431",
+        "filtered_mask.png": "4a89e77897662d2bab983aea100dcb897c3c76f0463c2db542b7191fcc39fb40",
+        "overlay.jpg": "d6eee3985af83a2904a14c23bb8c9504358b5cfcd933fb9cf763d0b14fa7a391"
+      },
+      "output_sha256": "3fe004201eda23e29750a4b4361d70f9757fde976d40e57a41603ff79db1f663",
+      "source": "attachment2/图2-5.jpg"
+    },
+    "case-a3-003.jpg": {
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "2308e12dc769886cf4bf299d8796260eb05ba5dcad3c3e4ec25c2c9a39ef6407",
+        "filtered_mask.png": "06b9c7b40ead464877741bee752e95344fd8e5f8159bf1bc7359b28a9f40f893",
+        "overlay.jpg": "f626e89e95b265640695de41de4777438b0e6b99cd3b3f5d5c643bbc7348f9d2"
+      },
+      "output_sha256": "44e85108d52e547937a06c14e8becad6e7c1441520b71ec366ead4386d378407",
+      "source": "attachment3/图3-3.jpg"
+    },
+    "imaging-context.jpg": {
+      "source_size": [
+        864,
+        9167
+      ],
+      "display_crop_rows": [
+        0,
+        1800
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "30d9fb6d4f7222e9b1051b6db50fddf6d68078827b2b068c16c5d6fbd1ce8809",
+        "filtered_mask.png": "7352c847b12f40e831032fd87adae986217d5ea7460d4c614d44eeaa082699cb",
+        "overlay.jpg": "48000f072ef1977e56bcca34b679f2fc08144664b33a7fc331c9973cb951e5e4"
+      },
+      "output_sha256": "290a31ea1a987101e23c75f4c970d4831715162309b72e55cd40d2d59dfff862",
+      "source": "attachment4/1#孔/0-1m.jpg"
+    }
+  },
+  "gallery": [
+    {
+      "case_id": "a1_001",
+      "image": "case-01.jpg",
+      "label": "图 1-1",
+      "caption": "附件 1 · 图 1-1",
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "ce163d3303078f666b49d1aa0119d69da81bf81914477147e8e7ddea714031ca",
+        "filtered_mask.png": "3b2ca44671e798f7415854471c5acf931234fbdf80083c0d9fc9c0011a9a9f62",
+        "overlay.jpg": "7e615201ec64ce1d13eccb93b0ff8d799b5049f0d820b394634df190ea149913"
+      },
+      "output_sha256": "b44108cdc719de498098e89b08352cfa53349cfff31a37ad3a716fd6a558c241",
+      "source": "attachment1/图1-1.jpg"
+    },
+    {
+      "case_id": "a1_002",
+      "image": "case-02.jpg",
+      "label": "图 1-2",
+      "caption": "附件 1 · 图 1-2",
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "2308e12dc769886cf4bf299d8796260eb05ba5dcad3c3e4ec25c2c9a39ef6407",
+        "filtered_mask.png": "06b9c7b40ead464877741bee752e95344fd8e5f8159bf1bc7359b28a9f40f893",
+        "overlay.jpg": "f626e89e95b265640695de41de4777438b0e6b99cd3b3f5d5c643bbc7348f9d2"
+      },
+      "output_sha256": "44e85108d52e547937a06c14e8becad6e7c1441520b71ec366ead4386d378407",
+      "source": "attachment1/图1-2.jpg"
+    },
+    {
+      "case_id": "a1_004",
+      "image": "case-04.jpg",
+      "label": "图 1-4",
+      "caption": "附件 1 · 图 1-4",
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "e35cd738091e7aaecf9764f0c96616ff4c34ba042bc9a0989056f14dc73b5826",
+        "filtered_mask.png": "1d050f8662b5f10389e74259d8059e09eb340d61d0b3dfdaa344ea19ea436932",
+        "overlay.jpg": "03ec560fd0cb9fd4f2acbe441641d2ad1fef7a303d9f374ed6938f6c977692a8"
+      },
+      "output_sha256": "bb3a73cc43915ddf4955605f64fc9b6656ddaa06fa1d854e068fa9937eaa3d28",
+      "source": "attachment1/图1-4.jpg"
+    },
+    {
+      "case_id": "a1_005",
+      "image": "case-05.jpg",
+      "label": "图 1-5",
+      "caption": "附件 1 · 图 1-5",
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "d8c35085a58da7810eeef606311bb467f271bd533f2454d6a317f355d9f2bda9",
+        "filtered_mask.png": "531a8c12fce83034be398e44942cfd9cd5d724990ee1009d81f6bd0ab9c816b3",
+        "overlay.jpg": "0806da4896635c5732be38ed870ba52e3326f6bb7630babc733edb9107dac0ae"
+      },
+      "output_sha256": "6d52fe57e1f5bb6a8e5513e7d896f5b505f4baa782f80ca3beae9e03e18030c7",
+      "source": "attachment1/图1-5.jpg"
+    },
+    {
+      "case_id": "a1_006",
+      "image": "case-a1-006.jpg",
+      "label": "图 1-6",
+      "caption": "附件 1 · 图 1-6",
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "103998fad76ae5c6f301d5dea07ce8661817d046020cd8b2d665c20c885b8159",
+        "filtered_mask.png": "621f1c01f60c257aa41f82956e9f64eb948b65816655912af9ae4e67371884b9",
+        "overlay.jpg": "e6744a7569f689fe8cf5d5b7b937719b3fade67f441e70e1d27e52d074515218"
+      },
+      "output_sha256": "558a2cdde5569bf0ce1abae623e70d13f3db475e980f0743a6938c0e0116a92b",
+      "source": "attachment1/图1-6.jpg"
+    },
+    {
+      "case_id": "a2_001",
+      "image": "case-a2-001.jpg",
+      "label": "图 2-1",
+      "caption": "附件 2 · 图 2-1",
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "4310ae748e4fc18e6da782855bf440621598b319baa176d4d9207d7338837a6c",
+        "filtered_mask.png": "4e67f40ed02be9b506349073759a9574b45312975a04e430e8e942aaaae0c461",
+        "overlay.jpg": "afa2c8c31f4054e1123c065f2a7d23a62d91cf2ceb840d6fce092f1406c9a079"
+      },
+      "output_sha256": "8b2f6b1432beaa20f21899ce2b2041314e489651c7d8d37cf27af975aa6fddc8",
+      "source": "attachment2/图2-1.jpg"
+    },
+    {
+      "case_id": "a2_002",
+      "image": "case-a2-002.jpg",
+      "label": "图 2-2",
+      "caption": "附件 2 · 图 2-2",
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "d7280790dd546ca27b3706757cde19ced3439a21d0776144822724ef03749f54",
+        "filtered_mask.png": "bb163fcd48eb076466dc1a65f9cbf0f9bc4e5d9798d5ef880f028374c8c33e86",
+        "overlay.jpg": "6251bdcde675bfb7cd95ac39b76927f33dbf92d384ea794087939e75d68a4566"
+      },
+      "output_sha256": "030765229ba1192797feae7089212b3bda32d482d1d978781f0639d46c13fe70",
+      "source": "attachment2/图2-2.jpg"
+    },
+    {
+      "case_id": "a2_005",
+      "image": "case-a2-005.jpg",
+      "label": "图 2-5",
+      "caption": "附件 2 · 图 2-5",
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "9408ca5699706ada66e3005d0762cbd0245584e97f1c10886d50dc8ba2ad3431",
+        "filtered_mask.png": "4a89e77897662d2bab983aea100dcb897c3c76f0463c2db542b7191fcc39fb40",
+        "overlay.jpg": "d6eee3985af83a2904a14c23bb8c9504358b5cfcd933fb9cf763d0b14fa7a391"
+      },
+      "output_sha256": "3fe004201eda23e29750a4b4361d70f9757fde976d40e57a41603ff79db1f663",
+      "source": "attachment2/图2-5.jpg"
+    },
+    {
+      "case_id": "a3_003",
+      "image": "case-a3-003.jpg",
+      "label": "图 3-3",
+      "caption": "附件 3 · 图 3-3",
+      "source_size": [
+        244,
+        1350
+      ],
+      "display_crop_rows": [
+        0,
+        1350
+      ],
+      "display_width_per_panel": 244,
+      "source_sha256": {
+        "original.jpg": "2308e12dc769886cf4bf299d8796260eb05ba5dcad3c3e4ec25c2c9a39ef6407",
+        "filtered_mask.png": "06b9c7b40ead464877741bee752e95344fd8e5f8159bf1bc7359b28a9f40f893",
+        "overlay.jpg": "f626e89e95b265640695de41de4777438b0e6b99cd3b3f5d5c643bbc7348f9d2"
+      },
+      "output_sha256": "44e85108d52e547937a06c14e8becad6e7c1441520b71ec366ead4386d378407",
+      "source": "attachment3/图3-3.jpg"
+    }
+  ],
+  "source_model_sha256": "7cfb9c38e0b04af24dd88d49d454836e0099bd9751f639a14eb9f8f3a8dbb6df"
+}

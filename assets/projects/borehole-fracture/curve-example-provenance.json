@@ -1,0 +1,37 @@
+{
+  "source_run": "borehole-fracture/exports/curve_analysis_final/case_2",
+  "source_summary_sha256": "a918c6aa58f0517c4e14d30da295675ba50e5b61b69814ac7e22e6c0e01c90b3",
+  "source_image": "图1-2.jpg",
+  "units": "pixels",
+  "coordinate_origin": "top-left; y increases downward",
+  "geological_identity_verified": false,
+  "new_inference": false,
+  "curve": {
+    "id": "C01",
+    "status": "accepted",
+    "acceptance_meaning": "passes geometric gates on model candidate points",
+    "amplitude_px": 44.64846641785073,
+    "phase_rad": -2.9126735542011843,
+    "center_y_px": 142.46948356828997,
+    "period_px": 244,
+    "coverage": 0.5081967213114754,
+    "span_fraction": 0.7336065573770492,
+    "max_gap_fraction": 0.0778688524590164,
+    "rmse_px": 2.178739462532096,
+    "support_points": 124
+  },
+  "assets": {
+    "curve-numbered.png": {
+      "source": "numbered_curves.png",
+      "sha256": "3bf18699634643490c49e35f632af1ef0a419ebb2ac83bd2d355409720104b12"
+    },
+    "curve-detail.png": {
+      "source": "accepted_detail.png",
+      "sha256": "8547ce7b4bf08ad9bd5aea33ec9a02780b79f10540e943432bfab569c84389ba"
+    },
+    "curve-parameters.csv": {
+      "source": "parameters.csv",
+      "sha256": "1f36dba09e66a53599c64fb80dc016d9b9a42d813e1252fb72193f9e587f9d46"
+    }
+  }
+}
