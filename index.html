@@ -123,7 +123,7 @@
       font-size: 13px;
       line-height: 1;
       font-weight: 700;
-      letter-spacing: 0.11em;
+      letter-spacing: 0;
       text-transform: uppercase;
       transition: color .18s ease;
     }
@@ -208,7 +208,7 @@
       color: var(--text);
       font-size: 14px;
       font-weight: 700;
-      letter-spacing: .1em;
+      letter-spacing: 0;
     }
 
     .about p {
@@ -492,7 +492,7 @@
       .intro { max-width: 560px; }
       .nav { margin-top: 28px; }
       .nav ul { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
-      .nav a { gap: 0; letter-spacing: .08em; }
+      .nav a { gap: 0; letter-spacing: 0; }
       .nav a::before { display: none; }
       .social { margin-top: 32px; }
       .content { max-width: none; margin-top: 88px; }
@@ -502,7 +502,7 @@
         color: var(--text);
         font-size: 14px;
         font-weight: 700;
-        letter-spacing: .1em;
+        letter-spacing: 0;
         text-transform: uppercase;
       }
       section { margin-bottom: 88px; }
@@ -606,20 +606,11 @@
 
       <section id="practices">
         <h2 class="section-label">个人实践</h2>
-        <article class="entry project practice">
+        <article id="yuxu-forge-demo" class="entry project practice">
           <h3>3D 游戏资产</h3>
-          <p class="desc">使用图生 3D 工具制作青白玉柱资产，并完成 Blender 材质处理。</p>
-          <div class="tags"><span class="tag">Image-to-3D</span><span class="tag">Blender</span></div>
-          <details id="yuxu-forge-demo">
-            <summary>游戏资产 · 视频演示</summary>
-            <div class="demo-video-wrap">
-              <video controls preload="none" playsinline>
-                <source src="assets/video/project_1.mp4" type="video/mp4">
-                你的浏览器不支持视频播放，请直接打开 assets/video/project_1.mp4。
-              </video>
-            </div>
-            <p class="demo-caption">青白玉柱 · 3D 游戏资产展示。</p>
-          </details>
+          <p class="desc">探索两种 3D 制作路线：概念图生成高模，以及 AI + 插件 / MCP 直接建模。展示玉柱与空间站的实际效果。</p>
+          <div class="tags"><span class="tag">Blender</span><span class="tag">MCP</span><span class="tag">Image-to-3D</span></div>
+          <div class="links"><a href="assets/projects/ai-3d/index.html">查看建模探索 ↗</a></div>
         </article>
         <article class="entry project practice">
           <h3>AI 辅助工作流实践</h3>

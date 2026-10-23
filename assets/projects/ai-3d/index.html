@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="3D 资产制作的两条实践路线：概念图生成高模，以及 AI 通过插件与 MCP 直接建模。">
+  <title>3D 游戏资产 · 周钰峰</title>
+  <style>
+    :root { color-scheme:dark; --bg:#0f172a; --text:#e2e8f0; --muted:#94a3b8; --accent:#5eead4; --line:rgba(148,163,184,.18); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:Inter,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; font-size:15px; line-height:1.8; }
+    a { color:var(--accent); text-decoration:none; text-underline-offset:4px; }
+    a:hover { text-decoration:underline; }
+    a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+    main { width:min(1000px,calc(100% - 64px)); margin:auto; padding:26px 0 36px; }
+    .back { font-size:13px; }
+    header { margin:18px 0 22px; }
+    h1 { margin:0; font-size:30px; line-height:1.35; }
+    header p { margin:8px 0 0; color:var(--muted); }
+    .routes { display:grid; gap:22px; }
+    .route { display:grid; grid-template-columns:280px minmax(0,1fr); align-items:center; gap:24px; padding:20px; border:1px solid var(--line); border-radius:14px; background:rgba(30,41,59,.22); }
+    .badge { display:inline-block; padding:2px 9px; border-radius:20px; background:rgba(94,234,212,.08); color:var(--accent); font-size:11px; margin-bottom:12px; }
+    h2 { margin:0 0 10px; font-size:20px; line-height:1.5; }
+    .method { margin:0 0 16px; color:var(--muted); font-size:13px; }
+    .limit { margin:0; font-size:14px; color:#cbd5e1; }
+    figure { margin:0; min-width:0; }
+    .media { display:block; width:100%; height:270px; border-radius:8px; background:#080d16; object-fit:contain; }
+    figcaption { margin-top:7px; color:var(--muted); font-size:12px; }
+    @media(max-width:760px) {
+      main { width:calc(100% - 36px); padding-top:24px; }
+      header { margin:24px 0; }
+      h1 { font-size:27px; }
+      .route { grid-template-columns:1fr; gap:18px; padding:18px; }
+      .method { margin-bottom:8px; }
+      .badge { margin-bottom:8px; }
+      .media { height:auto; aspect-ratio:16/9; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../../../index.html#practices">← 返回个人实践</a>
+    <header>
+      <h1>3D 游戏资产</h1>
+      <p>两种制作路线的实践。</p>
+    </header>
+    <div class="routes">
+      <section class="route" aria-labelledby="image-route">
+        <div>
+          <span class="badge">早期尝试 · 2026.05</span>
+          <h2 id="image-route">概念图 → 图生 3D</h2>
+          <p class="method">专业图生 3D 工具路线，如 Rodin；生成后在 Blender 中处理材质。</p>
+          <p class="limit">细节丰富，但面数偏高，仍需减面整理。</p>
+        </div>
+        <figure>
+          <video class="media" controls playsinline preload="metadata" poster="pillar-early-poster.webp" aria-label="早期图生3D玉柱展示">
+            <source src="../../video/project_1.mp4" type="video/mp4">
+            <a href="../../video/project_1.mp4">打开玉柱视频</a>
+          </video>
+          <figcaption>青白玉柱 · 早期图生 3D 与材质处理展示</figcaption>
+        </figure>
+      </section>
+      <section class="route" aria-labelledby="mcp-route">
+        <div>
+          <span class="badge">近期尝试 · 2026.10</span>
+          <h2 id="mcp-route">AI + 插件 / MCP → 直接建模</h2>
+          <p class="method">AI 通过插件与 MCP 操作 Blender，按参考图搭建几何结构。</p>
+          <p class="limit">规则几何、重复结构效果较好；复杂雕刻与不规则细节还原较弱。</p>
+        </div>
+        <figure>
+          <a href="station-hero.webp" target="_blank" rel="noopener" aria-label="放大查看空间站建模结果"><img class="media" src="station-hero.webp" width="1440" height="1080" alt="AI 通过 MCP 在 Blender 中搭建的双环五辐条桁架空间站"></a>
+          <figcaption>环形空间站 · AI + Blender MCP 直接建模</figcaption>
+        </figure>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
