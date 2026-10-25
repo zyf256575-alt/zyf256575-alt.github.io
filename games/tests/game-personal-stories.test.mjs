@@ -15,10 +15,11 @@ const indexSource = await readFile(indexUrl, "utf8");
 const homepageSource = await readFile(homepageUrl, "utf8");
 
 test("the homepage opens Game Log through its explicit HTML entry", () => {
-  assert.match(
-    homepageSource,
-    /<a id="game-log" class="game-database-entry" href="games\/index\.html" aria-label="打开游戏履历">/,
-  );
+  const entry = homepageSource.match(/<a\b[^>]*id="game-log"[^>]*>/)?.[0];
+  assert.ok(entry, "Game Log link is missing");
+  assert.match(entry, /class="game-database-entry"/);
+  assert.match(entry, /href="games\/index\.html"/);
+  assert.match(entry, /aria-label="打开游戏履历"/);
 });
 
 async function assertScreenshotCollection(game, expectedNames) {
@@ -1067,12 +1068,11 @@ test("Battle.net work cards stay product-focused and use local recognizable cove
 });
 
 test("the approved personal-site game-log increment stays exact", async () => {
-  const approvedIntro =
-    "物理学硕士在读，主要用 Python / MATLAB 做数值建模、仿真与图像分析，也开发 AI 应用和自动化工具。";
-  const oldIntro =
-    "物理学硕士在读，喜欢折腾工具，把想法做成能运行的东西，也把重复的事情交给自动化。";
-  assert.ok(homepageSource.includes(`<p class="intro">${approvedIntro}</p>`));
-  assert.ok(!homepageSource.includes(oldIntro));
+  assert.match(homepageSource, /<title>个人档案<\/title>/);
+  assert.doesNotMatch(homepageSource, /class="name"|class="subtitle"/);
+  assert.doesNotMatch(homepageSource, /<p class="intro">|id="about"|href="#about"/);
+  assert.match(homepageSource, /class="active" href="#optics"/);
+  assert.doesNotMatch(homepageSource, /href="#projects"|href="#experience"|href="#practices"|class="tags"/);
 
   const byId = (id) => archive.games.filter((game) => game.id === id);
   assert.equal(byId("1903340").length, 1);

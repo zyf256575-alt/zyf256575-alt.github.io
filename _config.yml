@@ -1,0 +1,8 @@
+# Public Pages output excludes development notes and local-only material.
+exclude:
+  - docs
+  - games/tests
+  - .worktrees
+  - README.md
+  - resume.pdf
+  - 2027届硕士_周钰峰_图像算法工程师.pdf

@@ -949,6 +949,10 @@ function renderApp(data) {
 }
 
 async function init() {
+  if (location.protocol === "file:") {
+    showArchiveError("直接打开 HTML 无法读取游戏档案。请运行“启动本地预览.cmd”，再从本机网页进入。");
+    return;
+  }
   let data;
   try {
     data = await loadArchive();

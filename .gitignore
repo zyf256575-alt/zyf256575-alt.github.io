@@ -1,1 +1,5 @@
 .worktrees/
+
+# Resume attachments and private rollback packages stay outside this public site.
+*.pdf
+*.zip

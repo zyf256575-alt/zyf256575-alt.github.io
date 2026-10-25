@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow, noarchive" />
-  <title>周钰峰</title>
+  <title>个人档案</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -63,8 +63,8 @@
       min-height: 100vh;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 380px minmax(0, 1fr);
-      gap: 104px;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 64px;
       padding: 96px 0 0;
     }
 
@@ -77,34 +77,8 @@
       align-self: start;
     }
 
-    .name {
-      margin: 0 0 10px;
-      color: var(--text-strong);
-      font-size: 56px;
-      line-height: 1.05;
-      font-weight: 800;
-      letter-spacing: -0.045em;
-    }
-
-    .subtitle {
-      margin: 0 0 18px;
-      color: var(--text);
-      font-size: 23px;
-      line-height: 1.35;
-      font-weight: 600;
-      letter-spacing: -0.015em;
-    }
-
-    .intro {
-      max-width: 335px;
-      margin: 0;
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.55;
-    }
-
     .nav {
-      margin-top: 86px;
+      margin-top: 0;
     }
 
     .nav ul {
@@ -198,25 +172,17 @@
     .social svg { width: 21px; height: 21px; fill: currentColor; }
 
     .content {
-      max-width: 660px;
+      max-width: none;
       padding-bottom: 96px;
     }
 
-    section { margin-bottom: 128px; scroll-margin-top: 96px; }
+    section { margin-bottom: 80px; scroll-margin-top: 96px; }
     .section-label {
       margin: 0 0 24px;
       color: var(--text);
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 0;
-    }
-
-    .about p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 17.5px;
-      line-height: 1.78;
-      letter-spacing: -0.01em;
     }
 
     .entry {
@@ -230,6 +196,8 @@
     }
 
     .entry + .entry { margin-top: 10px; }
+    .archive-list > [data-archive-entry] { scroll-margin-top: 48px; }
+    .archive-list > [data-archive-entry] + [data-archive-entry] { margin-top: 24px; }
 
     .entry:hover {
       background: var(--bg-card);
@@ -328,6 +296,7 @@
     }
 
     .links a:hover { color: var(--accent); }
+    .publication-links { flex-direction: column; align-items: flex-start; gap: 6px; }
 
 
     .demo-video-wrap {
@@ -482,20 +451,18 @@
       .page {
         width: min(100% - 48px, 680px);
         display: block;
-        padding-top: 64px;
+        padding-top: 32px;
       }
       .sidebar {
         position: static;
         height: auto;
       }
-      .name { font-size: 48px; }
-      .intro { max-width: 560px; }
-      .nav { margin-top: 28px; }
+      .nav { margin-top: 0; }
       .nav ul { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
       .nav a { gap: 0; letter-spacing: 0; }
       .nav a::before { display: none; }
       .social { margin-top: 32px; }
-      .content { max-width: none; margin-top: 88px; }
+      .content { max-width: none; margin-top: 32px; }
       .section-label {
         display: block;
         margin-bottom: 20px;
@@ -505,7 +472,7 @@
         letter-spacing: 0;
         text-transform: uppercase;
       }
-      section { margin-bottom: 88px; }
+      section { margin-bottom: 56px; }
       .entry { grid-template-columns: 1fr; gap: 8px; margin-left: -12px; margin-right: -12px; }
       .date { padding-top: 0; }
       .gallery { grid-template-columns: 1fr; }
@@ -524,17 +491,15 @@
   <div class="page">
     <aside class="sidebar">
       <div>
-        <h1 class="name">周钰峰</h1>
-        <h2 class="subtitle">科学计算与图像处理</h2>
-        <p class="intro">物理学硕士在读，主要用 Python / MATLAB 做数值建模、仿真与图像分析，也开发 AI 应用和自动化工具。</p>
 
-        <nav class="nav" aria-label="主导航">
+        <nav class="nav" aria-label="条目导航">
           <ul>
-            <li><a class="active" href="#about">关于</a></li>
-            <li><a href="#projects">代表项目</a></li>
-            <li><a href="#experience">实习经历</a></li>
-            <li><a href="#practices">个人实践</a></li>
-            <li><a href="resume.pdf" target="_blank" rel="nofollow noopener" class="external">Resume</a></li>
+            <li><a class="active" href="#optics">光学计算</a></li>
+            <li><a href="#borehole-fracture">钻孔图像</a></li>
+            <li><a href="#content-prototype">AI 内容原型</a></li>
+            <li><a href="#yuxu-forge-demo">3D 资产</a></li>
+            <li><a href="#esim-demo">eSIM</a></li>
+            <li><a href="#game-log">游戏履历</a></li>
           </ul>
         </nav>
       </div>
@@ -550,47 +515,23 @@
     </aside>
 
     <main class="content">
-      <section id="about">
-        <h2 class="section-label">关于</h2>
-        <div class="about">
-          <p>我目前在西安电子科技大学攻读物理学硕士，研究光与粒子的相互作用。主要工作是将理论模型实现为计算程序，开展数值仿真、参数分析和结果验证，相关代码已用于科研论文的计算与图件制作。</p>
-          <p>研究之外，我也持续学习 AI 技术，了解 Transformer 架构与大语言模型的基本原理，并围绕 Agent 开发、RAG 知识检索和 AI 辅助工作流开展实践。图像处理方面，完成了钻孔图像的分割、曲线拟合和 CPU 部署验证；实习中参与住房市场 AI 内容原型开发，负责数据处理、内容生成与视频合成。</p>
-          <p>业余喜欢运动、音乐和 3A 游戏。偏爱魂系的美术、《黑神话》的中式表达，也喜欢《巫师3》的叙事和《戴森球计划》的系统搭建。游戏记录和资产制作尝试，也收录在这个网站里。</p>
-        </div>
-      </section>
-
-      <section id="projects">
-        <h2 class="section-label">代表项目</h2>
-        <article class="entry project">
+      <section id="archive" class="archive-list">
+        <h2 class="section-label">档案</h2>
+        <article id="optics" class="entry project" data-archive-entry>
           <h3>光散射与光学力矩建模仿真</h3>
-          <p class="desc">围绕光束与球形粒子的相互作用，将波束展开、散射系数及光力与力矩公式实现为模块化 Python 计算程序，支持轴向、离轴响应求解与多参数扫描。</p>
-          <p class="desc">结合独立公式、文献基准和自动化回归测试验证数值结果，建立参数配置、批量计算与图件输出流程，相关实现已用于科研论文的计算与图件制作。</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">NumPy / SciPy</span><span class="tag">数值仿真</span><span class="tag">pytest</span></div>
-          <div class="links"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022407325003097" target="_blank" rel="noopener noreferrer">已发表前期论文（JQSRT） ↗</a></div>
-          <details id="scatron-demo">
-            <summary>研究工作台界面</summary>
-            <div class="gallery duo">
-              <a href="assets/img/project_3_3.png" target="_blank"><img src="assets/img/project_3_3.png" alt="Scatron 研究问题、计算分支与论文关联图谱" loading="lazy"></a>
-              <a href="assets/img/project_3_4.png" target="_blank"><img src="assets/img/project_3_4.png" alt="Scatron 参数扫描与图件规划界面" loading="lazy"></a>
-            </div>
-            <p class="demo-caption">研究工作台用于组织计算分支、参数扫描与图件规划；数值方法与前期研究结果见论文。</p>
-          </details>
+          <p class="desc">用 MATLAB / Python 实现光散射与光学力矩的数值计算。</p>
+          <div class="links publication-links"><a href="https://doi.org/10.1364/AO.601491" target="_blank" rel="noopener noreferrer">Applied Optics · 第一作者 · 已发表 ↗</a><a href="https://doi.org/10.1016/j.jqsrt.2025.109647" target="_blank" rel="noopener noreferrer">JQSRT · 第二作者 · 已发表 ↗</a></div>
         </article>
-        <article id="borehole-fracture" class="entry project">
+        <article id="borehole-fracture" class="entry project" data-archive-entry>
           <h3>钻孔图像裂隙识别</h3>
-          <p class="desc">基于2025年研究生数学建模C题开展个人算法实践，开发长图分块分割、候选曲线拟合与参数质检管线，并完成 ONNX CPU 推理对照。另开展 DnCNN 合成噪声适配实验，比较恢复收益与细节保真的取舍。</p>
-          <div class="tags"><span class="tag">PyTorch</span><span class="tag">图像分割</span><span class="tag">模型微调</span><span class="tag">ONNX Runtime</span></div>
+          <p class="desc">基于 2025 年华为杯数模 C 题，实践钻孔图像识别与裂隙参数提取。</p>
           <div class="links"><a href="assets/projects/borehole-fracture/index.html">查看项目 ↗</a></div>
         </article>
-      </section>
 
-      <section id="experience">
-        <h2 class="section-label">实习经历</h2>
-        <article class="entry project">
+        <article id="content-prototype" class="entry project" data-archive-entry>
           <h3>意果科技 · AI 内容工程实习</h3>
-          <p class="desc">参与住房市场 AI 内容原型开发，负责公开数据与新闻事件处理，串联内容筛选、来源校验、故事卡生成和 FFmpeg 视频合成。</p>
-          <p class="desc">根据项目评审需求，将首版视频管线收敛为可独立评审的故事卡原型，保留来源追溯与视频就绪检查，相关实现最终合入项目仓库。</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">数据处理</span><span class="tag">LLM 应用</span><span class="tag">FFmpeg</span></div>
+          <p class="demo-caption">2026.04–2026.05 · 远程实习</p>
+          <p class="desc">参与住房市场 AI 内容原型的数据处理、故事卡生成与视频合成。</p>
           <details id="reel-forge-demo">
             <summary>住房市场 AI 内容管线 · 视频演示</summary>
             <div class="demo-video-wrap">
@@ -599,41 +540,30 @@
                 你的浏览器不支持视频播放，请直接打开 assets/video/project_2.mp4。
               </video>
             </div>
-            <p class="demo-caption">公开数据与新闻事件经内容处理、故事卡生成和 FFmpeg 合成后输出视频。</p>
           </details>
         </article>
-      </section>
 
-      <section id="practices">
-        <h2 class="section-label">个人实践</h2>
-        <article id="yuxu-forge-demo" class="entry project practice">
+        <article id="yuxu-forge-demo" class="entry project" data-archive-entry>
           <h3>3D 游戏资产</h3>
-          <p class="desc">探索两种 3D 制作路线：概念图生成高模，以及 AI + 插件 / MCP 直接建模。展示玉柱与空间站的实际效果。</p>
-          <div class="tags"><span class="tag">Blender</span><span class="tag">MCP</span><span class="tag">Image-to-3D</span></div>
+          <p class="desc">探索图生 3D 与 AI 辅助 Blender 建模。</p>
           <div class="links"><a href="assets/projects/ai-3d/index.html">查看建模探索 ↗</a></div>
         </article>
-        <article class="entry project practice">
-          <h3>AI 辅助工作流实践</h3>
-          <p class="desc">使用 Codex、Claude Code 辅助科研计算与工具开发，通过 Markdown 保存任务进度和关键约束，整理可复用的 Skill，并结合人工确认、测试和 Git 管理修改与验收。</p>
-          <div class="tags"><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">Skills</span><span class="tag">Git</span></div>
-        </article>
-        <a id="game-log" class="game-database-entry" href="games/index.html" aria-label="打开游戏履历">
-          <span class="game-database-title">游戏履历</span>
-          <span class="game-database-entry-action">查看履历 <span aria-hidden="true">↗</span></span>
-        </a>
-        <details id="other-explorations" class="other-explorations">
-          <summary>其他探索</summary>
-          <article id="esim-demo" class="entry project practice">
+        <article id="esim-demo" class="entry project" data-archive-entry>
             <h3>eSIM 配置写入与实体卡自用实践</h3>
-            <p class="desc">围绕个人通信需求，使用 USB 智能卡设备将本人 eSIM 配置写入可编程实体 SIM 载体，实现英国号码在国内的短信收发与日常自用。</p>
-            <div class="gallery esim-gallery">
+            <p class="desc">将本人 eSIM 配置写入实体卡，验证短信收发。</p>
+            <details id="esim-gallery">
+              <summary>查看图片</summary>
+              <div class="gallery esim-gallery">
               <a href="assets/img/esim-card-reader.jpg" target="_blank"><img src="assets/img/esim-card-reader.jpg" alt="可编程实体 SIM 与 USB 智能卡设备" loading="lazy"></a>
               <a href="assets/img/esim-usb-connected.jpg" target="_blank"><img src="assets/img/esim-usb-connected.jpg" alt="USB 智能卡设备连接与写入过程" loading="lazy"></a>
               <a href="assets/img/esim-sms-proof.png" target="_blank"><img src="assets/img/esim-sms-proof.png" alt="英国号码在国内收到运营商漫游短信的脱敏截图" loading="lazy"></a>
             </div>
-            <p class="demo-caption">写入后，英国号码在国内成功完成短信收发。</p>
+            </details>
           </article>
-        </details>
+        <a id="game-log" class="game-database-entry" data-archive-entry href="games/index.html" aria-label="打开游戏履历">
+          <span class="game-database-title">游戏履历</span>
+          <span class="game-database-entry-action">查看履历 <span aria-hidden="true">↗</span></span>
+        </a>
       </section>
 
 
@@ -654,7 +584,7 @@
       });
     }, { passive: true });
 
-    const sections = [...document.querySelectorAll('main section')];
+    const sections = [...document.querySelectorAll('main [data-archive-entry]')];
     const links = [...document.querySelectorAll('.nav a')];
     const onScroll = () => {
       let current = sections[0]?.id || '';
